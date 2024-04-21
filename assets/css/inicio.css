@@ -174,10 +174,11 @@
         }
     }
 
-    .hero-description {
-        &.mobile {
+    .hero-description.mobile {
+        display: none;
+        @media screen and (max-width: 768px) {
             display: block;
-            margin-top: 150px;
+            margin-top: 250px;
         }
     }
 
