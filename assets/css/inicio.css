@@ -246,4 +246,114 @@
 #popular {
     height: 100vh;
     width: 100%;
+    margin-top: 100px;
+
+    h1 {
+        font-size: 57px;
+        text-transform: uppercase;
+        span {
+            color: var(--yellow);
+        }
+        text-align: center;
+    }
+
+    .row.popular {
+        margin-top: 150px;
+    }
+
+    .col.popular {
+        margin-top: 6rem;
+    }
+
+    .product-showcase-card {
+        position: relative;
+        width: 380px;
+        height: 467px;
+        padding: 24px;
+        box-sizing: border-box;
+
+        background-color: var(--black);
+        color: var(--white);
+        border-radius: 10px;
+        
+        .popular-top {
+            display: flex;
+            margin-bottom: 100px;
+        }
+        .popular-producto {
+            position: absolute;
+            top: -75px;
+            left: -25px;
+            width: 200px;
+            height: auto;
+        }
+
+        .popular-precio {
+            font-size: 24px;
+            display: flex;
+            margin-left: auto;
+        }
+
+        .popular-titulo {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 18px;
+        }
+
+        .popular-descripcion {
+            letter-spacing: 1px;
+            font-size: 16px;
+            margin-top: 24px;
+        }
+
+        .popular-cta {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 40px;
+
+            position: absolute;
+            bottom: 40px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        .btn.btn-warning.cart {
+            color: var(--white);
+        }
+
+        .btn.btn-success.cart {
+            width: 218px;
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 300px;
+            .popular-top {
+                margin-bottom: 20px;
+            }
+
+            .popular-producto {
+                top: -75px;
+                left: -5px;
+                width: 150px;
+            }
+
+            .popular-cta {
+                flex-direction: column;
+                align-items: flex-start;
+                position: absolute;
+                bottom: 40px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, 0%);
+            }
+
+            .btn.btn-warning.cart {
+                width: 100%;
+            }
+            
+        }
+    }
 }

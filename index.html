@@ -22,9 +22,8 @@
                 <a class="navbar-brand" href="index.html">
                     <img id="navigation-logo" src="assets/images/logo.svg" alt="logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarToogler" aria-controls="navbarToogler" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToogler"
+                    aria-controls="navbarToogler" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <a href="#" class="nav-link shopping-cart mobile">
@@ -83,8 +82,8 @@
                             </h1>
                         </div>
                         <p class="hero-description">
-                            En Celifoods, nos apasiona crear productos 
-                            de panadería y repostería sin gluten de la 
+                            En Celifoods, nos apasiona crear productos
+                            de panadería y repostería sin gluten de la
                             más alta calidad y sabor excepcional.
                         </p>
                         <div class="free-shipping">
@@ -111,10 +110,14 @@
             <div class="row">
                 <div class="hero-social-media">
                     <p>
-                        Síguenos <a class="hero-social-icon" href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                        <a class="hero-social-icon" href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a class="hero-social-icon" href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                        <a class="hero-social-icon" href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        Síguenos <a class="hero-social-icon" href="https://facebook.com" target="_blank"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a class="hero-social-icon" href="https://instagram.com" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a class="hero-social-icon" href="https://youtube.com" target="_blank"><i
+                                class="fa-brands fa-youtube"></i></a>
+                        <a class="hero-social-icon" href="https://twitter.com" target="_blank"><i
+                                class="fa-brands fa-twitter"></i></a>
                     </p>
                 </div>
             </div>
@@ -128,7 +131,72 @@
         </div>
     </section>
 
-    <section id="popular"></section>
+    <section id="popular">
+        <div class="container">
+            <h1>lo <span>más</span> popular</h1>
+            <div class="row gy-5 popular">
+                <div class="col popular">
+                    <div class="product-showcase-card">
+                        <div class="popular-top">
+                            <img class="popular-producto" src="assets/images/popular_1.svg"
+                                alt="producto popular galletas">
+                            <p class="popular-precio">&#8353;8.000</p>
+                        </div>
+                        <h3 class="popular-titulo">Galletas de semillas</h3>
+                        <div class="popular-descripcion">
+                            Elaboradas con una variedad
+                            de semillas, como semillas de
+                            girasol, calabaza, lino, chía y
+                            amapola
+                        </div>
+                        <div class="popular-cta">
+                            <button id="popular-purchase" type="button" class="btn btn-success cart" data-nombre="Galletas de semillas" data-precio="8000">comprar</button>
+                            <button id="popular-add-cart" type="button" class="btn btn-warning cart" data-nombre="Galletas de semillas" data-precio="8000"><i class="fa-solid fa-basket-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col popular">
+                    <div class="product-showcase-card">
+                        <div class="popular-top">
+                            <img class="popular-producto" src="assets/images/popular_2.svg"
+                                alt="producto popular pan">
+                            <p class="popular-precio">&#8353;8.000</p>
+                        </div>
+                        <h3 class="popular-titulo">pan sin gluten</h3>
+                        <div class="popular-descripcion">
+                            Suaves y esponjosas rodajas 
+                            de pan, perfectas para tostar 
+                            o para usar como base para 
+                            sándwiches ligeros.
+                        </div>
+                        <div class="popular-cta">
+                            <button id="popular-purchase" type="button" class="btn btn-success cart" data-nombre="Pan sin gluten" data-precio="8000">comprar</button>
+                            <button id="popular-add-cart" type="button" class="btn btn-warning cart" data-nombre="Pan sin gluten" data-precio="8000"><i class="fa-solid fa-basket-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col popular">
+                    <div class="product-showcase-card">
+                        <div class="popular-top">
+                            <img class="popular-producto" src="assets/images/popular_3.svg"
+                                alt="producto popular pan">
+                            <p class="popular-precio">&#8353;8.000</p>
+                        </div>
+                        <h3 class="popular-titulo">bowl de hummus</h3>
+                        <div class="popular-descripcion">
+                            Este cremoso manjar brinda 
+                            una explosión de sabor sin 
+                            preocuparte por el gluten.
+                        </div>
+                        <div class="popular-cta">
+                            <button id="popular-purchase" type="button" class="btn btn-success cart" data-nombre="Bowl de hummus" data-precio="8000">comprar</button>
+                            <button id="popular-add-cart" type="button" class="btn btn-warning cart" data-nombre="Bowl de hummus" data-precio="8000"><i class="fa-solid fa-basket-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="assets/js/inicio.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
