@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'QuatroBlack';
+    src: url('../fonts/Quatro-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../fonts/Metropolis-Medium.otf') format('opentype');
+}
+
+body, html {
+    font-family: 'Metropolis';
+    -webkit-text-size-adjust: 100%;
+    font-size: 1rem;
+    color: var(--black);
+}
+
+h1 {
+    font-family: 'QuatroBlack';
+}
+
+/* h2, h3, etc Myanmar* */
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--darkPurple);
+    --bs-btn-border-color: var(--darkPurple);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--darkPurple-shade-1);
+    --bs-btn-hover-border-color: var(--darkPurple-shade-1);
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--darkPurple-shade-1);
+    --bs-btn-active-border-color: var(--darkPurple-shade-1);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--darkPurple);
+    --bs-btn-disabled-border-color: var(--darkPurple);
+}
+
+.open-blink {
+    content: ' ';
+    position: relative;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: 0 20px;
+    border-radius: 50%;
+    background-color: #4caf50;
+    -webkit-animation-name: heartBeat;
+    animation-name: heartBeat;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+
+    &:before {
+        content: ' ';
+        position: absolute;
+        top: -8px;
+        left: -8px;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        opacity: 0.1;
+        border-radius: 50%;
+        background-color: #4caf50;
+    }
+}

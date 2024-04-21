@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Productos libres de gluten">
+    <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="assets/images/favicon-16x16.png" sizes="16x16" />
+
+    <title>CeliFoods | Inicio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/inicio.css">
+</head>
+
+<body id="top">
+    <div class="container">
+        <nav class="navbar fixed-top navbar-expand-lg bg-white">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img id="navigation-logo" src="assets/images/logo.svg" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarToogler" aria-controls="navbarToogler" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a href="#" class="nav-link shopping-cart mobile">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </a>
+                <div class="collapse navbar-collapse" id="navbarToogler">
+                    <div class="me-auto"></div>
+                    <ul class="d-flex navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item desktop">
+                            <a href="#" class="nav-link">
+                                <i class="fa-solid fa-basket-shopping"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <section id="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div id="visualHero" class="visual-container">
+                        <div class="rectangle">
+                            <div class="visual-logo-container">
+                                <img src="assets/images/logo.svg" alt="logo" class="visual-logo">
+                            </div>
+                            <div class="visual-image-container">
+                                <div class="hero-dish-img">
+                                    <img src="assets/images/hero-dish.svg" alt="hero-dish">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="hero-text">
+                        <div class="hero-title">
+                            <h1>
+                                disfruta la vida <span>sin</span> gluten
+                            </h1>
+                        </div>
+                        <p class="hero-description">
+                            En Celifoods, nos apasiona crear productos 
+                            de panadería y repostería sin gluten de la 
+                            más alta calidad y sabor excepcional.
+                        </p>
+                        <div class="free-shipping">
+                            <img src="assets/images/hero-freeshipping.svg" alt="transporte gratis">
+                            <p>Transporte Gratis en compras mayores a &#8353;20.000</p>
+                        </div>
+                        <div class="hero-cta-container">
+                            <button id="btn-ordenar" type="button" class="btn btn-primary">¡ORDENA YA!</button>
+                            <span class="open-blink"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="free-shipping mobile">
+                    <img src="assets/images/hero-freeshipping.svg" alt="transporte gratis">
+                    <p>Transporte Gratis en compras mayores a &#8353;20.000</p>
+                </div>
+                <div class="hero-cta-container mobile">
+                    <button id="btn-ordenar" type="button" class="btn btn-primary">¡ORDENA YA!</button>
+                    <span class="open-blink"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="hero-social-media">
+                    <p>
+                        Síguenos <a class="hero-social-icon" href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a class="hero-social-icon" href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a class="hero-social-icon" href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                        <a class="hero-social-icon" href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="arrow-container">
+                    <div class="down-arrow floating-arrow">
+                        <a href="#popular"><i class="fa-solid fa-circle-chevron-down"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="popular"></section>
+
+    <script src="assets/js/inicio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
