@@ -22,19 +22,25 @@
     .hero-social-media {
         margin-top: 100px;
         font-size: 18px;
-        animation: bounceInDown 1s ease-in-out;
+        display: none;
+        &.show {
+            display: initial;
+            animation: mostrar 1s ease-in-out;
+        }
+        &.hide {
+            display: none;
+            animation: ocultar 1s ease-in-out;
+        }
         .hero-social-icon {
-            margin-left: 4px;
-            margin-right: 4px;
+            margin-left: 8px;
+            margin-right: 8px;
             color: var(--darkPurple);
+            font-size: 32px;
         }
         @media screen and (max-width: 768px) {
             position: absolute;
             top: 300px;
             font-size: 16px;
-            p {
-                display: table-caption;
-            }
         }
     }
 
@@ -127,8 +133,10 @@
             }
         }
         @media screen and (max-width: 768px) {
+            margin-top: 40px;
             .hero-description {
                 font-size: 16px;
+                display: none;
             }
             .free-shipping {
                 display: none;
@@ -161,8 +169,15 @@
         }
         @media screen and (max-width: 768px) {
             h1 {
-                font-size: 22px;
+                font-size: 28px;
             }
+        }
+    }
+
+    .hero-description {
+        &.mobile {
+            display: block;
+            margin-top: 150px;
         }
     }
 
@@ -354,6 +369,12 @@
                 width: 100%;
             }
             
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .row.popular {
+            margin-top: 50px;
         }
     }
 }
