@@ -32,7 +32,7 @@ function updateBasketQuantity(quantity, nuevoProducto) {
         (acc, product) => acc + product.cantidad,
         0
     );
-    const qtyDisplayBadge = totalProducts > 9 ? '9+' : totalProducts.toString();
+    const qtyDisplayBadge = totalProducts > 9 ? '+9' : totalProducts.toString();
     if (window.innerWidth <= 991) {
         const basketElement = document.getElementById(
             "basket-menu-icon-qty-mobile"
