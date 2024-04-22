@@ -1,6 +1,8 @@
 function updateBasketQuantity(quantity, nuevoProducto) {
     let basketData = JSON.parse(localStorage.getItem("basket")) || [];
 
+    console.log(quantity, nuevoProducto)
+
     if (quantity >= 0 && nuevoProducto) {
         const existingProductIndex = basketData.findIndex(
             (product) => product.productId === nuevoProducto.productId
@@ -13,18 +15,21 @@ function updateBasketQuantity(quantity, nuevoProducto) {
                 basketData.push(nuevoProducto);
             }
         } else {
+            console.log('eliminando')
             basketData = basketData.filter(
                 (product) => product.productId !== nuevoProducto.productId
             );
         }
     }
 
+    console.log('basket ', basketData)
+
     const totalPrice = basketData.reduce(
         (acc, product) => acc + product.totalProducto,
         0
     );
 
-    if (quantity && nuevoProducto) {
+    if (quantity >= 0 && nuevoProducto) {
         localStorage.setItem("basket", JSON.stringify(basketData));
     }
 
@@ -32,21 +37,24 @@ function updateBasketQuantity(quantity, nuevoProducto) {
         (acc, product) => acc + product.cantidad,
         0
     );
+    const qtyDisplayBadge = totalProducts > 9 ? '9+' : totalProducts.toString();
     if (window.innerWidth <= 991) {
         const basketElement = document.getElementById(
             "basket-menu-icon-qty-mobile"
         );
-        basketElement.textContent = totalProducts.toString();
+        basketElement.textContent = qtyDisplayBadge;
     } else {
         const basketElement = document.getElementById(
             "basket-menu-icon-qty-desktop"
         );
-        basketElement.textContent = totalProducts.toString();
+        basketElement.textContent = qtyDisplayBadge;
     }
 
+    localStorage.setItem("totalPriceProducts", totalPrice);
+    localStorage.setItem("totalQtyProducts", totalProducts);
     console.log("Total price:", totalPrice);
 }
 
 window.addEventListener("load", () => {
     updateBasketQuantity();
-  });
+});
