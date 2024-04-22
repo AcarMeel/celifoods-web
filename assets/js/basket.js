@@ -1,7 +1,7 @@
 function updateBasketQuantity(quantity, nuevoProducto) {
     let basketData = JSON.parse(localStorage.getItem("basket")) || [];
 
-    if (quantity && nuevoProducto) {
+    if (quantity >= 0 && nuevoProducto) {
         const existingProductIndex = basketData.findIndex(
             (product) => product.productId === nuevoProducto.productId
         );

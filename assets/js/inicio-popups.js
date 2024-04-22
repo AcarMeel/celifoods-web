@@ -77,8 +77,12 @@ function verProductoClick(id) {
         );
 
         quantityInput?.addEventListener("change", function () {
-            const quantity = parseInt(this.value);
-
+            let quantity = parseInt(this.value);
+            if (isNaN(quantity)) {
+                quantity = 0;
+                quantityInput.value = "0";
+            }
+            console.log('Que es qty ', quantity)
             if (quantity < 0 || quantity > 5) {
                 quantityAlert.classList.remove("invisible");
             } else {
