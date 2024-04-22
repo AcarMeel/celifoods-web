@@ -1,4 +1,3 @@
-const jsonFilePath = "./assets/data/productos-populares.json";
 
 ["popular-purchase-1", "popular-purchase-2", "popular-purchase-3"].map(
     (btnId) => verProductoClick(btnId)

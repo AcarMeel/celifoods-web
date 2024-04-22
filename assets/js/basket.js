@@ -62,6 +62,33 @@ function updateInicioCartBtn() {
     });
 }
 
+['popular-add-cart-1', 'popular-add-cart-2', 'popular-add-cart-3']
+    .map(btnId => addItemFromCardCartBtn(btnId));
+
+function addItemFromCardCartBtn(id) {
+    document.getElementById(id).addEventListener("click", async function () {
+        const basketData = JSON.parse(localStorage.getItem("basket")) || [];
+        const productId = this.dataset.productId;
+        const nombreProducto = this.dataset.nombre;
+        const precioProducto = this.dataset.precio;
+        const response = await fetch(jsonFilePath);
+        const productos = await response.json();
+
+        const detalles = productos.find((p) => p.productId === productId);
+        const productFound = basketData.find(p => p.productId === productId);
+
+        const quantity = !productFound ? 1 : productFound.cantidad + 1;
+
+        updateBasketQuantity(quantity, {
+            nombreProducto,
+            ...detalles,
+            cantidad: quantity,
+            precio: precioProducto,
+            totalProducto: parseFloat(precioProducto) * quantity,
+        });
+    });
+}
+
 window.addEventListener("load", () => {
     updateBasketQuantity();
     updateInicioCartBtn();
