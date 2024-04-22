@@ -15,6 +15,10 @@ function verProductoClick(id) {
         const productos = await response.json();
 
         const detalles = productos.find((p) => p.productId === productId);
+        let basketData = JSON.parse(localStorage.getItem("basket")) || [];
+
+        const findProductInBasket = basketData.find(p => p.productId === productId);
+        const productQtyValue = findProductInBasket ? findProductInBasket.cantidad.toString() : "0";
 
         Swal.fire({
             html: `<div class="product-detail-view">
@@ -35,7 +39,7 @@ function verProductoClick(id) {
                                 <div class="col-3">
                                     <div class="">
                                         <label for="addQuantityViewDetail" class="form-label">Cantidad</label>
-                                        <input type="number" value="0" min="0" max="5" class="form-control qty" id="addQuantityViewDetail">
+                                        <input type="number" value="${productQtyValue}" min="0" max="5" class="form-control qty" id="addQuantityViewDetail">
                                     </div>
                                 </div>
                                 <div class="col mt-4">

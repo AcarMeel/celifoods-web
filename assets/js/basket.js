@@ -1,8 +1,6 @@
 function updateBasketQuantity(quantity, nuevoProducto) {
     let basketData = JSON.parse(localStorage.getItem("basket")) || [];
 
-    console.log(quantity, nuevoProducto)
-
     if (quantity >= 0 && nuevoProducto) {
         const existingProductIndex = basketData.findIndex(
             (product) => product.productId === nuevoProducto.productId
@@ -15,14 +13,11 @@ function updateBasketQuantity(quantity, nuevoProducto) {
                 basketData.push(nuevoProducto);
             }
         } else {
-            console.log('eliminando')
             basketData = basketData.filter(
                 (product) => product.productId !== nuevoProducto.productId
             );
         }
     }
-
-    console.log('basket ', basketData)
 
     const totalPrice = basketData.reduce(
         (acc, product) => acc + product.totalProducto,
@@ -52,7 +47,6 @@ function updateBasketQuantity(quantity, nuevoProducto) {
 
     localStorage.setItem("totalPriceProducts", totalPrice);
     localStorage.setItem("totalQtyProducts", totalProducts);
-    console.log("Total price:", totalPrice);
 }
 
 window.addEventListener("load", () => {
