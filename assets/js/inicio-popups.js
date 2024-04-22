@@ -24,7 +24,7 @@ function verProductoClick(id) {
             html: `<div class="product-detail-view">
             <div class="container">
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-lg-3">
                         <img class="product-detail-view-image" src="${detalles?.imagen}" alt="producto">
                     </div>
                     <div class="col product-detail-view-text">
@@ -36,7 +36,7 @@ function verProductoClick(id) {
                         <p class="product-detail-view-legend"><small><i class="fa-solid fa-heart-circle-check"></i> Hay existencias</small></p>
                         <div class="product-detail-view-input">
                             <div class="row add-action">
-                                <div class="col-3">
+                                <div class="col-lg-3">
                                     <div class="">
                                         <label for="addQuantityViewDetail" class="form-label">Cantidad</label>
                                         <input type="number" value="${productQtyValue}" min="0" max="5" class="form-control qty" id="addQuantityViewDetail">
@@ -47,7 +47,7 @@ function verProductoClick(id) {
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                <div class="alert alert-danger quantity-alert invisible" role="alert">
+                                <div class="alert alert-danger quantity-alert d-none" role="alert">
                                     Favor ingresar al menos un producto. Solo 5 productos por cliente.
                                 </div>
                             </div>
@@ -87,9 +87,9 @@ function verProductoClick(id) {
                 quantityInput.value = "0";
             }
             if (quantity < 0 || quantity > 5) {
-                quantityAlert.classList.remove("invisible");
+                quantityAlert.classList.remove("d-none");
             } else {
-                quantityAlert.classList.add("invisible");
+                quantityAlert.classList.add("d-none");
                 setTimeout(() => {
                     updateBasketQuantity(quantity, {
                         nombreProducto,
