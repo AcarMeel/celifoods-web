@@ -41,7 +41,10 @@
 
 .nav-link.shopping-cart.mobile {
     display: none;
-    font-size: 32px;
+    i.fa-solid.fa-basket-shopping {
+        font-size: 32px;
+    }
+    
     @media screen and (max-width: 991px) {
         display: block;
     }
