@@ -1,20 +1,22 @@
-const jsonFilePath = './assets/data/productos-populares.json';
+const jsonFilePath = "./assets/data/productos-populares.json";
+const basket = document.getElementById("basket-menu-icon-qty");
 
-
-['popular-purchase-1', 'popular-purchase-2', 'popular-purchase-3'].map(btnId => verProductoClick(btnId));
+["popular-purchase-1", "popular-purchase-2", "popular-purchase-3"].map(
+    (btnId) => verProductoClick(btnId)
+);
 
 function verProductoClick(id) {
-    document.getElementById(id).addEventListener('click', async function() {
+    document.getElementById(id).addEventListener("click", async function () {
         const productId = this.dataset.productId;
         const nombreProducto = this.dataset.nombre;
         const precioProducto = `₡${this.dataset.precio}`;
         const precioProductoSinFormato = `${this.dataset.precio}`;
-        
+
         const response = await fetch(jsonFilePath);
         const productos = await response.json();
 
-        const detalles = productos.find(p => p.productId === productId);
-    
+        const detalles = productos.find((p) => p.productId === productId);
+
         Swal.fire({
             html: `<div class="product-detail-view">
             <div class="container">
@@ -34,11 +36,16 @@ function verProductoClick(id) {
                                 <div class="col-3">
                                     <div class="">
                                         <label for="addQuantityViewDetail" class="form-label">Cantidad</label>
-                                        <input type="number" value="1" class="form-control qty" id="addQuantityViewDetail">
+                                        <input type="number" value="0" min="0" max="5" class="form-control qty" id="addQuantityViewDetail">
                                     </div>
                                 </div>
                                 <div class="col mt-4">
-                                    <button id="popup-view-detail-add-cart" type="button" class="btn btn-warning cart popup-view-detail-add-cart" data-nombre="${nombreProducto}" data-precio="${precioProductoSinFormato}"><i class="fa-solid fa-basket-shopping"></i> Agregar</button>
+                                    <button id="popup-view-detail-remove-cart" type="button" class="btn btn-danger cart popup-view-detail-remove-cart" data-nombre="${nombreProducto}" data-precio="${precioProductoSinFormato}"><i class="fa-solid fa-trash-can"></i></button>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="alert alert-danger quantity-alert invisible" role="alert">
+                                    Favor ingresar al menos un producto. Solo 5 productos por cliente.
                                 </div>
                             </div>
                         </div>
@@ -60,8 +67,37 @@ function verProductoClick(id) {
                 </div>
             </div>
         </div>`,
-            confirmButtonText: 'Cerrar',
-            width: '960px'
+            confirmButtonText: "Cerrar",
+            width: "960px",
+        });
+
+        const quantityInput = document.getElementById("addQuantityViewDetail");
+        const quantityAlert = document.querySelector(".quantity-alert");
+        const removeCartButton = document.getElementById("popup-view-detail-remove-cart");
+
+        quantityInput?.addEventListener("change", function () {
+            const quantity = parseInt(this.value);
+
+            if (quantity < 0 || quantity > 5) {
+                quantityAlert.classList.remove("invisible");
+            } else {
+                quantityAlert.classList.add("invisible");
+                setTimeout(() => {
+                    updateBasketQuantity(quantity);
+                }, 10);
+            }
+        });
+
+        removeCartButton?.addEventListener("click", function() {
+            quantityInput.value = "0";
+            setTimeout(() => {
+                updateBasketQuantity("0");
+            }, 10);
         });
     });
+}
+
+function updateBasketQuantity(quantity) {
+    basket.textContent = quantity.toString();
+    console.log(basket)
 }

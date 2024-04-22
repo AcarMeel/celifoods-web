@@ -114,7 +114,7 @@ h1 {
     text-align: left !important;
 }
 
-#basket-menu-icon-qty {
+/* #basket-menu-icon-qty {
     display: initial;
     visibility: hidden;
     transition: visibility 0.2s ease-in-out;
@@ -122,4 +122,4 @@ h1 {
 
 #basket-menu-icon-qty:not(:empty) {
     visibility: visible;
-}
+} */
