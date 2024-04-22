@@ -1,5 +1,4 @@
 const jsonFilePath = "./assets/data/productos-populares.json";
-const basket = document.getElementById("basket-menu-icon-qty");
 
 ["popular-purchase-1", "popular-purchase-2", "popular-purchase-3"].map(
     (btnId) => verProductoClick(btnId)
@@ -98,6 +97,11 @@ function verProductoClick(id) {
 }
 
 function updateBasketQuantity(quantity) {
-    basket.textContent = quantity.toString();
-    console.log(basket)
+    if (window.innerWidth <= 991) {
+        const basketElement = document.getElementById("basket-menu-icon-qty-mobile");
+        basketElement.textContent = quantity.toString();
+    } else {
+        const basketElement = document.getElementById("basket-menu-icon-qty-desktop");
+        basketElement.textContent = quantity.toString();
+    }
 }
