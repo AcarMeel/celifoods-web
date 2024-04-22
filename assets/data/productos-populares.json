@@ -1,0 +1,30 @@
+[
+    {
+      "productId": "1",
+      "ingredientes": "Harina de avena, azúcar, aceite vegetal, huevos, vainilla",
+      "alergenos": "Contiene huevo",
+      "presentacion": "Paquete de 200g",
+      "vidaUtil": "6 meses",
+      "conservacion": "Guardar en un lugar fresco y seco",
+      "imagen": "assets/images/popular_1.svg"
+    },
+    {
+      "productId": "2",
+      "ingredientes": "Harina de arroz, almidón de maíz, agua, levadura, sal",
+      "alergenos": "Ninguno",
+      "presentacion": "Bolsa de 400g",
+      "vidaUtil": "5 días",
+      "conservacion": "Conservar en bolsa hermética",
+      "imagen": "assets/images/popular_2.svg"
+    },
+    {
+      "productId": "3",
+      "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
+      "alergenos": "Contiene sésamo.",
+      "presentacion": "Bowl.",
+      "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
+      "conservacion": "Guardar en la nevera",
+      "imagen": "assets/images/popular_3.svg"
+    }
+  ]
+  

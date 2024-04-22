@@ -8,7 +8,8 @@
     src: url('../fonts/Metropolis-Medium.otf') format('opentype');
 }
 
-body, html {
+body,
+html {
     font-family: 'Metropolis';
     -webkit-text-size-adjust: 100%;
     font-size: 1rem;
@@ -62,7 +63,7 @@ h1 {
     --bs-btn-hover-color: #000;
     --bs-btn-hover-bg: #ffca2c;
     --bs-btn-hover-border-color: #ffc720;
-    --bs-btn-focus-shadow-rgb: 217,164,6;
+    --bs-btn-focus-shadow-rgb: 217, 164, 6;
     --bs-btn-active-color: #000;
     --bs-btn-active-bg: #ffcd39;
     --bs-btn-active-border-color: #ffc720;
@@ -106,4 +107,19 @@ h1 {
         border-radius: 50%;
         background-color: #4caf50;
     }
+}
+
+.swal2-content {
+    color: var(--black) !important;
+    text-align: left !important;
+}
+
+#basket-menu-icon-qty {
+    display: initial;
+    visibility: hidden;
+    transition: visibility 0.2s ease-in-out;
+}
+
+#basket-menu-icon-qty:not(:empty) {
+    visibility: visible;
 }
