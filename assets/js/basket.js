@@ -1,7 +1,11 @@
+const toastTrigger = document.getElementById('toastNotificationCartUpdate');
+const toast = new bootstrap.Toast(toastTrigger);
+
 function updateBasketQuantity(quantity, nuevoProducto) {
     let basketData = JSON.parse(localStorage.getItem("basket")) || [];
+    const hasItems =  quantity >= 0 && nuevoProducto;
 
-    if (quantity >= 0 && nuevoProducto) {
+    if (hasItems) {
         const existingProductIndex = basketData.findIndex(
             (product) => product.productId === nuevoProducto.productId
         );
@@ -24,7 +28,7 @@ function updateBasketQuantity(quantity, nuevoProducto) {
         0
     );
 
-    if (quantity >= 0 && nuevoProducto) {
+    if (hasItems) {
         localStorage.setItem("basket", JSON.stringify(basketData));
     }
 
@@ -49,6 +53,11 @@ function updateBasketQuantity(quantity, nuevoProducto) {
     localStorage.setItem("totalQtyProducts", totalProducts);
 
     updateInicioCartBtn();
+
+    if (hasItems) {
+        toast.show();
+    }
+    
 }
 
 function updateInicioCartBtn() {
@@ -88,6 +97,11 @@ function addItemFromCardCartBtn(id) {
         });
     });
 }
+
+
+toastTrigger.addEventListener('click', () => {
+    toast.hide()
+});
 
 window.addEventListener("load", () => {
     updateBasketQuantity();
