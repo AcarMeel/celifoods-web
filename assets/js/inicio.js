@@ -21,9 +21,12 @@ document.addEventListener("DOMContentLoaded", function() {
         // }
     });
 
-    document.getElementById('btn-ordenar').addEventListener('click', function() {
-        window.location.href = 'productos.html';
-    }); 
+    ['btn-ordenar', 'btn-ordenar-2'].map(btnId => {
+        document.getElementById(btnId).addEventListener('click', function() {
+            window.location.href = 'productos.html';
+        }); 
+    })
+    
 
     
     const timerId2 = setTimeout(() => {
