@@ -424,6 +424,13 @@
             width: 100%;
             height: auto;
         }
+
+        @media screen and (max-width: 991px) {
+            height: 190px;
+            img {
+                max-width: 300px;
+            }
+        }
     }
 
     .mejor-texto {
@@ -440,7 +447,7 @@
 }
 
 #porque-nosotros {
-    margin-top: 100px;
+    margin: 100px 0;
     h1 {
         text-transform: uppercase;
         letter-spacing: 2px;
