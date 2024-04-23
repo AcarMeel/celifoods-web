@@ -438,3 +438,17 @@
         margin-top: 40px;
     }
 }
+
+#porque-nosotros {
+    margin-top: 100px;
+    h1 {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 57px;
+        line-height: 1.5;
+
+        span {
+            color: var(--darkPurple);
+        }
+    }
+}
