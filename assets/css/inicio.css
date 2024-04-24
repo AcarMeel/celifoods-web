@@ -344,6 +344,7 @@
 
         .btn.btn-warning.cart {
             color: var(--black);
+            position: relative;
         }
 
         .btn.btn-success.cart {
@@ -377,6 +378,14 @@
             }
             
         }
+    }
+
+    #popular-add-cart-1-qty,
+    #popular-add-cart-2-qty,
+    #popular-add-cart-3-qty {
+        position: absolute;
+        top: -14px;
+        right: -8px;
     }
 }
 

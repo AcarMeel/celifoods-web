@@ -66,8 +66,10 @@ function updateInicioCartBtn() {
     .map(btnId => {
         const element = document.getElementById(btnId);
         const productId = element.dataset.productId;
+        const badge = document.getElementById(`${btnId}-qty`);
         const productFound = basketData.find(p => p.productId === productId);
         element.disabled = productFound && productFound.cantidad >= 5;
+        badge.textContent = productFound ? productFound.cantidad.toString() : "0";
     });
 }
 
