@@ -277,12 +277,13 @@
         text-align: center;
     }
 
-    .row.popular {
-        margin-top: 70px;
-    }
-
-    .col.popular {
-        margin-top: 6rem;
+    .popular-products {
+        margin-top: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 40px;
     }
 
     .product-showcase-card {
@@ -291,6 +292,7 @@
         height: 467px;
         padding: 24px;
         box-sizing: border-box;
+        margin-bottom: 100px;
 
         background-color: var(--black);
         color: var(--white);
@@ -374,12 +376,6 @@
                 width: 100%;
             }
             
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        .row.popular {
-            margin-top: 50px;
         }
     }
 }
