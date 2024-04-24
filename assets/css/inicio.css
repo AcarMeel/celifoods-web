@@ -496,6 +496,61 @@
     }
 }
 
+#testimonios {
+    margin: 100px 0;
+    padding-bottom: 100px;
+    background-image: url("../images/pattern-bg.svg");
+    h1 {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 57px;
+        line-height: 1.5;
+
+        span {
+            color: var(--darkPurple);
+        }
+    }
+
+    .testimonios {
+        margin-top: 200px;
+    }
+
+    .testimonio {
+        background-color: var(--darkBlue);
+        color: var(--white);
+        border-radius: 50px;
+        max-width: 400px;
+        width: 100%;
+        min-height: 400px;
+        padding: 0 32px 24px 32px;
+        margin-bottom: 200px;
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            letter-spacing: 1px;
+        }
+        p > i {
+            color: var(--yellow);
+            font-size: 32px;
+        }
+        p.testimonio-nombre {
+            color: var(--yellow);
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+
+    .testimonio-img {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 24px;
+
+        img {
+            margin-top: -82px;
+        }
+    }
+}
+
 .slick-dots {
     bottom: 20px; 
 }
