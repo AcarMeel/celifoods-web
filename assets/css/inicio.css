@@ -278,7 +278,7 @@
     }
 
     .row.popular {
-        margin-top: 150px;
+        margin-top: 70px;
     }
 
     .col.popular {
@@ -341,7 +341,7 @@
         }
 
         .btn.btn-warning.cart {
-            color: var(--white);
+            color: var(--black);
         }
 
         .btn.btn-success.cart {
