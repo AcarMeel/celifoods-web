@@ -17,3 +17,14 @@ $(document).ready(function () {
     arrows: false,
   });
 });
+
+
+window.addEventListener('scroll', function() {
+    var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollPosition > 600) { 
+        document.querySelector('.btn-scroll-top').classList.add('visible');
+    } else {
+        document.querySelector('.btn-scroll-top').classList.remove('visible');
+    }
+});

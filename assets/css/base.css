@@ -114,12 +114,23 @@ h1 {
     text-align: left !important;
 }
 
-/* #basket-menu-icon-qty {
-    display: initial;
-    visibility: hidden;
-    transition: visibility 0.2s ease-in-out;
+.btn-scroll-top {
+    font-size: 50px;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    border: none;
+    background-color: transparent;
 }
 
-#basket-menu-icon-qty:not(:empty) {
-    visibility: visible;
-} */
+.btn-scroll-top i {
+    color: var(--darkPurple);
+}
+
+@media (min-height: 600px) {
+    .btn-scroll-top.visible {
+        display: block;
+    }
+}
