@@ -621,6 +621,32 @@
 }
 
 
+#siguenos {
+    background-color: var(--lightPurple);
+    color: var(--white);
+    width: 100%;
+    padding: 42px 16px;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .siguenos-texto,
+    p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+    p {
+        font-size: 32px;
+        margin: 0;
+        a {
+            color: var(--white);
+        }
+    }
+}
+
 
 
 .slick-dots {
