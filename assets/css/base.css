@@ -126,7 +126,7 @@ h1 {
 }
 
 .btn-scroll-top i {
-    color: var(--black);
+    color: var(--bs-blue);
 }
 
 @media (min-height: 600px) {
