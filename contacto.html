@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,18 +10,21 @@
 
     <title>CeliFoods | Contacto</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <!-- Hacer link del css de esta pagina -->
+    <link rel="stylesheet" href="assets/css/contacto.css">
 </head>
+
 <body id="top">
+    <a href="#top" class="btn-scroll-top">
+        <i class="fa-solid fa-circle-chevron-up"></i>
+    </a>
     <div class="container">
         <nav class="navbar fixed-top navbar-expand-lg bg-white">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
                     <img id="navigation-logo" src="assets/images/logo.svg" alt="logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarToogler" aria-controls="navbarToogler" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToogler"
+                    aria-controls="navbarToogler" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <a href="#" class="nav-link shopping-cart mobile">
@@ -53,9 +57,94 @@
                 </div>
             </div>
         </nav>
+        <section id="contacto">
+            <div class="contacto-rectangle">
+                <h1>
+                    ponte en <span>contacto</span>
+                </h1>
+            </div>
+            <div class="contacto-form-container">
+                <div class="contacto-form">
+                    <div class="contact-form-fields">
+                        <span class="required">*</span><span class="text-mute">Campos obligatorios</span>
+                        <div class="my-3">
+                            <label for="contacto-nombre" class="form-label"><span class="required">*</span>Nombre Completo</label>
+                            <input required type="email" class="form-control" id="contacto-nombre" placeholder="Jane Doe">
+                        </div>
+                        <div class="my-3">
+                            <label for="contacto-correo" class="form-label"><span class="required">*</span>Correo electrónico</label>
+                            <input required type="email" class="form-control" id="contacto-correo" placeholder="correo@ejemplo.com">
+                        </div>
+                        <div class="my-3">
+                            <label for="contacto-tel" class="form-label"><span class="required">*</span>Teléfono</label>
+                            <input required type="email" class="form-control" id="contacto-tel" placeholder="11111111">
+                        </div>
+                        <div class="my-3">
+                            <label for="contacto-msj" class="form-label"><span class="required">*</span>Mensaje</label>
+                            <textarea required class="form-control" id="contacto-msj" rows="3"></textarea>
+                        </div>
+                        <button id="contacto-form-enviar" class="btn btn-success">enviar</button>
+                    </div>
+                    <div class="mapa">
+                        <img src="assets/images/map.png" alt="mapa">
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-    
-    
+
+    <footer id="footer">
+        <div class="container">
+            <div class="logo-footer">
+                <img src="assets/images/logo.svg" alt="logo">
+            </div>
+            <div class="group-links">
+                <div class="group-link">
+                    <h3>acerca de</h3>
+                    <p>
+                        Celifoods nace por el deseo de
+                        crear productos libres de
+                        gluten, deliciosos y de alta
+                        calidad, desde postres
+                        individuales hasta productos
+                        tradicionales costarricenses
+                        para el disfrute de todas las
+                        personas.
+                    </p>
+                </div>
+                <div class="group-link">
+                    <h3>recursos</h3>
+                    <ul>
+                        <li><a href="">inicio</a></li>
+                        <li><a href="">productos</a></li>
+                        <li><a href="">blog</a></li>
+                        <li><a href="">nosotros</a></li>
+                        <li><a href="">contacto</a></li>
+                    </ul>
+                </div>
+                <div class="group-link">
+                    <h3>más información</h3>
+                    <div class="mb-3">
+                        <label for="footer-email" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="footer-email" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="footer-msg" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="footer-msg" rows="3"></textarea>
+                    </div>
+                    <button id="footer-enviar" class="btn btn-success">enviar</button>
+                </div>
+            </div>
+            <hr>
+            <p class="copy text-center">
+                &copy;2024 Celifoods. Todos los derechos reservados. | contacto@celifoods.com
+            </p>
+            <p class="country text-center">
+                <img src="assets/images/cr_flag.png" alt="cr flag">
+                Costa Rica
+            </p>
+        </div>
+    </footer>
     <script src="assets/js/cdn/jquery-3.6.0.min.js"></script>
     <script src="assets/js/cdn/slick.min.js"></script>
     <script src="assets/js/cdn/aos.js"></script>
@@ -65,6 +154,7 @@
     <script src="assets/js/celifoods.js"></script>
 
     <!-- Hacer link del js de esta pagina -->
-    
+
 </body>
+
 </html>
