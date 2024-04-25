@@ -580,7 +580,7 @@
         width: 100%;
 
         p {
-            color: var(--white);
+            color: var(--black);
             font-size: 32px;
             margin: 0;
         }
@@ -594,7 +594,7 @@
     .iniciemos-bottom-text {
         margin-top: 24px;
         font-size: 32px;
-        color: var(--white);
+        color: var(--black);
     }
 
     .iniciemos-img-container {

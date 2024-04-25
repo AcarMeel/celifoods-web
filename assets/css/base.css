@@ -40,18 +40,18 @@ h1 {
 }
 
 .btn-success {
-    --bs-btn-color: #fff;
+    --bs-btn-color: var(--black);
     --bs-btn-bg: var(--green);
     --bs-btn-border-color: var(--green);
-    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-color: var(--white);
     --bs-btn-hover-bg: #157347;
     --bs-btn-hover-border-color: #146c43;
     --bs-btn-focus-shadow-rgb: 60, 153, 110;
-    --bs-btn-active-color: #fff;
+    --bs-btn-active-color: var(--black);
     --bs-btn-active-bg: #146c43;
     --bs-btn-active-border-color: #13653f;
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-color: var(--black);
     --bs-btn-disabled-bg: var(--green);
     --bs-btn-disabled-border-color: var(--green);
 }
@@ -126,7 +126,7 @@ h1 {
 }
 
 .btn-scroll-top i {
-    color: var(--darkPurple);
+    color: var(--black);
 }
 
 @media (min-height: 600px) {
