@@ -20,6 +20,10 @@
                 color: var(--yellow);
             }
         }
+
+        @media screen and (max-width: 991px) {
+            font-size: 32px;
+        }
     }
 
     .contacto-form-container {
