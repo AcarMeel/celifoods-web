@@ -1,6 +1,5 @@
 #banner {
     margin-top: 100px;
-    
 }
 .banner-texto{
     top: 30%;
@@ -26,14 +25,48 @@
     align-items: center;
     text-align: center;
     margin-top: -7%;
+
+    .informacion-boxes{
+        padding-top: 0px;
+        padding-right: 25px;
+        padding-left: 25px;
+        padding-bottom: 0px;
+        margin: 30px;
+    
+        .iconografia{
+            margin-bottom: 20px;
+        }
+    }
 }
-.informacion-boxes{
-    padding-top: 0px;
-    padding-right: 25px;
-    padding-left: 25px;
-    padding-bottom: 0px;
-    margin: 30px;
+h2{
+    margin-top: 50px;
+    text-align: center;
+    span{
+        color: var(--yellow);
+    }
 }
-.iconografia{
-    margin-bottom: 20px;
+
+.products-card{
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 30px;
+    width: 300px;
+    height: 400px;
+    display: block;
+    text-align: center;
+    position: relative;
+    margin-top: 130px;
 }
+.card-dish{
+    position: absolute;
+    top: -80px;
+    left: 40px;
+}
+.products-info{
+    position: absolute;
+    top: 170px;
+}
+
+
+
+

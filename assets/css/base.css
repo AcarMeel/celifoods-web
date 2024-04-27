@@ -7,9 +7,10 @@
     font-family: 'Metropolis';
     src: url('../fonts/Metropolis-Medium.otf') format('opentype');
 }
+
 @font-face {
     font-family: 'Myanmar Text';
-    src: url('../fonts/mmrtextb.ttf') format(truetype);
+    src: url('../fonts/mmrtextb.ttf') format('truetype');
 }
 
 body,
