@@ -7,6 +7,10 @@
     font-family: 'Metropolis';
     src: url('../fonts/Metropolis-Medium.otf') format('opentype');
 }
+@font-face {
+    font-family: 'Myanmar Text';
+    src: url('../fonts/mmrtextb.ttf') format(truetype);
+}
 
 body,
 html {
@@ -18,6 +22,10 @@ html {
 
 h1 {
     font-family: 'QuatroBlack';
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Myanmar Text';
 }
 
 /* h2, h3, etc Myanmar* */
