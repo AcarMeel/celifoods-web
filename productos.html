@@ -102,17 +102,24 @@
     </section>
 
     <section id="new-dish">
+        <h2 data-aos="fade-down">Lo <span>más</span> nuevo</h2>
         <div class="container">
-            <h2 data-aos="fade-down">Lo <span>más</span> nuevo</h2>
             <div class="products">
                 <div class="products-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card-dish">
-                        <img src="assets/images/PlatilloVerde.svg">
-                    </div>
+                    <img class="img-dish" src="assets/images/PlatilloVerde.svg">
                     <div class="products-info">
                          <h5 class="products-title">Platillo Verde</h5>
                          <p class="products-text">Contiene arroz preparado junto con deliciosas verduras salteadas con extra sabor</p>
                          <p class="products-price">₡4.650</p>
+                    </div>
+                    <div class="products-cta">
+                        <button type="button" class="btn btn-success" data-product-id="4"
+                            data-nombre="Platillo Verde" data-precio="4650">Comprar</button>
+                        <button data-bs-toggle="tooltip" data-bs-title="Agregar al carrito"
+                            type="button" class="btn btn-warning cart" data-product-id="4"
+                            data-nombre="Platillo Verde" data-precio="4650">
+                            <span id="products-add-cart-4-qty" class="badge text-bg-danger">0</span>
+                            <i class="fa-solid fa-basket-shopping"></i></button>
                     </div>
                 </div>
             </div>

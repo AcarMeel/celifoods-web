@@ -39,34 +39,54 @@
     }
 }
 h2{
-    margin-top: 50px;
+    margin-top: 60px;
     text-align: center;
     span{
         color: var(--yellow);
     }
 }
-
-.products-card{
-    background-color: var(--black);
-    color: var(--white);
-    border-radius: 30px;
-    width: 300px;
-    height: 400px;
-    display: block;
-    text-align: center;
+.products{
+    display: inline-flex;
     position: relative;
-    margin-top: 130px;
+    margin-top: 100px;
+
+    .products-card{
+        background-color: var(--black);
+        border-radius: 20px;
+        position: relative;
+        text-align: center;
+        width: 300px;
+        height: 430px;
+    
+        .img-dish{
+            position: absolute;
+            top: -70px;
+            left: 38px;
+        }
+    }
+
 }
-.card-dish{
-    position: absolute;
-    top: -80px;
-    left: 40px;
-}
+
 .products-info{
     position: absolute;
-    top: 170px;
+    bottom: 60px;
+    width: 100%;
+    padding: 20px;
+    color: var(--white);
+
+    .products-price{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
 }
 
+.products-cta{
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    display: flex;
+    gap: 32px;
+}
 
 
 
