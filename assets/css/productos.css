@@ -1,6 +1,12 @@
 #banner {
     margin-top: 100px;
 }
+body{
+    background-image: url("../images/pattern-bg.svg");
+    background-size: cover;
+    background-repeat: repeat;
+    width: 100%;
+}
 .banner-texto{
     top: 30%;
     position: absolute;
