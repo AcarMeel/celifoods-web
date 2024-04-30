@@ -45,11 +45,14 @@ body{
     }
 }
 h2{
-    margin-top: 60px;
     text-align: center;
     span{
         color: var(--yellow);
     }
+}
+#new-dish{
+    margin-top: 60px;
+    margin-bottom: 100px;
 }
 .products{
     display: inline-flex;
@@ -80,22 +83,27 @@ h2{
     padding: 20px;
     color: var(--white);
 
+
+    .products-text{
+        font-family: 'Metropolis Thin';
+    }
     .products-price{
-        font-size: 1.5rem;
-        font-weight: bold;
+        
+        font-size: 1.4rem;
+        font-weight: 800;
     }
 }
 
 .products-cta {
     position: absolute;
     bottom: 30px;
-    left: 40px;
+    left: 28px;
     display: flex;
-    gap: 32px;
+    gap: 20px;
 
     .btn-comprar {
-        padding-left: 24px;
-        padding-right: 24px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .btn.btn-warning.cart {
@@ -109,6 +117,31 @@ h2{
     }
   
 }
+#visitanos{
+    display: flex;
+    text-align: center;
+}
+.visitanos-titulo{
+    position: absolute;
+    color: var(--white);
+    text-shadow: 0px 9px 12.6px rgba(0, 0, 0, 0.38);
+    line-height: normal;
+    letter-spacing: 0.2625rem;
+    left: 11%;
+    margin-top: 14%;
+}
+.visitanos-texto{
+    position: absolute;
+    color: var(--white);
+    text-shadow: 0px 9px 12.3px #000;
+    font-size: 1.5rem;
+    line-height: normal;
+    font-weight: bold;
+    letter-spacing: 0.15313rem;
+    left: 13%;
+    margin-top: 22%;
+}
+
 
 
 
