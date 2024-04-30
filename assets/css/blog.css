@@ -1,0 +1,16 @@
+.blog-body {
+    background-image: url("../images/pattern-bg.svg");
+}
+
+#blog-banner {
+    background-image: url("../images/blog-banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    background-position: center center;
+}
+
+#blog-list {
+    height: 100vh;
+}

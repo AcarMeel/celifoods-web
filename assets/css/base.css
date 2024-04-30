@@ -5,7 +5,20 @@
 
 @font-face {
     font-family: 'Metropolis';
-    src: url('../fonts/Metropolis-Medium.otf') format('opentype');
+    src: 
+        url('../fonts/Metropolis-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Metropolis Thin';
+    src: 
+        url('../fonts/metropolis.thin.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Metropolis Regular';
+    src: 
+        url('../fonts/metropolis.regular.otf') format('opentype');
 }
 
 @font-face {
@@ -29,7 +42,6 @@ h2, h3, h4, h5, h6 {
     font-family: 'Myanmar Text';
 }
 
-/* h2, h3, etc Myanmar* */
 
 textarea {
     resize: none;

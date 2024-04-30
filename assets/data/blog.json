@@ -1,0 +1,44 @@
+[
+    {
+        "imagen": "assets/images/blog-01.png",
+        "id": 1,
+        "titulo": "¿Que es el Gluten?",
+        "tag": "información",
+        "descripcion": "El gluten es una proteína que se encuentra en la semilla de muchos cereales como son el trigo, cebada, centeno ......."
+    },
+    {
+        "imagen": "assets/images/blog-01.png",
+        "id": 2,
+        "titulo": "Biscotti de Almendra",
+        "tag": "recetas",
+        "descripcion": "Precalienta el horno a 180ºC con calor arriba y abajo y saca la bandeja del horno. En un bol pequeño, mezcla la ......"
+    },
+    {
+        "imagen": "assets/images/blog-01.png",
+        "id": 3,
+        "titulo": "Mufin de Chocolate",
+        "tag": "recetas",
+        "descripcion": "Su masa, esponjosa y ligera , es ideal para querer tomarlas en cualquier momento del día. Receta perfecta ......"
+    },
+    {
+        "imagen": "assets/images/blog-01.png",
+        "id": 4,
+        "titulo": "Pan de Granos y Semillas",
+        "tag": "recetas",
+        "descripcion": "Para preparar este sencillo y delicioso pan sin gluten de semillas podemos elegir las que más nos gusten: de lino, de sésamo ......."
+    },
+    {
+        "imagen": "assets/images/blog-01.png",
+        "id": 5,
+        "titulo": "¿Como nos daña el Gluten?",
+        "tag": "información",
+        "descripcion": "Se ha sabido que la sensibilidad al gluten puede causar síntomas tales como diarrea, fatiga, dolores de cabeza, depresión ........"
+    },
+    {
+        "imagen": "assets/images/blog-01.png",
+        "id": 6,
+        "titulo": "Queque de Zanahoria",
+        "tag": "recetas",
+        "descripcion": "Comenzamos preparando un molde desmoldable de 14-16 cm de diámetro y encendiendo el horno a 175 ºC para que ......."
+    }
+]
