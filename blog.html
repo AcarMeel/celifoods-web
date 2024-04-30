@@ -57,10 +57,33 @@
             </div>
         </nav>
     </div>
-    <header id="blog-banner"></header>
+    <header id="blog-banner">
+        <h1>blog</h1>
+    </header>
     <section id="blog-list">
-        
+        <div class="container">
+            <div class="blog-card-list">
+            </div>
+            <div class="blog-btn-container">
+                <button class="btn btn-primary text-center">seguir viendo</button>
+            </div>
+        </div>
     </section>
+    <template id="blog-card-template">
+        <a href="#" class="blog-card">
+          <img src="${imagen}" alt="Blog ${id}">
+          <div class="blog-card-tag-container">
+            <div class="blog-card-tag ${tag}">${tag}</div>
+          </div>
+          <div class="blog-card-text">
+            <h2>${titulo}</h2>
+            <p>
+              ${descripcion}
+            </p>
+          </div>
+        </a>
+      </template>
+      
     <footer id="footer">
         <div class="container">
             <div class="logo-footer">

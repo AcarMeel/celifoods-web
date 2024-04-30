@@ -3,14 +3,90 @@
 }
 
 #blog-banner {
-    background-image: url("../images/blog-banner.png");
+    margin-top: 100px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/blog-banner.png");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 400px;
+    height: 250px;
     background-position: center center;
+
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        text-transform: uppercase;
+        font-family: "QuatroBlack";
+        font-size: 62px;
+        margin: 0;
+        padding: 0;
+    }
 }
 
 #blog-list {
-    height: 100vh;
+    margin: 40px 0;
+
+    .blog-card-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .blog-btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .blog-card {
+        max-width: 320px;
+        width: 100%;
+        background-color: var(--white);
+        font-family: "Metropolis Regular";
+        border: 1px solid var(--gray);
+        text-decoration: none;
+        color: var(--black);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+        .blog-card-text {
+            padding: 16px;
+            margin-top: 16px;
+        }
+        .blog-card-tag-container {
+            position: relative;
+        }
+        .blog-card-tag {
+            &.info {
+                background-color: var(--darkBlue);
+                color: var(--white);
+            }
+            &.receta {
+                background-color: var(--yellow);
+                color: var(--black);
+            }
+            text-transform: uppercase;
+            text-align: center;
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 5px;
+            font-family: 'Metropolis';
+
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+        h2 {
+            font-size: 22px;
+            font-family: 'Metropolis';
+        }
+        img {
+            width: 100%;
+            margin-bottom: 24px;
+        }
+    }
 }
