@@ -53,6 +53,8 @@
     }
 
     .mapa {
+        max-width: 500px;
+        width: 100%;
         img {
             width: 100%;
             height: auto;
