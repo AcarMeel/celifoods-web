@@ -1,0 +1,22 @@
+@import url("./animaciones.css");
+
+#not-found {
+    margin-top: 100px;
+    padding: 50px 0;
+    background-image: url("../images/pattern-bg.svg");
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    img {
+        max-width: 200px;
+        width: 100%;
+    }
+
+    a, 
+    h1 {
+        margin: 32px 0;
+    }
+}

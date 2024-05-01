@@ -24,6 +24,7 @@ function createBlogCard(blogEntry) {
     blogCardTag.classList.add(tagStyleClass);
     blogCardHTML.querySelector('h2').textContent = blogEntry.titulo;
     blogCardHTML.querySelector('p').textContent = blogEntry.descripcion;
+    blogCardHTML.querySelector('a').href = `blog-detail.html?id=${blogEntry.id}`;
 
 
     blogCardList.appendChild(blogCardHTML);

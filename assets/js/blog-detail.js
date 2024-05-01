@@ -3,12 +3,21 @@ async function loadBlogDetails() {
     const blogId = urlParams.get('id');
     let blogItems = [];
 
-    const jsonFilePath = "./assets/data/blog.json";
-    const response = await fetch(jsonFilePath);
-    blogItems = await response.json();
+    try {
+        const jsonFilePath = "./assets/data/blog.json";
+        const response = await fetch(jsonFilePath);
+        blogItems = await response.json();
 
-    const blogItem = blogItems.find(blog => blog.id === +blogId);
-    createBlogDetail(blogItem)
+        const blogItem = blogItems.find(blog => blog.id === +blogId);
+
+        if (blogItem) {
+            createBlogDetail(blogItem);
+        } else {
+            window.location.href = "not-found.html";
+        }
+    } catch (error) {
+        console.error("Error fetching blog data:", error);
+    }
 }
 
 function createBlogDetail(blogEntry) {
