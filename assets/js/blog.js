@@ -1,6 +1,5 @@
 let blogItems = [];
 let initialItems = [];
-let displayedItems = 3;
 const blogCardList = document.querySelector('.blog-card-list');
 const loadMoreBtn = document.querySelector('.load-more-btn');
 const loader = document.querySelector('.loader');
@@ -39,8 +38,7 @@ loadMoreBtn.addEventListener('click', async () => {
   
     await new Promise(resolve => setTimeout(resolve, 500));
 
-    const additionalItems = blogItems.slice(displayedItems, displayedItems + 3);
-    displayedItems += 3;
+    const additionalItems = blogItems.slice(6, blogItems.length);
   
     additionalItems.forEach(blogItem => {
       createBlogCard(blogItem);
