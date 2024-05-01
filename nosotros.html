@@ -18,13 +18,13 @@
                 <a class="navbar-brand" href="index.html">
                     <img id="navigation-logo" src="assets/images/logo.svg" alt="logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarToogler" aria-controls="navbarToogler" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToogler"
+                    aria-controls="navbarToogler" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <a href="#" class="nav-link shopping-cart mobile">
                     <i class="fa-solid fa-basket-shopping"></i>
+                    <span id="basket-menu-icon-qty-mobile" class="badge text-bg-danger">0</span>
                 </a>
                 <div class="collapse navbar-collapse" id="navbarToogler">
                     <div class="me-auto"></div>
@@ -47,6 +47,7 @@
                         <li class="nav-item desktop">
                             <a href="#" class="nav-link">
                                 <i class="fa-solid fa-basket-shopping"></i>
+                                <span id="basket-menu-icon-qty-desktop" class="badge text-bg-danger">0</span>
                             </a>
                         </li>
                     </ul>
@@ -62,6 +63,7 @@
     <script src="assets/js/cdn/bootstrap.bundle.min.js"></script>
 
     <script src="assets/js/celifoods.js"></script>
+    <script src="assets/js/basket.js"></script>
 
     <!-- Hacer link del js de esta pagina -->
 </body>
