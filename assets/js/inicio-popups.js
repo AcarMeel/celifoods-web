@@ -10,7 +10,7 @@ function verProductoClick(id) {
         const precioProducto = `₡${this.dataset.precio}`;
         const precioProductoSinFormato = `${this.dataset.precio}`;
 
-        const response = await fetch(jsonFilePath);
+        const response = await fetch(jsonFilePathPopulares);
         const productos = await response.json();
 
         const detalles = productos.find((p) => p.productId === productId);

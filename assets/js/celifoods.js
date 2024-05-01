@@ -1,4 +1,4 @@
-const jsonFilePath = "./assets/data/productos-populares.json";
+const jsonFilePathPopulares = "./assets/data/productos-populares.json";
 
 const tooltipTriggerList = document.querySelectorAll(
   '[data-bs-toggle="tooltip"]'

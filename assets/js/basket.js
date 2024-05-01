@@ -84,7 +84,7 @@ function addItemFromCardCartBtn(id) {
             const productId = this.dataset.productId;
             const nombreProducto = this.dataset.nombre;
             const precioProducto = this.dataset.precio;
-            const response = await fetch(jsonFilePath);
+            const response = await fetch(jsonFilePathPopulares);
             const productos = await response.json();
     
             const detalles = productos.find((p) => p.productId === productId);

@@ -2,8 +2,8 @@ const productTemplate = document.getElementById('product-card-tpl');
 let productos = [];
 
 async function loadProducts() {
-    const jsonFilePath = "./assets/data/productos.json";
-    const response = await fetch(jsonFilePath);
+    const jsonFilePathProducts = "./assets/data/productos.json";
+    const response = await fetch(jsonFilePathProducts);
     productos = await response.json();
 
     productos.forEach(producto => {

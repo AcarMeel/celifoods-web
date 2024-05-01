@@ -8,8 +8,8 @@ async function loadBlogDetails() {
     const blogId = urlParams.get('id');
 
     try {
-        const jsonFilePath = "./assets/data/blog.json";
-        const response = await fetch(jsonFilePath);
+        const jsonFilePathBlog = "./assets/data/blog.json";
+        const response = await fetch(jsonFilePathBlog);
         blogItems = await response.json();
 
         blogItem = blogItems.find(blog => blog.id === +blogId);

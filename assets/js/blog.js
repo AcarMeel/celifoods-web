@@ -6,8 +6,8 @@ const loader = document.querySelector('.loader');
 const blogCardTemplate = document.getElementById('blog-card-template');
 
 async function loadBlogItems() {
-    const jsonFilePath = "./assets/data/blog.json";
-    const response = await fetch(jsonFilePath);
+    const jsonFilePathBlog = "./assets/data/blog.json";
+    const response = await fetch(jsonFilePathBlog);
     blogItems = await response.json();
     initialItems = blogItems.slice(0, 6);
 
