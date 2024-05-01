@@ -35,6 +35,7 @@ https://api.whatsapp.com/send/?phone=50689428070
 
 # Pendientes
 
+
 - blog.html 
     - imagenes
     - imagen trazo
@@ -42,15 +43,16 @@ https://api.whatsapp.com/send/?phone=50689428070
 - blog-detalles.html
     - imagen fecha
     - imagen circulos
-    
+    - contenido (lorem ipsum)
 
 - productos.html
     - agregar carrito
+    - comprar -> muestra otra pantalla
     - mostrar todos los productos
-    - ver mas
+    - responsive
 
 - carrito
-    - popup carrito
+    - popup carrito (todas las paginas)
     - popup compra
     - popup factura
     - ir a whatsapp
