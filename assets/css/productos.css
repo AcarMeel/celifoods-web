@@ -54,18 +54,22 @@ h2{
     margin-top: 60px;
     margin-bottom: 100px;
 }
-.products{
-    display: inline-flex;
+.products {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
     position: relative;
     margin-top: 100px;
 
-    .products-card{
+    .products-card {
         background-color: var(--black);
         border-radius: 20px;
         position: relative;
         text-align: center;
         width: 300px;
         height: 430px;
+        margin-bottom: 70px;
     
         .img-dish{
             position: absolute;

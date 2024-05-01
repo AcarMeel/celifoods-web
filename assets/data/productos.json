@@ -1,0 +1,142 @@
+[
+    {
+        "categoria": "new-dish",
+        "titulo1": "Platillos",
+        "titulo2": "nuevos",
+        "productos": [
+            {
+                "productId": 4,
+                "imagen": "assets/images/PlatilloVerde.svg",
+                "nombre": "Platillo Verde",
+                "descripcion": "Contiene arroz preparado junto con deliciosas verduras salteadas con extra sabor",
+                "precio": 4650
+            },
+            {
+                "productId": 5,
+                "imagen": "assets/images/PlatilloVerde.svg",
+                "nombre": "Pollo con garbanzos",
+                "descripcion": "Una sopa especial y llena de sabor de pollo, verduras varias y garbanzos. ",
+                "precio": 5200
+            },
+            {
+                "productId": 6,
+                "imagen": "assets/images/PlatilloVerde.svg",
+                "nombre": "Cheesecake",
+                "descripcion": "Disfruta un rico postre con una pastel de queso, jugoso y dulce, perfecto para compartir",
+                "precio": 13000
+            },
+            {
+                "productId": 7,
+                "imagen": "assets/images/PlatilloVerde.svg",
+                "nombre": "Pizza",
+                "descripcion": "Pizza familiar de 14 piezas con ingredientes naturales y masa libre de gluten, perfecta para la familia",
+                "precio": 13000
+            }
+        ]
+    },
+    {
+        "categoria": "comida-preparada",
+        "titulo1": "Comida",
+        "titulo2": "preparada",
+        "productos": [
+            {
+                "productId": 8,
+                "imagen": "assets/images/PlatilloVerde.svg",
+                "nombre": "Platillo Verde",
+                "descripcion": "Contiene arroz preparado junto con deliciosas verduras salteadas con extra sabor",
+                "precio": 4650
+            },
+            {
+                "productId": 9,
+                "imagen": "assets/images/PlatilloVerde.svg",
+                "nombre": "Pollo con garbanzos",
+                "descripcion": "Una sopa especial y llena de sabor de pollo, verduras varias y garbanzos. ",
+                "precio": 5200
+            },
+            {
+                "productId": 10,
+                "imagen": "assets/images/PlatilloVerde.svg",
+                "nombre": "Cheesecake",
+                "descripcion": "Disfruta un rico postre con una pastel de queso, jugoso y dulce, perfecto para compartir",
+                "precio": 13000
+            },
+            {
+                "productId": 11,
+                "imagen": "assets/images/PlatilloVerde.svg",
+                "nombre": "Pizza",
+                "descripcion": "Pizza familiar de 14 piezas con ingredientes naturales y masa libre de gluten, perfecta para la familia",
+                "precio": 13000
+            }
+        ]
+    },
+    {
+        "categoria": "reposteria-dulce",
+        "titulo1": "Repostería",
+        "titulo2": "dulce",
+        "productos": [
+            {
+                "productId": 12,
+                "imagen": "assets/images/PlatilloVerde.svg",
+                "nombre": "Platillo Verde",
+                "descripcion": "Contiene arroz preparado junto con deliciosas verduras salteadas con extra sabor",
+                "precio": 4650
+            },
+            {
+                "productId": 13,
+                "imagen": "assets/images/PlatilloVerde.svg",
+                "nombre": "Pollo con garbanzos",
+                "descripcion": "Una sopa especial y llena de sabor de pollo, verduras varias y garbanzos. ",
+                "precio": 5200
+            },
+            {
+                "productId": 14,
+                "imagen": "assets/images/PlatilloVerde.svg",
+                "nombre": "Cheesecake",
+                "descripcion": "Disfruta un rico postre con una pastel de queso, jugoso y dulce, perfecto para compartir",
+                "precio": 13000
+            },
+            {
+                "productId": 15,
+                "imagen": "assets/images/PlatilloVerde.svg",
+                "nombre": "Pizza",
+                "descripcion": "Pizza familiar de 14 piezas con ingredientes naturales y masa libre de gluten, perfecta para la familia",
+                "precio": 13000
+            }
+        ]
+    },
+    {
+        "categoria": "reposteria-salada",
+        "titulo1": "Repostería",
+        "titulo2": "salada",
+        "productos": [
+            {
+                "productId": 16,
+                "imagen": "assets/images/PlatilloVerde.svg",
+                "nombre": "Platillo Verde",
+                "descripcion": "Contiene arroz preparado junto con deliciosas verduras salteadas con extra sabor",
+                "precio": 4650
+            },
+            {
+                "productId": 17,
+                "imagen": "assets/images/PlatilloVerde.svg",
+                "nombre": "Pollo con garbanzos",
+                "descripcion": "Una sopa especial y llena de sabor de pollo, verduras varias y garbanzos. ",
+                "precio": 5200
+            },
+            {
+                "productId": 18,
+                "imagen": "assets/images/PlatilloVerde.svg",
+                "nombre": "Cheesecake",
+                "descripcion": "Disfruta un rico postre con una pastel de queso, jugoso y dulce, perfecto para compartir",
+                "precio": 13000
+            },
+            {
+                "productId": 19,
+                "imagen": "assets/images/PlatilloVerde.svg",
+                "nombre": "Pizza",
+                "descripcion": "Pizza familiar de 14 piezas con ingredientes naturales y masa libre de gluten, perfecta para la familia",
+                "precio": 13000
+            }
+        ]
+    }
+]

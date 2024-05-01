@@ -108,31 +108,49 @@
     </section>
 
     <section id="new-dish">
-        <h2 data-aos="fade-down">Lo <span>más</span> nuevo</h2>
-
+        <h2 data-aos="fade-down"></h2>
         <div class="container">
-            <div class="products">
-                <div class="products-card" data-aos="fade-up" data-aos-delay="300">
-                    <img class="img-dish" src="assets/images/PlatilloVerde.svg">
-                    <div class="products-info">
-                         <h5 class="products-title">Platillo Verde</h5>
-                         <p class="products-text">Contiene arroz preparado junto con deliciosas verduras salteadas con extra sabor</p>
-                         <p class="products-price">₡4.650</p>
-                    </div>
-                    <div class="products-cta">
-                        <button id="product-purchase-1" type="button" class="btn btn-success btn-comprar" data-product-id="4"
-                            data-nombre="Platillo Verde" data-precio="4650">Ver producto</button>
-                        <button id="product-add-cart-1" data-bs-toggle="tooltip" data-bs-title="Agregar al carrito"
-                            type="button" class="btn btn-warning cart" data-product-id="4"
-                            data-nombre="Platillo Verde" data-precio="4650">
-                            <span id="products-add-cart-4-qty" class="badge text-bg-danger">0</span>
-                            <i class="fa-solid fa-basket-shopping"></i></button>
-                    </div>
-                </div>
+            <div class="products"></div>
+        </div>
+    </section>
+    <section id="comida-preparada">
+        <h2 data-aos="fade-down"></h2>
+        <div class="container">
+            <div class="products"></div>
+        </div>
+    </section>
+    <section id="reposteria-dulce">
+        <h2 data-aos="fade-down"></h2>
+        <div class="container">
+            <div class="products"></div>
+        </div>
+    </section>
+    <section id="reposteria-salada">
+        <h2 data-aos="fade-down"></h2>
+        <div class="container">
+            <div class="products"></div>
+        </div>
+    </section>
+
+    <template id="product-card-tpl">
+        <div class="products-card" data-aos="fade-up" data-aos-delay="300">
+            <img class="img-dish" src="${imagen}">
+            <div class="products-info">
+                 <h5 class="products-title">${titulo}</h5>
+                 <p class="products-text">${description}</p>
+                 <p class="products-price">${precio}</p>
+            </div>
+            <div class="products-cta">
+                <button id="product-purchase-${productId}" type="button" class="btn btn-success btn-comprar" data-product-id="${productId}"
+                    data-nombre="${nombre}" data-precio="${precio}">Ver producto</button>
+                <button id="product-add-cart-${productId}" data-bs-toggle="tooltip" data-bs-title="Agregar al carrito"
+                    type="button" class="btn btn-warning cart" data-product-id="${productId}"
+                    data-nombre="${nombre}" data-precio="${precio}">
+                    <span id="products-add-cart-${productId}-qty" class="badge text-bg-danger">0</span>
+                    <i class="fa-solid fa-basket-shopping"></i></button>
             </div>
         </div>
-
-    </section>
+    </template>
 
     <section id="visitanos">
         <img src="assets/images/Local.png" width="50%">
@@ -201,5 +219,6 @@
     <script src="assets/js/cdn/bootstrap.bundle.min.js"></script>
 
     <script src="assets/js/celifoods.js"></script>
+    <script src="assets/js/productos.js"></script>
 </body>
 </html>

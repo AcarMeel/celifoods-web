@@ -6,7 +6,8 @@
       "presentacion": "Paquete de 200g",
       "vidaUtil": "6 meses",
       "conservacion": "Guardar en un lugar fresco y seco",
-      "imagen": "assets/images/popular_1.svg"
+      "imagen": "assets/images/popular_1.svg",
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nemo optio debitis molestias! Repudiandae ipsum molestiae veniam sunt, nesciunt nobis architecto quaerat eligendi eum aut quae esse praesentium, soluta sed."
     },
     {
       "productId": "2",
@@ -15,7 +16,8 @@
       "presentacion": "Bolsa de 400g",
       "vidaUtil": "5 días",
       "conservacion": "Conservar en bolsa hermética",
-      "imagen": "assets/images/popular_2.svg"
+      "imagen": "assets/images/popular_2.svg",
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nemo optio debitis molestias! Repudiandae ipsum molestiae veniam sunt, nesciunt nobis architecto quaerat eligendi eum aut quae esse praesentium, soluta sed."
     },
     {
       "productId": "3",
@@ -24,7 +26,8 @@
       "presentacion": "Bowl.",
       "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
       "conservacion": "Guardar en la nevera",
-      "imagen": "assets/images/popular_3.svg"
+      "imagen": "assets/images/popular_3.svg",
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nemo optio debitis molestias! Repudiandae ipsum molestiae veniam sunt, nesciunt nobis architecto quaerat eligendi eum aut quae esse praesentium, soluta sed."
     }
   ]
   
