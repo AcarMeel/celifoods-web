@@ -9,6 +9,7 @@ async function loadProducts() {
     productos.forEach(producto => {
         renderProducts(producto);
     });
+    updateInicioCartBtn();
 }
 
 function renderProducts(item) {
@@ -28,12 +29,12 @@ function renderProducts(item) {
         productClone.querySelector('.products-text').textContent = product.descripcion;
         productClone.querySelector('.products-price').textContent = `₡${product.precio}`;
 
-        purchaseButton.id = '#product-purchase-' + product.productId;
+        purchaseButton.id = 'product-purchase-' + product.productId;
         purchaseButton.dataset.productId = product.productId;
         purchaseButton.dataset.nombre = product.nombre;
         purchaseButton.dataset.precio = product.precio;
 
-        addToCartButton.id = '#product-add-cart-' + product.productId;
+        addToCartButton.id = 'product-add-cart-' + product.productId;
         addToCartButton.dataset.productId = product.productId;
         addToCartButton.dataset.nombre = product.nombre;
         addToCartButton.dataset.precio = product.precio;
@@ -44,19 +45,27 @@ function renderProducts(item) {
         purchaseButton.addEventListener('click', () => {
             const clickedButton = event.target;
             const id = clickedButton.dataset.productId;
-            addProductToCart(product);
+            openPurchasePopup(product);
         });
 
         
         addToCartButton.addEventListener('click', () => {
             const clickedButton = event.target;
             const id = clickedButton.dataset.productId;
-            openPurchasePopup(product);
+            addProductToCart(1, product);
         });
     });
 }
 
-function addProductToCart(product) { 
+function addProductToCart(quantity, product) { 
+    updateBasketQuantity(quantity, {
+        nombreProducto: product.nombre,
+        ...product,
+        cantidad: quantity,
+        precio: product.precio,
+        totalProducto: parseFloat(product.precio) * quantity,
+        productId: product.productId.toString()
+    });
 }
 
 function openPurchasePopup(product) {

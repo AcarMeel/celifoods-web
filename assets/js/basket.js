@@ -62,11 +62,11 @@ function updateBasketQuantity(quantity, nuevoProducto) {
 
 function updateInicioCartBtn() {
     const basketData = JSON.parse(localStorage.getItem("basket")) || [];
-    ['popular-add-cart-1', 'popular-add-cart-2', 'popular-add-cart-3']
-    .map(btnId => {
-        const element = document.getElementById(btnId);
+
+    const elements = document.querySelectorAll('.accion-carrito');
+    elements.forEach(element => {
         const productId = element.dataset.productId;
-        const badge = document.getElementById(`${btnId}-qty`);
+        const badge = element.querySelector('span');
         const productFound = basketData.find(p => p.productId === productId);
         element.disabled = productFound && productFound.cantidad >= 5;
         badge.textContent = productFound ? productFound.cantidad.toString() : "0";
@@ -77,33 +77,38 @@ function updateInicioCartBtn() {
     .map(btnId => addItemFromCardCartBtn(btnId));
 
 function addItemFromCardCartBtn(id) {
-    document.getElementById(id).addEventListener("click", async function () {
-        const basketData = JSON.parse(localStorage.getItem("basket")) || [];
-        const productId = this.dataset.productId;
-        const nombreProducto = this.dataset.nombre;
-        const precioProducto = this.dataset.precio;
-        const response = await fetch(jsonFilePath);
-        const productos = await response.json();
-
-        const detalles = productos.find((p) => p.productId === productId);
-        const productFound = basketData.find(p => p.productId === productId);
-
-        const quantity = !productFound ? 1 : productFound.cantidad + 1;
-
-        updateBasketQuantity(quantity, {
-            nombreProducto,
-            ...detalles,
-            cantidad: quantity,
-            precio: precioProducto,
-            totalProducto: parseFloat(precioProducto) * quantity,
+    const element = document.getElementById(id);
+    if (element) {
+        element.addEventListener("click", async function () {
+            const basketData = JSON.parse(localStorage.getItem("basket")) || [];
+            const productId = this.dataset.productId;
+            const nombreProducto = this.dataset.nombre;
+            const precioProducto = this.dataset.precio;
+            const response = await fetch(jsonFilePath);
+            const productos = await response.json();
+    
+            const detalles = productos.find((p) => p.productId === productId);
+            const productFound = basketData.find(p => p.productId === productId);
+    
+            const quantity = !productFound ? 1 : productFound.cantidad + 1;
+    
+            updateBasketQuantity(quantity, {
+                nombreProducto,
+                ...detalles,
+                cantidad: quantity,
+                precio: precioProducto,
+                totalProducto: parseFloat(precioProducto) * quantity,
+            });
         });
+    }
+}
+
+if (toastTrigger) {
+    toastTrigger.addEventListener('click', () => {
+        toast.hide()
     });
 }
 
-
-toastTrigger.addEventListener('click', () => {
-    toast.hide()
-});
 
 window.addEventListener("load", () => {
     updateBasketQuantity();

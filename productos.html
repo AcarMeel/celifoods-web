@@ -21,13 +21,13 @@
                 <a class="navbar-brand" href="index.html">
                     <img id="navigation-logo" src="assets/images/logo.svg" alt="logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarToogler" aria-controls="navbarToogler" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToogler"
+                    aria-controls="navbarToogler" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <a href="#" class="nav-link shopping-cart mobile">
                     <i class="fa-solid fa-basket-shopping"></i>
+                    <span id="basket-menu-icon-qty-mobile" class="badge text-bg-danger">0</span>
                 </a>
                 <div class="collapse navbar-collapse" id="navbarToogler">
                     <div class="me-auto"></div>
@@ -50,6 +50,7 @@
                         <li class="nav-item desktop">
                             <a href="#" class="nav-link">
                                 <i class="fa-solid fa-basket-shopping"></i>
+                                <span id="basket-menu-icon-qty-desktop" class="badge text-bg-danger">0</span>
                             </a>
                         </li>
                     </ul>
@@ -133,7 +134,7 @@
     </section>
 
     <template id="product-card-tpl">
-        <div class="products-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="products-card">
             <img class="img-dish" src="${imagen}">
             <div class="products-info">
                  <h5 class="products-title">${titulo}</h5>
@@ -141,10 +142,10 @@
                  <p class="products-price">${precio}</p>
             </div>
             <div class="products-cta">
-                <button id="product-purchase-${productId}" type="button" class="btn btn-success btn-comprar" data-product-id="${productId}"
+                <button id="product-purchase-${productId}" type="button" class="btn btn-success btn-comprar accion-ver" data-product-id="${productId}"
                     data-nombre="${nombre}" data-precio="${precio}">Ver producto</button>
                 <button id="product-add-cart-${productId}" data-bs-toggle="tooltip" data-bs-title="Agregar al carrito"
-                    type="button" class="btn btn-warning cart" data-product-id="${productId}"
+                    type="button" class="btn btn-warning cart accion-carrito" data-product-id="${productId}"
                     data-nombre="${nombre}" data-precio="${precio}">
                     <span id="products-add-cart-${productId}-qty" class="badge text-bg-danger">0</span>
                     <i class="fa-solid fa-basket-shopping"></i></button>
@@ -212,6 +213,19 @@
         </div>
     </footer>
 
+    <div class="position-fixed top-0 start-50 p-3" style="z-index: 1032">
+        <div id="toastNotificationCartUpdate" class="toast hide" role="alert" aria-atomic="true" aria-live="assertive">
+            <div class="toast-header">
+                <strong class="me-auto">Carrito de compras actualizado</strong>
+                <small>Ahora</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Puedes ver los detalles en el carrito de compras
+            </div>
+        </div>
+    </div>
+
     <script src="assets/js/cdn/jquery-3.6.0.min.js"></script>
     <script src="assets/js/cdn/slick.min.js"></script>
     <script src="assets/js/cdn/aos.js"></script>
@@ -219,6 +233,7 @@
     <script src="assets/js/cdn/bootstrap.bundle.min.js"></script>
 
     <script src="assets/js/celifoods.js"></script>
+    <script src="assets/js/basket.js"></script>
     <script src="assets/js/productos.js"></script>
 </body>
 </html>

@@ -47,8 +47,7 @@ https://api.whatsapp.com/send/?phone=50689428070
 
 - productos.html
     - agregar carrito
-    - comprar -> muestra otra pantalla
-    - mostrar todos los productos
+    - ver producto -> muestra detalles
     - responsive
 
 - carrito
@@ -56,3 +55,7 @@ https://api.whatsapp.com/send/?phone=50689428070
     - popup compra
     - popup factura
     - ir a whatsapp
+    - logica envio (provincias)
+
+- animaciones
+    - cambiar libreria
