@@ -62,33 +62,37 @@
         <h1>blog</h1>
     </header>
     <section id="blog-detail">
-        <!-- <div class="container">
-            <div class="blog-detail-top">
-                <div class="blog-detail-tag receta">
-                    recetas
-                </div>
-                <h2>Muffin de Chocolate</h2>
-            </div>
-            <div class="yellow-container">
-                <img src="assets/images/blog-01.png" alt="queque chocolate y fresas">
-            </div>
-            <div class="blog-detail-content">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, eveniet!
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, eveniet!
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, eveniet!
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, eveniet!
-                </p>
-            </div>
-        </div> -->
+        
     </section>
-
+    <section id="see-more">
+        <div class="btn-container">
+            <button class="btn btn-primary">
+                más opciones
+            </button>
+        </div>
+        <div class="blog-card-list">
+        </div>
+        <div class="container">
+            <div class="blog-pagination">
+                <button id="blog-prev" class="btn"><i class="fa-solid fa-chevron-left mx-3"></i> Mas antiguo</button>
+                <button id="blog-next" class="btn">Mas nuevo <i class="fa-solid fa-chevron-right mx-3"></i></button>
+            </div>
+        </div>
+    </section>
+    <template id="blog-card-template">
+        <a href="#" class="blog-card">
+            <img src="${imagen}" alt="Blog ${id}">
+            <div class="blog-card-tag-container">
+                <div class="blog-card-tag ${tag}">${tag}</div>
+            </div>
+            <div class="blog-card-text">
+                <h2>${titulo}</h2>
+                <p>
+                    ${descripcion}
+                </p>
+            </div>
+        </a>
+    </template>
     <template id="blog-detail-template">
         <div class="container">
             <div class="blog-detail-top">

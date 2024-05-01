@@ -42,12 +42,12 @@ https://api.whatsapp.com/send/?phone=50689428070
 - blog-detalles.html
     - imagen fecha
     - imagen circulos
-    - mas opciones
-    - paginacion
+    
 
 - productos.html
     - agregar carrito
     - mostrar todos los productos
+    - ver mas
 
 - carrito
     - popup carrito
