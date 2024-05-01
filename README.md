@@ -44,6 +44,7 @@ https://api.whatsapp.com/send/?phone=50689428070
     - imagen fecha
     - imagen circulos
     - contenido (lorem ipsum)
+    - deshabilitar prev/next segun el id q estemos viendo
 
 - productos.html
     - agregar carrito
