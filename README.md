@@ -31,3 +31,26 @@ Algunos archivos de js se reutilizan.
 
 
 https://api.whatsapp.com/send/?phone=50689428070
+
+
+# Pendientes
+
+- blog.html 
+    - imagenes
+    - imagen trazo
+
+- blog-detalles.html
+    - imagen fecha
+    - imagen circulos
+    - mas opciones
+    - paginacion
+
+- productos.html
+    - agregar carrito
+    - mostrar todos los productos
+
+- carrito
+    - popup carrito
+    - popup compra
+    - popup factura
+    - ir a whatsapp
