@@ -40,5 +40,26 @@
         "titulo": "Queque de Zanahoria",
         "tag": "recetas",
         "descripcion": "Comenzamos preparando un molde desmoldable de 14-16 cm de diámetro y encendiendo el horno a 175 ºC para que ......."
+    },
+    {
+        "imagen": "assets/images/blog-01.png",
+        "id": 7,
+        "titulo": "Productos alternativos",
+        "tag": "información",
+        "descripcion": "Comenzamos preparando un molde desmoldable de 14-16 cm de diámetro y encendiendo el horno a 175 ºC para que ......."
+    },
+    {
+        "imagen": "assets/images/blog-01.png",
+        "id": 8,
+        "titulo": "Alergias al gluten",
+        "tag": "información",
+        "descripcion": "Comenzamos preparando un molde desmoldable de 14-16 cm de diámetro y encendiendo el horno a 175 ºC para que ......."
+    },
+    {
+        "imagen": "assets/images/blog-01.png",
+        "id": 9,
+        "titulo": "Detectar intolerancias",
+        "tag": "información",
+        "descripcion": "Comenzamos preparando un molde desmoldable de 14-16 cm de diámetro y encendiendo el horno a 175 ºC para que ......."
     }
 ]

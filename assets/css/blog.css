@@ -36,6 +36,7 @@
     }
 
     .blog-btn-container {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -88,5 +89,19 @@
             width: 100%;
             margin-bottom: 24px;
         }
+    }
+
+    .loader {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+
+        display: block;
+        background: white;
+        padding: 40px;
+        font-size: 40px;
+        color: var(--bs-blue);
     }
 }
