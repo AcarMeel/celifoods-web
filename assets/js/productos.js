@@ -58,12 +58,16 @@ function renderProducts(item) {
 }
 
 function addProductToCart(quantity, product) { 
-    updateBasketQuantity(quantity, {
+    const basketData = JSON.parse(localStorage.getItem("basket")) || [];
+    const productFound = basketData.find(p => p.productId === product.productId.toString());
+    const quantityAcc = !productFound ? quantity : productFound.cantidad + quantity;
+
+    updateBasketQuantity(quantityAcc, {
         nombreProducto: product.nombre,
         ...product,
-        cantidad: quantity,
+        cantidad: quantityAcc,
         precio: product.precio,
-        totalProducto: parseFloat(product.precio) * quantity,
+        totalProducto: parseFloat(product.precio) * quantityAcc,
         productId: product.productId.toString()
     });
 }
