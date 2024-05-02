@@ -9,28 +9,48 @@
                 "imagen": "assets/images/PlatilloVerde.svg",
                 "nombre": "Platillo Verde",
                 "descripcion": "Contiene arroz preparado junto con deliciosas verduras salteadas con extra sabor",
-                "precio": 4650
+                "precio": 4650,
+                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
+                "alergenos": "Contiene sésamo.",
+                "presentacion": "Bowl.",
+                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
+                "conservacion": "Guardar en la nevera"
             },
             {
                 "productId": 5,
                 "imagen": "assets/images/PolloGarbanzos.svg",
                 "nombre": "Pollo con garbanzos",
                 "descripcion": "Una sopa especial y llena de sabor de pollo, verduras varias y garbanzos",
-                "precio": 5200
+                "precio": 5200,
+                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
+                "alergenos": "Contiene sésamo.",
+                "presentacion": "Bowl.",
+                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
+                "conservacion": "Guardar en la nevera"
             },
             {
                 "productId": 6,
                 "imagen": "assets/images/Cheesecake.svg",
                 "nombre": "Cheesecake",
                 "descripcion": "Disfruta un rico postre con una pastel de queso, jugoso y dulce, perfecto para compartir",
-                "precio": 13000
+                "precio": 13000,
+                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
+                "alergenos": "Contiene sésamo.",
+                "presentacion": "Bowl.",
+                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
+                "conservacion": "Guardar en la nevera"
             },
             {
                 "productId": 7,
                 "imagen": "assets/images/Pizza.svg",
                 "nombre": "Pizza",
                 "descripcion": "Pizza familiar de 14 piezas con ingredientes naturales y masa libre de gluten, perfecta para la familia",
-                "precio": 14300
+                "precio": 14300,
+                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
+                "alergenos": "Contiene sésamo.",
+                "presentacion": "Bowl.",
+                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
+                "conservacion": "Guardar en la nevera"
             }
         ]
     },
@@ -44,28 +64,48 @@
                 "imagen": "assets/images/Pinto.svg",
                 "nombre": "Gallo Pinto",
                 "descripcion": "Disfruta la gastronomía tica con un pinto elaborado con arroz, frijoles, especias y puro sabor",
-                "precio": 4650
+                "precio": 4650,
+                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
+                "alergenos": "Contiene sésamo.",
+                "presentacion": "Bowl.",
+                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
+                "conservacion": "Guardar en la nevera"
             },
             {
                 "productId": 9,
                 "imagen": "assets/images/PolloGarbanzos.svg",
                 "nombre": "Pollo con garbanzos",
                 "descripcion": "Una sopa especial y llena de sabor de pollo, verduras varias y garbanzos",
-                "precio": 5200
+                "precio": 5200,
+                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
+                "alergenos": "Contiene sésamo.",
+                "presentacion": "Bowl.",
+                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
+                "conservacion": "Guardar en la nevera"
             },
             {
                 "productId": 10,
                 "imagen": "assets/images/Spaghetti.svg",
                 "nombre": "Spaghetti",
                 "descripcion": "Elaborados con una mezcla de harinas sin gluten, que te conquistarán con su sabor",
-                "precio": 13000
+                "precio": 13000,
+                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
+                "alergenos": "Contiene sésamo.",
+                "presentacion": "Bowl.",
+                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
+                "conservacion": "Guardar en la nevera"
             },
             {
                 "productId": 11,
                 "imagen": "assets/images/ArrozPollo.svg",
                 "nombre": "Arroz con pollo",
                 "descripcion": "El pollo tierno y jugoso se acompaña a la perfección con arroz esponjoso y verduras frescas",
-                "precio": 13000
+                "precio": 13000,
+                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
+                "alergenos": "Contiene sésamo.",
+                "presentacion": "Bowl.",
+                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
+                "conservacion": "Guardar en la nevera"
             }
         ]
     },
@@ -79,28 +119,48 @@
                 "imagen": "assets/images/PlatilloVerde.svg",
                 "nombre": "Platillo Verde",
                 "descripcion": "Contiene arroz preparado junto con deliciosas verduras salteadas con extra sabor",
-                "precio": 4650
+                "precio": 4650,
+                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
+                "alergenos": "Contiene sésamo.",
+                "presentacion": "Bowl.",
+                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
+                "conservacion": "Guardar en la nevera"
             },
             {
                 "productId": 13,
                 "imagen": "assets/images/PlatilloVerde.svg",
                 "nombre": "Pollo con garbanzos",
                 "descripcion": "Una sopa especial y llena de sabor de pollo, verduras varias y garbanzos. ",
-                "precio": 5200
+                "precio": 5200,
+                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
+                "alergenos": "Contiene sésamo.",
+                "presentacion": "Bowl.",
+                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
+                "conservacion": "Guardar en la nevera"
             },
             {
                 "productId": 14,
                 "imagen": "assets/images/PlatilloVerde.svg",
                 "nombre": "Cheesecake",
                 "descripcion": "Disfruta un rico postre con una pastel de queso, jugoso y dulce, perfecto para compartir",
-                "precio": 13000
+                "precio": 13000,
+                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
+                "alergenos": "Contiene sésamo.",
+                "presentacion": "Bowl.",
+                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
+                "conservacion": "Guardar en la nevera"
             },
             {
                 "productId": 15,
                 "imagen": "assets/images/PlatilloVerde.svg",
                 "nombre": "Pizza",
                 "descripcion": "Pizza familiar de 14 piezas con ingredientes naturales y masa libre de gluten, perfecta para la familia",
-                "precio": 13000
+                "precio": 13000,
+                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
+                "alergenos": "Contiene sésamo.",
+                "presentacion": "Bowl.",
+                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
+                "conservacion": "Guardar en la nevera"
             }
         ]
     },
@@ -114,28 +174,48 @@
                 "imagen": "assets/images/PlatilloVerde.svg",
                 "nombre": "Platillo Verde",
                 "descripcion": "Contiene arroz preparado junto con deliciosas verduras salteadas con extra sabor",
-                "precio": 4650
+                "precio": 4650,
+                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
+                "alergenos": "Contiene sésamo.",
+                "presentacion": "Bowl.",
+                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
+                "conservacion": "Guardar en la nevera"
             },
             {
                 "productId": 17,
                 "imagen": "assets/images/PlatilloVerde.svg",
                 "nombre": "Pollo con garbanzos",
                 "descripcion": "Una sopa especial y llena de sabor de pollo, verduras varias y garbanzos. ",
-                "precio": 5200
+                "precio": 5200,
+                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
+                "alergenos": "Contiene sésamo.",
+                "presentacion": "Bowl.",
+                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
+                "conservacion": "Guardar en la nevera"
             },
             {
                 "productId": 18,
                 "imagen": "assets/images/PlatilloVerde.svg",
                 "nombre": "Cheesecake",
                 "descripcion": "Disfruta un rico postre con una pastel de queso, jugoso y dulce, perfecto para compartir",
-                "precio": 13000
+                "precio": 13000,
+                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
+                "alergenos": "Contiene sésamo.",
+                "presentacion": "Bowl.",
+                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
+                "conservacion": "Guardar en la nevera"
             },
             {
                 "productId": 19,
                 "imagen": "assets/images/PlatilloVerde.svg",
                 "nombre": "Pizza",
                 "descripcion": "Pizza familiar de 14 piezas con ingredientes naturales y masa libre de gluten, perfecta para la familia",
-                "precio": 13000
+                "precio": 13000,
+                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
+                "alergenos": "Contiene sésamo.",
+                "presentacion": "Bowl.",
+                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
+                "conservacion": "Guardar en la nevera"
             }
         ]
     }

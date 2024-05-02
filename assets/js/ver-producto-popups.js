@@ -1,19 +1,26 @@
 
 ["popular-purchase-1", "popular-purchase-2", "popular-purchase-3"].map(
-    (btnId) => verProductoClick(btnId)
+    (btnId) => {
+        const element = document.getElementById(btnId);
+        if (element) {
+            element.addEventListener("click", function() { verProductoClick(this.dataset, null ) } );
+        }
+    }
 );
 
-function verProductoClick(id) {
-    document.getElementById(id).addEventListener("click", async function () {
-        const productId = this.dataset.productId;
-        const nombreProducto = this.dataset.nombre;
-        const precioProducto = `₡${this.dataset.precio}`;
-        const precioProductoSinFormato = `${this.dataset.precio}`;
+async function verProductoClick(dataset, detalles) {
+        const productId = dataset.productId;
+        const nombreProducto = dataset.nombre;
+        const precioProducto = `₡${dataset.precio}`;
+        const precioProductoSinFormato = `${dataset.precio}`;
 
-        const response = await fetch(jsonFilePathPopulares);
-        const productos = await response.json();
+        if (!detalles) {
+            const response = await fetch(jsonFilePathPopulares);
+            const productos = await response.json();
 
-        const detalles = productos.find((p) => p.productId === productId);
+            detalles = productos.find((p) => p.productId === productId);
+        }
+
         let basketData = JSON.parse(localStorage.getItem("basket")) || [];
 
         const findProductInBasket = basketData.find(p => p.productId === productId);
@@ -96,6 +103,7 @@ function verProductoClick(id) {
                         cantidad: quantity,
                         precio: precioProductoSinFormato,
                         totalProducto: parseFloat(precioProductoSinFormato) * quantity,
+                        productId
                     });
                 }, 10);
             }
@@ -110,9 +118,9 @@ function verProductoClick(id) {
                     cantidad: 0,
                     precio: precioProductoSinFormato,
                     totalProducto: 0,
+                    productId
                 });
             }, 10);
         });
-    });
 }
 

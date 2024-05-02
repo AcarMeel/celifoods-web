@@ -45,7 +45,7 @@ function renderProducts(item) {
         purchaseButton.addEventListener('click', () => {
             const clickedButton = event.target;
             const id = clickedButton.dataset.productId;
-            openPurchasePopup(product);
+            openPurchasePopup(product, clickedButton.dataset);
         });
 
         
@@ -68,7 +68,8 @@ function addProductToCart(quantity, product) {
     });
 }
 
-function openPurchasePopup(product) {
+function openPurchasePopup(product, dataset) {
+    verProductoClick(dataset, product);
 }
 
 

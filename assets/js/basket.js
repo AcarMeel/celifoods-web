@@ -103,7 +103,7 @@ function addItemFromCardCartBtn(id) {
     }
 }
 
-if (toastTrigger) {
+if (toastTrigger && toast) {
     toastTrigger.addEventListener('click', () => {
         toast.hide()
     });
