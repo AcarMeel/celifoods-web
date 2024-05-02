@@ -64,12 +64,12 @@
                 "imagen": "assets/images/Pinto.svg",
                 "nombre": "Gallo Pinto",
                 "descripcion": "Disfruta la gastronomía tica con un pinto elaborado con arroz, frijoles, especias y puro sabor",
-                "precio": 4650,
                 "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
                 "alergenos": "Contiene sésamo.",
                 "presentacion": "Bowl.",
                 "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
-                "conservacion": "Guardar en la nevera"
+                "conservacion": "Guardar en la nevera",
+                "precio": 6500
             },
             {
                 "productId": 9,
@@ -88,24 +88,24 @@
                 "imagen": "assets/images/Spaghetti.svg",
                 "nombre": "Spaghetti",
                 "descripcion": "Elaborados con una mezcla de harinas sin gluten, que te conquistarán con su sabor",
-                "precio": 13000,
                 "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
                 "alergenos": "Contiene sésamo.",
                 "presentacion": "Bowl.",
                 "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
-                "conservacion": "Guardar en la nevera"
+                "conservacion": "Guardar en la nevera",
+                "precio": 7500
             },
             {
                 "productId": 11,
                 "imagen": "assets/images/ArrozPollo.svg",
                 "nombre": "Arroz con pollo",
                 "descripcion": "El pollo tierno y jugoso se acompaña a la perfección con arroz esponjoso y verduras frescas",
-                "precio": 13000,
                 "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
                 "alergenos": "Contiene sésamo.",
                 "presentacion": "Bowl.",
                 "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
-                "conservacion": "Guardar en la nevera"
+                "conservacion": "Guardar en la nevera",
+                "precio": 9500
             }
         ]
     },
@@ -116,10 +116,10 @@
         "productos": [
             {
                 "productId": 12,
-                "imagen": "assets/images/PlatilloVerde.svg",
-                "nombre": "Platillo Verde",
-                "descripcion": "Contiene arroz preparado junto con deliciosas verduras salteadas con extra sabor",
-                "precio": 4650,
+                "imagen": "assets/images/Arandanos.svg",
+                "nombre": "Pastel de Arándanos",
+                "descripcion": "La explosión de sabor de los arándanos frescos se fusiona en una masa esponjosa",
+                "precio": 18900,
                 "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
                 "alergenos": "Contiene sésamo.",
                 "presentacion": "Bowl.",
@@ -128,10 +128,10 @@
             },
             {
                 "productId": 13,
-                "imagen": "assets/images/PlatilloVerde.svg",
-                "nombre": "Pollo con garbanzos",
-                "descripcion": "Una sopa especial y llena de sabor de pollo, verduras varias y garbanzos. ",
-                "precio": 5200,
+                "imagen": "assets/images/Donas.svg",
+                "nombre": "Paquete de donas",
+                "descripcion": "Disfruta de una variedad de 8 sabores clásicos. Elaborados con ingredientes de alta calidad",
+                "precio": 11000,
                 "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
                 "alergenos": "Contiene sésamo.",
                 "presentacion": "Bowl.",
@@ -140,7 +140,7 @@
             },
             {
                 "productId": 14,
-                "imagen": "assets/images/PlatilloVerde.svg",
+                "imagen": "assets/images/Cheesecake.svg",
                 "nombre": "Cheesecake",
                 "descripcion": "Disfruta un rico postre con una pastel de queso, jugoso y dulce, perfecto para compartir",
                 "precio": 13000,
@@ -152,10 +152,10 @@
             },
             {
                 "productId": 15,
-                "imagen": "assets/images/PlatilloVerde.svg",
-                "nombre": "Pizza",
-                "descripcion": "Pizza familiar de 14 piezas con ingredientes naturales y masa libre de gluten, perfecta para la familia",
-                "precio": 13000,
+                "imagen": "assets/images/GalletasCanela.svg",
+                "nombre": "Galletas de Canela",
+                "descripcion": "Cada galleta crujiente contiene harina de arroz integral, canela molida, vainilla y más",
+                "precio": 8000,
                 "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
                 "alergenos": "Contiene sésamo.",
                 "presentacion": "Bowl.",
@@ -171,10 +171,10 @@
         "productos": [
             {
                 "productId": 16,
-                "imagen": "assets/images/PlatilloVerde.svg",
-                "nombre": "Platillo Verde",
-                "descripcion": "Contiene arroz preparado junto con deliciosas verduras salteadas con extra sabor",
-                "precio": 4650,
+                "imagen": "assets/images/PanAjo.svg",
+                "nombre": "Pan de ajo",
+                "descripcion": "Un pan de ajo crujiente bañado en mantequilla, ajo fresco y hierbas aromáticas",
+                "precio": 7600,
                 "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
                 "alergenos": "Contiene sésamo.",
                 "presentacion": "Bowl.",
@@ -183,10 +183,10 @@
             },
             {
                 "productId": 17,
-                "imagen": "assets/images/PlatilloVerde.svg",
-                "nombre": "Pollo con garbanzos",
-                "descripcion": "Una sopa especial y llena de sabor de pollo, verduras varias y garbanzos. ",
-                "precio": 5200,
+                "imagen": "assets/images/Empanadas.svg",
+                "nombre": "Empanadas Rellenas",
+                "descripcion": "Disfruta de una crujiente masa, rellena de carne mechada, especias y verduras frescas",
+                "precio": 9000,
                 "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
                 "alergenos": "Contiene sésamo.",
                 "presentacion": "Bowl.",
@@ -195,10 +195,10 @@
             },
             {
                 "productId": 18,
-                "imagen": "assets/images/PlatilloVerde.svg",
-                "nombre": "Cheesecake",
-                "descripcion": "Disfruta un rico postre con una pastel de queso, jugoso y dulce, perfecto para compartir",
-                "precio": 13000,
+                "imagen": "assets/images/Sandwich.svg",
+                "nombre": "Sandwich de jamón",
+                "descripcion": "Saborea la combinación perfecta de queso derretido, jamón jugoso, tomate fresco y espinacas",
+                "precio": 6500,
                 "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
                 "alergenos": "Contiene sésamo.",
                 "presentacion": "Bowl.",
@@ -207,7 +207,7 @@
             },
             {
                 "productId": 19,
-                "imagen": "assets/images/PlatilloVerde.svg",
+                "imagen": "assets/images/Pizza.svg",
                 "nombre": "Pizza",
                 "descripcion": "Pizza familiar de 14 piezas con ingredientes naturales y masa libre de gluten, perfecta para la familia",
                 "precio": 13000,
