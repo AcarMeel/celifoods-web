@@ -36,36 +36,41 @@ https://api.whatsapp.com/send/?phone=50689428070
 # Pendientes
 
 
-- blog.html 
-    - imagenes
-    - imagen trazo
+- blog.html Erin
+    - imagenes 
+    - imagen trazo 
+    - agregar cuadro fecha css (UI/json) => 
 
 - blog-detalles.html
-    - imagen fecha
-    - imagen circulos
+    - fecha que esta a la par del titulo => css
+    - imagen circulos de colores
     - contenido (lorem ipsum)
-    - deshabilitar prev/next segun el id q estemos viendo
+    - slider prev/next
 
 - productos.html
-    - agregar carrito
-    - ver producto -> muestra detalles
-    - responsive
+    - ver producto -> muestra detalles - Melissa
+    - responsive -> Katty
 
-- carrito
+- nosotros.html
+    - html/css -> katty
+    - imagenes -> erin
+
+- carrito - Melissa
     - popup carrito (todas las paginas)
     - popup compra
     - popup factura
     - ir a whatsapp
     - logica envio (provincias)
+    - info envios/costos/dias => erin
 
-- animaciones
+- animaciones aos
     - cambiar libreria
 
 - footer
-    - enviar footer
+    - enviar footer => popup email enviado
 
 - index.html
-    - enviar email seccion
+    - enviar email seccion => popup email enviado
 
-- contraste
+- contraste - Katty/Erin
     - color azul sobre blanco, amarillo, verde, morado
