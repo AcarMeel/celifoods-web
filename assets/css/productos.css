@@ -3,7 +3,7 @@
 }
 body{
     background-image: url("../images/pattern-bg.svg");
-    background-size: cover;
+    background-size: contain;
     background-repeat: repeat;
     width: 100%;
 }
