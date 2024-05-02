@@ -60,3 +60,12 @@ https://api.whatsapp.com/send/?phone=50689428070
 
 - animaciones
     - cambiar libreria
+
+- footer
+    - enviar footer
+
+- index.html
+    - enviar email seccion
+
+- contraste
+    - color azul sobre blanco, amarillo, verde, morado
