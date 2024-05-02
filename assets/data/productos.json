@@ -13,24 +13,24 @@
             },
             {
                 "productId": 5,
-                "imagen": "assets/images/PlatilloVerde.svg",
+                "imagen": "assets/images/PolloGarbanzos.svg",
                 "nombre": "Pollo con garbanzos",
-                "descripcion": "Una sopa especial y llena de sabor de pollo, verduras varias y garbanzos. ",
+                "descripcion": "Una sopa especial y llena de sabor de pollo, verduras varias y garbanzos",
                 "precio": 5200
             },
             {
                 "productId": 6,
-                "imagen": "assets/images/PlatilloVerde.svg",
+                "imagen": "assets/images/Cheesecake.svg",
                 "nombre": "Cheesecake",
                 "descripcion": "Disfruta un rico postre con una pastel de queso, jugoso y dulce, perfecto para compartir",
                 "precio": 13000
             },
             {
                 "productId": 7,
-                "imagen": "assets/images/PlatilloVerde.svg",
+                "imagen": "assets/images/Pizza.svg",
                 "nombre": "Pizza",
                 "descripcion": "Pizza familiar de 14 piezas con ingredientes naturales y masa libre de gluten, perfecta para la familia",
-                "precio": 13000
+                "precio": 14300
             }
         ]
     },
@@ -41,30 +41,30 @@
         "productos": [
             {
                 "productId": 8,
-                "imagen": "assets/images/PlatilloVerde.svg",
-                "nombre": "Platillo Verde",
-                "descripcion": "Contiene arroz preparado junto con deliciosas verduras salteadas con extra sabor",
+                "imagen": "assets/images/Pinto.svg",
+                "nombre": "Gallo Pinto",
+                "descripcion": "Disfruta la gastronomía tica con un pinto elaborado con arroz, frijoles, especias y puro sabor",
                 "precio": 4650
             },
             {
                 "productId": 9,
-                "imagen": "assets/images/PlatilloVerde.svg",
+                "imagen": "assets/images/PolloGarbanzos.svg",
                 "nombre": "Pollo con garbanzos",
-                "descripcion": "Una sopa especial y llena de sabor de pollo, verduras varias y garbanzos. ",
+                "descripcion": "Una sopa especial y llena de sabor de pollo, verduras varias y garbanzos",
                 "precio": 5200
             },
             {
                 "productId": 10,
-                "imagen": "assets/images/PlatilloVerde.svg",
-                "nombre": "Cheesecake",
-                "descripcion": "Disfruta un rico postre con una pastel de queso, jugoso y dulce, perfecto para compartir",
+                "imagen": "assets/images/Spaghetti.svg",
+                "nombre": "Spaghetti",
+                "descripcion": "Elaborados con una mezcla de harinas sin gluten, que te conquistarán con su sabor",
                 "precio": 13000
             },
             {
                 "productId": 11,
-                "imagen": "assets/images/PlatilloVerde.svg",
-                "nombre": "Pizza",
-                "descripcion": "Pizza familiar de 14 piezas con ingredientes naturales y masa libre de gluten, perfecta para la familia",
+                "imagen": "assets/images/ArrozPollo.svg",
+                "nombre": "Arroz con pollo",
+                "descripcion": "El pollo tierno y jugoso se acompaña a la perfección con arroz esponjoso y verduras frescas",
                 "precio": 13000
             }
         ]
