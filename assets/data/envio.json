@@ -1,0 +1,38 @@
+[
+    {
+      "provincia": "San José",
+      "costoEnvio": 2500,
+      "diasEntrega": "Lunes a viernes"
+    },
+    {
+      "provincia": "Alajuela",
+      "costoEnvio": 3000,
+      "diasEntrega": "Martes, jueves y sábado"
+    },
+    {
+      "provincia": "Cartago",
+      "costoEnvio": 2750,
+      "diasEntrega": "Miércoles y viernes"
+    },
+    {
+      "provincia": "Heredia",
+      "costoEnvio": 2250,
+      "diasEntrega": "Lunes, miércoles y viernes"
+    },
+    {
+      "provincia": "Guanacaste",
+      "costoEnvio": 3500,
+      "diasEntrega": "Martes, jueves y sábado"
+    },
+    {
+      "provincia": "Puntarenas",
+      "costoEnvio": 3250,
+      "diasEntrega": "Lunes, miércoles y viernes"
+    },
+    {
+      "provincia": "Limón",
+      "costoEnvio": 3750,
+      "diasEntrega": "Martes, jueves y sábado"
+    }
+  ]
+  

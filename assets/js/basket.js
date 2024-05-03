@@ -157,13 +157,17 @@ function getTotal(cartPopupElement) {
 }
 
 function displayNoCartItems(list, cartPopupElement) {
-    const p = document.createElement('p');
-    p.classList.add('text-center', 'my-3')
-    p.textContent = 'Carrito vacío';
-    p.id = 'carrito-vacio';
-    list.appendChild(p);
-
-    getTotal(cartPopupElement);
+    setTimeout(() => {
+        const basketData = JSON.parse(localStorage.getItem("basket")) || [];
+        if (!basketData || basketData && basketData.length === 0) {
+            const p = document.createElement('p');
+            p.classList.add('text-center', 'my-3')
+            p.textContent = 'Carrito vacío';
+            p.id = 'carrito-vacio';
+            list.appendChild(p);
+        }
+        getTotal(cartPopupElement);
+    }, 10);
 }
 
 const showCartItems = document.querySelectorAll('.mostrar-carrito');
