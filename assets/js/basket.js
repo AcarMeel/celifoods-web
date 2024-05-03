@@ -96,6 +96,15 @@ function updateBasketQuantity(quantity, nuevoProducto) {
     if (hasItems) {
         toast.show();
     }
+
+    const cartPopupElement = document.querySelector('.cart-items-popup');
+    if (cartPopupElement) {
+        const cartItems = document.querySelectorAll('.cart-item-popup');
+        if ( cartItems && cartItems.length > 0) {
+            cartItems.forEach(item => item.remove());
+        }
+        updateCartPopup(cartPopupElement);
+    }
     
 }
 
@@ -189,130 +198,133 @@ showCartItems.forEach(item => {
                 cartPopupElement.classList.add('cart-items-popup');
                 cartPopupElement.innerHTML = cartPopupTemplate;
                 document.body.appendChild(cartPopupElement);
-                const decartarBtn = document.getElementById('descartar-items');
-                const continuarEnvioBtn = document.getElementById('continuar-envio');
-
-                getTotal(cartPopupElement);
-                enableBtn(decartarBtn);
-                enableBtn(continuarEnvioBtn);
-
-                const goBack = document.querySelector('.regresar');
-                goBack.addEventListener('click', function() {
-                    if (cartPopupElement) {
-                        cartPopupElement.remove();
-                    }
-                });
-
-                decartarBtn.addEventListener('click', () => {
-                    Swal.fire({
-                        title: '¿Desea eliminar todos los productos?',
-                        text: 'Esta acción no se puede deshacer.',
-                        icon: 'warning',
-                        showCancelButton: true,
-                        confirmButtonColor: '#6D275E',
-                        cancelButtonColor: '#d33',
-                        confirmButtonText: 'Si, continuar',
-                        cancelButtonText: 'Cancelar'
-                      }).then((result) => {
-                        if (result.isConfirmed) {
-                            if (cartPopupElement) {
-                                cartPopupElement.remove();
-                                localStorage.removeItem('basket');
-                                window.location.reload();
-                            }
-                        }
-                    });
-                })
-
-                const list = document.querySelector('.cart-items-popup-list');
-                const basketData = JSON.parse(localStorage.getItem("basket")) || [];
-
-                if (basketData.length > 0) {
-                    basketData.forEach(cartItem => {
-                        const carritoVacio = document.getElementById('carrito-vacio');
-                        if (carritoVacio) {
-                            carritoVacio.remove();
-                        }
-                        const cartItemPopupElement = document.createElement('div');
-                        cartItemPopupElement.classList.add('cart-item-popup');
-                        cartItemPopupElement.innerHTML = cartListPopupTemplate;
-                        cartItemPopupElement.id = `cart-item-popup-${cartItem.productId}`;
-
-                        cartItemPopupElement.querySelector('.cart-item-popup-img').src = cartItem.imagen;
-                        cartItemPopupElement.querySelector('h2').textContent = cartItem.nombreProducto;
-                        cartItemPopupElement.querySelector('p').textContent = `${cartItem.ingredientes.slice(0, 25)}(...)`;
-                        cartItemPopupElement.querySelector('.cart-item-popup-text-precio').textContent = `₡${cartItem.precio}`;
-
-                        const btn = cartItemPopupElement.querySelector('button');
-                        const input = cartItemPopupElement.querySelector('input');
-
-                        input.value = cartItem.cantidad.toString();
-
-                        [btn, input].map(el => {
-                            el.dataset.nombre = cartItem.nombreProducto;
-                            el.dataset.precio = cartItem.precio;
-                            el.dataset.productId = cartItem.productId;
-                        });
-
-                        list.appendChild(cartItemPopupElement);
-
-                        input?.addEventListener("change", function () {
-                            let quantity = parseInt(this.value);
-                            if (isNaN(quantity)) {
-                                quantity = 0;
-                                input.value = "0";
-                            }
-                            if (quantity < 0 || quantity > 5) {
-                                alert('Debe ingresar una cantidad menor a 5');
-                            } else {
-                                setTimeout(() => {
-                                    updateBasketQuantity(quantity, {
-                                        nombreProducto: cartItem.nombreProducto,
-                                        ...cartItem,
-                                        cantidad: quantity,
-                                        precio: cartItem.precio,
-                                        totalProducto: parseFloat(cartItem.precio) * quantity,
-                                        productId: cartItem.productId.toString()
-                                    });
-                                }, 10);
-                                if (quantity === 0) {
-                                    cartItemPopupElement.remove();
-                                    displayNoCartItems(list, cartPopupElement);
-                                    enableBtn(decartarBtn);
-                                    enableBtn(continuarEnvioBtn);
-                                }
-                            }
-                        });
-
-                        btn?.addEventListener("click", function () {
-                            input.value = "0";
-                            setTimeout(() => {
-                                updateBasketQuantity(0, {
-                                    nombreProducto: cartItem.nombreProducto,
-                                    ...cartItem,
-                                    cantidad: 0,
-                                    precio: cartItem.precio,
-                                    totalProducto: 0,
-                                    productId: cartItem.productId.toString()
-                                });
-                            }, 10);
-                            cartItemPopupElement.remove();
-                            displayNoCartItems(list, cartPopupElement);
-                            enableBtn(decartarBtn);
-                            enableBtn(continuarEnvioBtn);
-                        });
-                    });
-                } else {
-                    displayNoCartItems(list, cartPopupElement);
-                    enableBtn(decartarBtn);
-                    enableBtn(continuarEnvioBtn);
-                }
+                updateCartPopup(cartPopupElement);
             }
         });
     }
 });
 
 
+function updateCartPopup(cartPopupElement) {
+    const decartarBtn = document.getElementById('descartar-items');
+    const continuarEnvioBtn = document.getElementById('continuar-envio');
+
+    getTotal(cartPopupElement);
+    enableBtn(decartarBtn);
+    enableBtn(continuarEnvioBtn);
+
+    const goBack = document.querySelector('.regresar');
+    goBack.addEventListener('click', function() {
+        if (cartPopupElement) {
+            cartPopupElement.remove();
+        }
+    });
+
+    decartarBtn.addEventListener('click', () => {
+        Swal.fire({
+            title: '¿Desea eliminar todos los productos?',
+            text: 'Esta acción no se puede deshacer.',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#6D275E',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, continuar',
+            cancelButtonText: 'Cancelar'
+            }).then((result) => {
+            if (result.isConfirmed) {
+                if (cartPopupElement) {
+                    cartPopupElement.remove();
+                    localStorage.removeItem('basket');
+                    window.location.reload();
+                }
+            }
+        });
+    })
+
+    const list = document.querySelector('.cart-items-popup-list');
+    const basketData = JSON.parse(localStorage.getItem("basket")) || [];
+
+    if (basketData.length > 0) {
+        basketData.forEach(cartItem => {
+            const carritoVacio = document.getElementById('carrito-vacio');
+            if (carritoVacio) {
+                carritoVacio.remove();
+            }
+            const cartItemPopupElement = document.createElement('div');
+            cartItemPopupElement.classList.add('cart-item-popup');
+            cartItemPopupElement.innerHTML = cartListPopupTemplate;
+            cartItemPopupElement.id = `cart-item-popup-${cartItem.productId}`;
+
+            cartItemPopupElement.querySelector('.cart-item-popup-img').src = cartItem.imagen;
+            cartItemPopupElement.querySelector('h2').textContent = cartItem.nombreProducto;
+            cartItemPopupElement.querySelector('p').textContent = `${cartItem.ingredientes.slice(0, 25)}(...)`;
+            cartItemPopupElement.querySelector('.cart-item-popup-text-precio').textContent = `₡${cartItem.precio}`;
+
+            const btn = cartItemPopupElement.querySelector('button');
+            const input = cartItemPopupElement.querySelector('input');
+
+            input.value = cartItem.cantidad.toString();
+
+            [btn, input].map(el => {
+                el.dataset.nombre = cartItem.nombreProducto;
+                el.dataset.precio = cartItem.precio;
+                el.dataset.productId = cartItem.productId;
+            });
+
+            list.appendChild(cartItemPopupElement);
+
+            input?.addEventListener("change", function () {
+                let quantity = parseInt(this.value);
+                if (isNaN(quantity)) {
+                    quantity = 0;
+                    input.value = "0";
+                }
+                if (quantity < 0 || quantity > 5) {
+                    alert('Debe ingresar una cantidad menor a 5');
+                } else {
+                    setTimeout(() => {
+                        updateBasketQuantity(quantity, {
+                            nombreProducto: cartItem.nombreProducto,
+                            ...cartItem,
+                            cantidad: quantity,
+                            precio: cartItem.precio,
+                            totalProducto: parseFloat(cartItem.precio) * quantity,
+                            productId: cartItem.productId.toString()
+                        });
+                    }, 10);
+                    if (quantity === 0) {
+                        cartItemPopupElement.remove();
+                        displayNoCartItems(list, cartPopupElement);
+                        enableBtn(decartarBtn);
+                        enableBtn(continuarEnvioBtn);
+                    }
+                }
+            });
+
+            btn?.addEventListener("click", function () {
+                input.value = "0";
+                setTimeout(() => {
+                    updateBasketQuantity(0, {
+                        nombreProducto: cartItem.nombreProducto,
+                        ...cartItem,
+                        cantidad: 0,
+                        precio: cartItem.precio,
+                        totalProducto: 0,
+                        productId: cartItem.productId.toString()
+                    });
+                }, 10);
+                cartItemPopupElement.remove();
+                displayNoCartItems(list, cartPopupElement);
+                enableBtn(decartarBtn);
+                enableBtn(continuarEnvioBtn);
+            });
+        });
+    } else {
+        displayNoCartItems(list, cartPopupElement);
+        enableBtn(decartarBtn);
+        enableBtn(continuarEnvioBtn);
+    }
+} 
 
 window.addEventListener("load", () => {
     updateBasketQuantity();
