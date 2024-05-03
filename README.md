@@ -61,6 +61,7 @@ https://api.whatsapp.com/send/?phone=50689428070
     - popup factura
     - ir a whatsapp
     - logica envio (provincias)
+    - generar un # de pedido
     - info envios/costos/dias => erin
 
 - animaciones aos
