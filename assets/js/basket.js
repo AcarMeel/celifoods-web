@@ -2,11 +2,11 @@ const toastTrigger = document.getElementById('toastNotificationCartUpdate');
 const toast = new bootstrap.Toast(toastTrigger);
 const cartListPopupTemplate = `
         <div class="cart-item-popup-left">
-            <img class="cart-item-popup-img" src="" alt="galletas">
+            <img class="cart-item-popup-img" src="" alt="">
             <div class="cart-item-popup-text">
-                <h2>Platillo Verde</h2>
-                <p>Con vegetales salteados...</p>
-                <p class="cart-item-popup-text-precio">&#8353;4650</p>
+                <h2></h2>
+                <p></p>
+                <p class="cart-item-popup-text-precio"></p>
             </div>
         </div>
         <div class="cart-item-popup-actions">
@@ -25,14 +25,17 @@ const cartPopupTemplate = `
     <div class="cart-items-popup-total">
         <div class="item subtotal">
             <h6>Subtotal</h6>
-            <p class="subtotal-display">20.000</p>
+            <p class="subtotal-display"></p>
         </div>
         <div class="item iva">
             <h6>Total IVAI*</h6>
-            <p class="iva-display">20.000</p>
+            <p class="iva-display"></p>
         </div>
     </div>
     <div class="cart-items-popup-footer">
+        <div class="alert alert-danger cartPopupQtyAlert d-none" role="alert">
+            Favor ingresar al menos un producto. Solo 5 productos por cliente.
+        </div>
         <p>*Este precio no incluye el envío.</p>
         <div class="cart-items-popup-footer-cta">
             <button id="descartar-items" class="btn btn-outline-primary">descartar</button>
@@ -209,6 +212,7 @@ showCartItems.forEach(item => {
 function updateCartPopup(cartPopupElement) {
     const decartarBtn = document.getElementById('descartar-items');
     const continuarEnvioBtn = document.getElementById('continuar-envio');
+    const quantityAlert = document.querySelector(".cartPopupQtyAlert");
 
     getTotal(cartPopupElement);
     enableBtn(decartarBtn);
@@ -276,12 +280,13 @@ function updateCartPopup(cartPopupElement) {
 
             input?.addEventListener("change", function () {
                 let quantity = parseInt(this.value);
+                quantityAlert.classList.add("d-none");
                 if (isNaN(quantity)) {
                     quantity = 0;
                     input.value = "0";
                 }
                 if (quantity < 0 || quantity > 5) {
-                    alert('Debe ingresar una cantidad menor a 5');
+                    quantityAlert.classList.remove("d-none");
                 } else {
                     setTimeout(() => {
                         updateBasketQuantity(quantity, {
