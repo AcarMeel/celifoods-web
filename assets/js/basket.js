@@ -168,7 +168,8 @@ function getTotal(cartPopupElement) {
 function displayNoCartItems(list, cartPopupElement) {
     setTimeout(() => {
         const basketData = JSON.parse(localStorage.getItem("basket")) || [];
-        if (!basketData || basketData && basketData.length === 0) {
+        const pEl = document.getElementById('carrito-vacio');
+        if (!pEl && (!basketData || basketData && basketData.length === 0)) {
             const p = document.createElement('p');
             p.classList.add('text-center', 'my-3')
             p.textContent = 'Carrito vacío';
