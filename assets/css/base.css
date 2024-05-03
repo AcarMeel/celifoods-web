@@ -237,6 +237,8 @@ span.required {
         h2 {
             font-size: 20px;
             margin: 0;
+            text-align: left;
+            padding-bottom: 0;
         }
         p {
             margin: 0;
