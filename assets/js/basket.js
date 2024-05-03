@@ -35,8 +35,8 @@ const cartPopupTemplate = `
     <div class="cart-items-popup-footer">
         <p>*Este precio no incluye el envío.</p>
         <div class="cart-items-popup-footer-cta">
-            <button class="btn btn-outline-primary">descartar</button>
-            <button class="btn btn-primary">continuar</button>
+            <button id="descartar-items" class="btn btn-outline-primary">descartar</button>
+            <button id="continuar-envio" class="btn btn-primary">continuar</button>
         </div>
     </div>`;
 
@@ -178,6 +178,7 @@ showCartItems.forEach(item => {
                 cartPopupElement.classList.add('cart-items-popup');
                 cartPopupElement.innerHTML = cartPopupTemplate;
                 document.body.appendChild(cartPopupElement);
+                const decartarBtn = document.getElementById('descartar-items');
 
                 getTotal(cartPopupElement);
 
@@ -187,6 +188,27 @@ showCartItems.forEach(item => {
                         cartPopupElement.remove();
                     }
                 });
+
+                decartarBtn.addEventListener('click', () => {
+                    Swal.fire({
+                        title: '¿Desea eliminar todos los productos?',
+                        text: 'Esta acción no se puede deshacer.',
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#6D275E',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Si, continuar',
+                        cancelButtonText: 'Cancelar'
+                      }).then((result) => {
+                        if (result.isConfirmed) {
+                            if (cartPopupElement) {
+                                cartPopupElement.remove();
+                                localStorage.removeItem('basket');
+                                window.location.reload();
+                            }
+                        }
+                    });
+                })
 
                 const list = document.querySelector('.cart-items-popup-list');
                 const basketData = JSON.parse(localStorage.getItem("basket")) || [];
