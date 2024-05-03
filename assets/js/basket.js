@@ -170,6 +170,13 @@ function displayNoCartItems(list, cartPopupElement) {
     }, 10);
 }
 
+function enableBtn(buttonEl) {
+    setTimeout(() => {
+        const basketData = JSON.parse(localStorage.getItem("basket")) || [];
+        buttonEl.disabled = !basketData || basketData && basketData.length === 0;
+    }, 10);
+}
+
 const showCartItems = document.querySelectorAll('.mostrar-carrito');
 showCartItems.forEach(item => {
     if (item) {
@@ -183,8 +190,11 @@ showCartItems.forEach(item => {
                 cartPopupElement.innerHTML = cartPopupTemplate;
                 document.body.appendChild(cartPopupElement);
                 const decartarBtn = document.getElementById('descartar-items');
+                const continuarEnvioBtn = document.getElementById('continuar-envio');
 
                 getTotal(cartPopupElement);
+                enableBtn(decartarBtn);
+                enableBtn(continuarEnvioBtn);
 
                 const goBack = document.querySelector('.regresar');
                 goBack.addEventListener('click', function() {
@@ -265,8 +275,12 @@ showCartItems.forEach(item => {
                                         productId: cartItem.productId.toString()
                                     });
                                 }, 10);
-                                cartItemPopupElement.remove();
-                                displayNoCartItems(list, cartPopupElement);
+                                if (quantity === 0) {
+                                    cartItemPopupElement.remove();
+                                    displayNoCartItems(list, cartPopupElement);
+                                    enableBtn(decartarBtn);
+                                    enableBtn(continuarEnvioBtn);
+                                }
                             }
                         });
 
@@ -284,10 +298,14 @@ showCartItems.forEach(item => {
                             }, 10);
                             cartItemPopupElement.remove();
                             displayNoCartItems(list, cartPopupElement);
+                            enableBtn(decartarBtn);
+                            enableBtn(continuarEnvioBtn);
                         });
                     });
                 } else {
                     displayNoCartItems(list, cartPopupElement);
+                    enableBtn(decartarBtn);
+                    enableBtn(continuarEnvioBtn);
                 }
             }
         });
