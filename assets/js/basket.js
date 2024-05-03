@@ -1,5 +1,44 @@
 const toastTrigger = document.getElementById('toastNotificationCartUpdate');
 const toast = new bootstrap.Toast(toastTrigger);
+const cartListPopupTemplate = `
+        <div class="cart-item-popup-left">
+            <img class="cart-item-popup-img" src="" alt="galletas">
+            <div class="cart-item-popup-text">
+                <h2>Platillo Verde</h2>
+                <p>Con vegetales salteados...</p>
+                <p class="cart-item-popup-text-precio">&#8353;4650</p>
+            </div>
+        </div>
+        <div class="cart-item-popup-actions">
+            <input type="number" min="0" max="5" value="0">
+            <button><i class="fa-solid fa-trash-can"></i></button>
+        </div>
+    `;
+const cartPopupTemplate = `
+    <h3>Tu carrito</h3>
+    <button data-bs-toggle="tooltip" data-bs-title="Regresar" class="btn btn-outline-secondary regresar">
+        <i class="fa-solid fa-arrow-left"></i>
+    </button>
+    <div class="cart-items-popup-list">
+        
+    </div>
+    <div class="cart-items-popup-total">
+        <div class="item subtotal">
+            <h6>Subtotal</h6>
+            <p class="subtotal-display">20.000</p>
+        </div>
+        <div class="item iva">
+            <h6>Total IVAI*</h6>
+            <p class="iva-display">20.000</p>
+        </div>
+    </div>
+    <div class="cart-items-popup-footer">
+        <p>*Este precio no incluye el envío.</p>
+        <div class="cart-items-popup-footer-cta">
+            <button class="btn btn-outline-primary">descartar</button>
+            <button class="btn btn-primary">continuar</button>
+        </div>
+    </div>`;
 
 function updateBasketQuantity(quantity, nuevoProducto) {
     let basketData = JSON.parse(localStorage.getItem("basket")) || [];
@@ -108,6 +147,125 @@ if (toastTrigger && toast) {
         toast.hide()
     });
 }
+
+function getTotal(cartPopupElement) {
+    setInterval(() => {
+        const totalPriceProducts = JSON.parse(localStorage.getItem("totalPriceProducts")) || 0;
+        cartPopupElement.querySelector('.subtotal-display').textContent = '₡' + totalPriceProducts.toFixed(2);
+        cartPopupElement.querySelector('.iva-display').textContent = totalPriceProducts > 0 ? '₡' + (totalPriceProducts * 0.13).toFixed(2) : '₡' + totalPriceProducts.toFixed(2);
+    }, 10);
+}
+
+function displayNoCartItems(list, cartPopupElement) {
+    const p = document.createElement('p');
+    p.classList.add('text-center', 'my-3')
+    p.textContent = 'Carrito vacío';
+    p.id = 'carrito-vacio';
+    list.appendChild(p);
+
+    getTotal(cartPopupElement);
+}
+
+const showCartItems = document.querySelectorAll('.mostrar-carrito');
+showCartItems.forEach(item => {
+    if (item) {
+        item.addEventListener('click', () => {
+            const cartPopupElement = document.querySelector('.cart-items-popup');
+            if (cartPopupElement) {
+                cartPopupElement.remove();
+            } else {
+                const cartPopupElement = document.createElement('div');
+                cartPopupElement.classList.add('cart-items-popup');
+                cartPopupElement.innerHTML = cartPopupTemplate;
+                document.body.appendChild(cartPopupElement);
+
+                getTotal(cartPopupElement);
+
+                const goBack = document.querySelector('.regresar');
+                goBack.addEventListener('click', function() {
+                    if (cartPopupElement) {
+                        cartPopupElement.remove();
+                    }
+                });
+
+                const list = document.querySelector('.cart-items-popup-list');
+                const basketData = JSON.parse(localStorage.getItem("basket")) || [];
+
+                if (basketData.length > 0) {
+                    basketData.forEach(cartItem => {
+                        const carritoVacio = document.getElementById('carrito-vacio');
+                        if (carritoVacio) {
+                            carritoVacio.remove();
+                        }
+                        const cartItemPopupElement = document.createElement('div');
+                        cartItemPopupElement.classList.add('cart-item-popup');
+                        cartItemPopupElement.innerHTML = cartListPopupTemplate;
+                        cartItemPopupElement.id = `cart-item-popup-${cartItem.productId}`;
+
+                        cartItemPopupElement.querySelector('.cart-item-popup-img').src = cartItem.imagen;
+                        cartItemPopupElement.querySelector('h2').textContent = cartItem.nombreProducto;
+                        cartItemPopupElement.querySelector('p').textContent = `${cartItem.ingredientes.slice(0, 25)}(...)`;
+                        cartItemPopupElement.querySelector('.cart-item-popup-text-precio').textContent = `₡${cartItem.precio}`;
+
+                        const btn = cartItemPopupElement.querySelector('button');
+                        const input = cartItemPopupElement.querySelector('input');
+
+                        input.value = cartItem.cantidad.toString();
+
+                        [btn, input].map(el => {
+                            el.dataset.nombre = cartItem.nombreProducto;
+                            el.dataset.precio = cartItem.precio;
+                            el.dataset.productId = cartItem.productId;
+                        });
+
+                        list.appendChild(cartItemPopupElement);
+
+                        input?.addEventListener("change", function () {
+                            let quantity = parseInt(this.value);
+                            if (isNaN(quantity)) {
+                                quantity = 0;
+                                input.value = "0";
+                            }
+                            if (quantity < 0 || quantity > 5) {
+                                alert('Debe ingresar una cantidad menor a 5');
+                            } else {
+                                setTimeout(() => {
+                                    updateBasketQuantity(quantity, {
+                                        nombreProducto: cartItem.nombreProducto,
+                                        ...cartItem,
+                                        cantidad: quantity,
+                                        precio: cartItem.precio,
+                                        totalProducto: parseFloat(cartItem.precio) * quantity,
+                                        productId: cartItem.productId.toString()
+                                    });
+                                }, 10);
+                            }
+                        });
+
+                        btn?.addEventListener("click", function () {
+                            input.value = "0";
+                            setTimeout(() => {
+                                updateBasketQuantity(0, {
+                                    nombreProducto: cartItem.nombreProducto,
+                                    ...cartItem,
+                                    cantidad: 0,
+                                    precio: cartItem.precio,
+                                    totalProducto: 0,
+                                    productId: cartItem.productId.toString()
+                                });
+                            }, 10);
+                            cartItemPopupElement.remove();
+                            displayNoCartItems(list, cartPopupElement);
+                        });
+                    });
+                } else {
+                    displayNoCartItems(list, cartPopupElement);
+                }
+            }
+        });
+    }
+});
+
 
 
 window.addEventListener("load", () => {
