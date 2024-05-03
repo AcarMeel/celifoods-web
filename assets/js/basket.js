@@ -265,6 +265,8 @@ showCartItems.forEach(item => {
                                         productId: cartItem.productId.toString()
                                     });
                                 }, 10);
+                                cartItemPopupElement.remove();
+                                displayNoCartItems(list, cartPopupElement);
                             }
                         });
 
