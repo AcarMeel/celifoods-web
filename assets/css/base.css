@@ -172,7 +172,10 @@ span.required {
     right: 20px;
     z-index: 1000;
     border: none;
-    background-color: transparent;
+    
+    background-color: var(--white);
+    padding: 6px 14px 0px 14px;
+    border-radius: 100%;
 }
 
 .btn-scroll-top i {
