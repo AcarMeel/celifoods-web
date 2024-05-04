@@ -523,7 +523,7 @@ function shippingPopupCreateItems() {
 
         shippingItem.querySelector('.shipping-item-popup-img').src = data.imagen;
         shippingItem.querySelector('.shipping-item-popup-img').alt = data.nombreProducto;
-        shippingItem.querySelector('h2').src = data.nombreProducto;
+        shippingItem.querySelector('h2').textContent = data.nombreProducto;
         shippingItem.querySelector('.shipping-item-popup-text-precio').textContent = `₡${data.precio}`;
         shippingItem.querySelector('.shipping-item-popup-desc').textContent = `${data.ingredientes.slice(0, 25)}(...)`;
 
