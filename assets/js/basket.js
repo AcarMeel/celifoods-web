@@ -1,5 +1,65 @@
 const toastTrigger = document.getElementById('toastNotificationCartUpdate');
 const toast = new bootstrap.Toast(toastTrigger);
+const jsonProvincias = './assets/data/envio.json';
+const shippingItemsTpl = `
+    <div class="shipping-item-popup-left">
+        <img class="shipping-item-popup-img" src="" alt="">
+        <div class="shipping-item-popup-text">
+            <h2></h2>
+            <p class="shipping-item-popup-desc"></p>
+            <p class="shipping-item-popup-text-precio"></p>
+        </div>
+    </div>
+    <div class="shipping-item-popup-actions">
+        <input type="number" min="0" max="5" value="0">
+        <button><i class="fa-solid fa-trash-can"></i></button>
+    </div>`;
+const shippingPopupTpl = `
+        <button id="regresar-shipping-btn" data-bs-toggle="tooltip" data-bs-title="Regresar" class="btn btn-outline-secondary regresar">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="shipping-flex">
+            <div class="shipping-form">
+                <form>
+                    <div class="mb-3">
+                        <label for="shippingNombre" class="form-label">Nombre Completo</label>
+                        <input type="text" class="form-control" id="shippingNombre" placeholder="Ej. María Castro">
+                    </div>
+                    <div class="mb-3">
+                        <label for="shippingTel" class="form-label">Número de Teléfono</label>
+                        <input type="tel" class="form-control" id="shippingTel" placeholder="Ej. 88906543">
+                    </div>
+                    <div class="mb-3">
+                        <label for="shippingCorreo" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="shippingCorreo" placeholder="Ej. alguien@algo.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="shippingProvincia" class="form-label">Provincia</label>
+                        <select id="provinciaSelect" class="form-select" aria-label="Elegir provincia">
+                            <option selected>Elegir provincia</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="shippingPago" class="form-label">Método de pago</label>
+                        <select id="metodoPagoSelect" class="form-select" aria-label="Método de pago">
+                            <option selected>Elegir Método de pago</option>
+                            <option value="1">Transferencia bancaria</option>
+                            <option value="2">SINPE Móvil</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="shipping-items">
+                
+            </div>
+        </div>
+        <div class="alert alert-danger shippingPopupQtyAlert d-none" role="alert">
+            Favor ingresar al menos un producto. Solo 5 productos por cliente.
+        </div>
+        <div class="shipping-cta my-4 mx-4">
+            <button id="shippingContinuarBtn" class="btn btn-primary">facturar</button>
+        </div>
+`;
 const cartListPopupTemplate = `
         <div class="cart-item-popup-left">
             <img class="cart-item-popup-img" src="" alt="">
@@ -225,6 +285,13 @@ function updateCartPopup(cartPopupElement) {
         }
     });
 
+    continuarEnvioBtn.addEventListener('click', () => {
+        if (cartPopupElement) {
+            cartPopupElement.remove();
+        }
+        showShippingPopup();
+    });
+
     decartarBtn.addEventListener('click', () => {
         Swal.fire({
             title: '¿Desea eliminar todos los productos?',
@@ -331,6 +398,124 @@ function updateCartPopup(cartPopupElement) {
         enableBtn(continuarEnvioBtn);
     }
 } 
+
+async function loadProvincias() {
+    const response = await fetch(jsonProvincias);
+    const provincias = await response.json();
+    const selector = document.getElementById('provinciaSelect');
+    provincias.forEach((item) => {
+        const option = document.createElement('option');
+        option.value = item.provincia;
+        option.textContent = item.provincia;
+        selector.appendChild(option);
+    });
+}
+
+function showShippingPopup() {
+    let shippingPopupEl = document.querySelector('.shipping-popup');
+    if (!shippingPopupEl) {
+        shippingPopupEl = document.createElement('div');
+        shippingPopupEl.classList.add('shipping-popup');
+        shippingPopupEl.innerHTML = shippingPopupTpl;
+        document.body.appendChild(shippingPopupEl);
+        loadProvincias();
+        closeShippingPopup(shippingPopupEl);
+        shippingPopupCreateItems();
+    }
+}
+
+function shippingPopupCreateItems() {
+    const basketData = JSON.parse(localStorage.getItem("basket")) || [];
+    const container = document.querySelector('.shipping-items');
+    basketData.forEach(data => {
+        const shippingItem = document.createElement('div');
+        shippingItem.classList.add('shipping-item');
+        shippingItem.innerHTML = shippingItemsTpl;
+        container.appendChild(shippingItem);
+
+        shippingItem.querySelector('.shipping-item-popup-img').src = data.imagen;
+        shippingItem.querySelector('.shipping-item-popup-img').alt = data.nombreProducto;
+        shippingItem.querySelector('h2').src = data.nombreProducto;
+        shippingItem.querySelector('.shipping-item-popup-text-precio').textContent = `₡${data.precio}`;
+        shippingItem.querySelector('.shipping-item-popup-desc').textContent = `${data.ingredientes.slice(0, 25)}(...)`;
+
+        const input = shippingItem.querySelector('input');
+        const btnRemove = shippingItem.querySelector('button');
+
+        input.value = data.cantidad.toString();
+
+        shippingPopupRemoveItem(btnRemove, input, data, shippingItem);
+        shippingPopupQty(input, data, shippingItem);
+    });
+}
+
+function shippingPopupQty(input, data, shippingItem) {
+    const quantityAlert = document.querySelector('.shippingPopupQtyAlert');
+    input?.addEventListener("change", function () {
+        let quantity = parseInt(this.value);
+        quantityAlert.classList.add("d-none");
+        if (isNaN(quantity)) {
+            quantity = 0;
+            input.value = "0";
+        }
+        if (quantity < 0 || quantity > 5) {
+            quantityAlert.classList.remove("d-none");
+        } else {
+            setTimeout(() => {
+                updateBasketQuantity(quantity, {
+                    nombreProducto: data.nombreProducto,
+                    ...data,
+                    cantidad: quantity,
+                    precio: data.precio,
+                    totalProducto: parseFloat(data.precio) * quantity,
+                    productId: data.productId.toString()
+                });
+            }, 10);
+            if (quantity === 0) {
+                shippingItem.remove();
+            }
+            removeShippingPopup();
+        }
+    });
+}
+
+function removeShippingPopup() {
+    setTimeout(() => {
+        const basketData = JSON.parse(localStorage.getItem("basket")) || [];
+        if (!basketData || basketData && basketData.length === 0) {
+            const popup = document.querySelector('.shipping-popup');
+            popup.remove();
+        }
+    }, 10);
+}
+
+function shippingPopupRemoveItem(btnRef, input, item, parentEl) {
+    btnRef.addEventListener('click', () => {
+        input.value = "0";
+        setTimeout(() => {
+            updateBasketQuantity(0, {
+                nombreProducto: item.nombreProducto,
+                ...item,
+                cantidad: 0,
+                precio: item.precio,
+                totalProducto: 0,
+                productId: item.productId.toString()
+            });
+        }, 10);
+        parentEl.remove();
+
+        removeShippingPopup();
+    })
+}
+
+function closeShippingPopup(parentEl) {
+    if (parentEl) {
+        const btnRegresar = document.getElementById('regresar-shipping-btn');
+        btnRegresar.addEventListener('click', () => {
+            parentEl.remove();
+        });
+    }
+}
 
 window.addEventListener("load", () => {
     updateBasketQuantity();
