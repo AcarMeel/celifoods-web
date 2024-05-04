@@ -2,6 +2,31 @@ const toastTrigger = document.getElementById('toastNotificationCartUpdate');
 const toast = new bootstrap.Toast(toastTrigger);
 const jsonProvincias = './assets/data/envio.json';
 let provincias = [];
+const receiptPopupTpl = `
+    <div class="receipt-confirmation-icon">
+        <i class="fa-regular fa-circle-check text-success"></i>
+    </div>
+    <h3 class="receipt-h3">Factura realizada con éxito</h3>
+    <div class="receipt-top-text">
+        <h4 class="receipt-h4">Número de Factura 202405041549</h4>
+        <h5 class="receipt-h5">Nombre: Lalal Lalala</h5>
+    </div>
+    <div class="receipt-items"></div>
+    <div class="receipt-totals"></div>
+    <div class="receipt-btn-container">
+        <a class="btn btn-primary receipt">Dirigir a whatsapp</a>
+    </div>
+`;
+
+const receiptItemTpl = `
+    <p class="receipt-item-name"></p>
+    <span>- - - - - - - - - - - - -</span>
+    <p class="receipt-item-price"></p>
+`;
+const receiptTotalItemTpl = `
+    <p class="receipt-total-title"></p>
+    <p class="receipt-total-price"></p>
+`;
 const shippingItemsTpl = `
     <div class="shipping-item-popup-left">
         <img class="shipping-item-popup-img" src="" alt="">
@@ -414,6 +439,134 @@ async function loadProvincias() {
     });
 }
 
+function showReceiptPopup() {
+    let receiptPopupEl = document.querySelector('.receipt-popup');
+    const shippingData = JSON.parse(localStorage.getItem("shipping")) || null;
+    const basketData = JSON.parse(localStorage.getItem("basket")) || [];
+    const totalPriceProducts = localStorage.getItem("totalPriceProducts") || 0;
+    let invoiceDetails = '';
+    if (!receiptPopupEl && shippingData && basketData.length > 0) {
+        receiptPopupEl = document.createElement('div');
+        receiptPopupEl.classList.add('receipt-popup');
+        receiptPopupEl.innerHTML = receiptPopupTpl;
+        document.body.appendChild(receiptPopupEl);
+
+        const btn = receiptPopupEl.querySelector('.receipt');
+
+        const factura = `Número de Factura ${generateInvoiceNumber()}`;
+        const facturaNombre = `Nombre: ${shippingData.shippingNombre}`;
+        document.querySelector('.receipt-h4').textContent = factura;
+        document.querySelector('.receipt-h5').textContent = facturaNombre;
+
+        invoiceDetails += `
+            ${'Hola! He realizado un pedido desde el sitio web!'}
+            ${factura}
+            ${facturaNombre}
+        `;
+        
+        const receiptItems = document.querySelector('.receipt-items');
+        const receiptTotals = document.querySelector('.receipt-totals');
+
+        basketData.forEach(item => {
+            const receiptItem = document.createElement('div');
+            receiptItem.classList.add('receipt-item');
+            receiptItem.innerHTML = receiptItemTpl;
+            receiptItems.appendChild(receiptItem);
+
+            const prodItem = `${item.cantidad} ${item.nombreProducto}`;
+            const prodPrice = `${formatToColon(item.totalProducto)}`;
+            receiptItem.querySelector('.receipt-item-name').textContent = prodItem;
+            receiptItem.querySelector('.receipt-item-price').textContent = prodPrice;
+
+            invoiceDetails += `
+                ${prodItem}
+                ${prodPrice}
+            `;
+        });
+
+        const paymentTotals = [
+            { title: 'Subtotal IVAI', price: +totalPriceProducts + (+totalPriceProducts * 0.13) },
+            { title: 'Envío', price: +shippingData.costoEnvio },
+            { title: 'Total', price: (+shippingData.costoEnvio) + (+totalPriceProducts + (+totalPriceProducts * 0.13)) }
+        ];
+
+        paymentTotals.forEach(item => {
+            const receiptTotalItem = document.createElement('div');
+            receiptTotalItem.classList.add('receipt-total-item');
+            receiptTotalItem.innerHTML = receiptTotalItemTpl;
+            receiptTotals.appendChild(receiptTotalItem);
+            
+            receiptTotalItem.querySelector('.receipt-total-title').textContent = `${item.title}`; 
+            receiptTotalItem.querySelector('.receipt-total-price').textContent = `${formatToColon(item.price)}`;
+
+            invoiceDetails += `
+                ${item.title}
+                ${formatToColon(item.price)}
+            `;
+        });
+
+        invoiceDetails += `
+                Método de pago: ${shippingData.metodoPago}
+                Provincia: ${shippingData.provincia}
+                Correo: ${shippingData.shippingCorreo}
+                Teléfono: ${shippingData.shippingTel}
+        `;
+
+        const link = createWhatsAppLink('+50689428070', invoiceDetails);
+
+        btn.href = link;
+        btn.target = '_blank';
+
+        btn.addEventListener('click', () => {
+            setTimeout(() => {
+                receiptPopupEl.remove();
+                toggleShippingBodyClass();
+                localStorage.removeItem('basket');
+                localStorage.removeItem('shipping');
+                localStorage.removeItem('totalQtyProducts');
+                localStorage.removeItem('totalPriceProducts');
+                window.location.reload();
+            }, 10);
+        })
+    }
+}
+
+function createWhatsAppLink(phoneNumber, message) {
+    const encodedMessage = encodeURIComponent(message); 
+    const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    return url;
+}
+
+function formatToColon(number) {
+    const options = {
+      style: 'currency',
+      currency: 'CRC', 
+      minimumFractionDigits: 2, 
+      maximumFractionDigits: 2,
+    };
+  
+    const formatter = new Intl.NumberFormat('es-CR', options);
+    const formattedNumber = formatter.format(number);
+  
+    return formattedNumber;
+  }
+
+function generateInvoiceNumber() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = now.getMonth() + 1;
+    const day = now.getDate();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+    const randomSuffix = Math.floor(Math.random() * 100000000); 
+  
+    const invoiceNumber = `${year}${month.toString().padStart(2, '0')}${day.toString().padStart(2, '0')}${hours.toString().padStart(2, '0')}${minutes.toString().padStart(2, '0')}${seconds.toString().padStart(2, '0')}${randomSuffix}`;
+  
+    return invoiceNumber;
+}
+  
+
 function showShippingPopup() {
     let shippingPopupEl = document.querySelector('.shipping-popup');
     if (!shippingPopupEl) {
@@ -499,6 +652,8 @@ function shippingConfirm() {
             costoEnvio: envio.costoEnvio,
             diasEntrega: envio.diasEntrega
         }));
+        document.querySelector('.shipping-popup').remove();
+        showReceiptPopup();
     });
 }
 
