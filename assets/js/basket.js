@@ -1,6 +1,7 @@
 const toastTrigger = document.getElementById('toastNotificationCartUpdate');
 const toast = new bootstrap.Toast(toastTrigger);
 const jsonProvincias = './assets/data/envio.json';
+let provincias = [];
 const shippingItemsTpl = `
     <div class="shipping-item-popup-left">
         <img class="shipping-item-popup-img" src="" alt="">
@@ -21,23 +22,22 @@ const shippingPopupTpl = `
         <div class="my-4 alert alert-danger shippingPopupQtyAlert d-none" role="alert">
             Favor ingresar al menos un producto. Solo 5 productos por cliente.
         </div>
-        <div class="my-4 alert alert-danger shippingFormErrors d-none" role="alert">
-            
-        </div>
+        <div class="my-4 alert alert-danger shippingFormErrors d-none" role="alert"></div>
+        <div class="my-4 alert alert-info shippingFormInfo d-none" role="alert"></div>
         <div class="shipping-flex">
             <div class="shipping-form">
                 <form>
                     <div class="mb-3">
                         <label for="shippingNombre" class="form-label"><span class="required">*</span>Nombre Completo</label>
-                        <input type="text" class="form-control" id="shippingNombre" placeholder="Ej. María Castro">
+                        <input type="text" maxlength="25" class="form-control" id="shippingNombre" placeholder="Ej. María Castro">
                     </div>
                     <div class="mb-3">
                         <label for="shippingTel" class="form-label"><span class="required">*</span>Número de Teléfono</label>
-                        <input type="tel" class="form-control" id="shippingTel" placeholder="Ej. 88906543">
+                        <input type="tel" maxlength="8" class="form-control" id="shippingTel" placeholder="Ej. 88906543">
                     </div>
                     <div class="mb-3">
                         <label for="shippingCorreo" class="form-label"><span class="required">*</span>Correo electrónico</label>
-                        <input type="email" class="form-control" id="shippingCorreo" placeholder="Ej. alguien@algo.com">
+                        <input type="email" maxlength="25" class="form-control" id="shippingCorreo" placeholder="Ej. alguien@algo.com">
                     </div>
                     <div class="mb-3">
                         <label for="shippingProvincia" class="form-label"><span class="required">*</span>Provincia</label>
@@ -49,8 +49,8 @@ const shippingPopupTpl = `
                         <label for="shippingPago" class="form-label"><span class="required">*</span>Método de pago</label>
                         <select id="metodoPagoSelect" class="form-select" aria-label="Método de pago">
                             <option selected>Elegir Método de pago</option>
-                            <option value="1">Transferencia bancaria</option>
-                            <option value="2">SINPE Móvil</option>
+                            <option value="Transferencia bancaria">Transferencia bancaria</option>
+                            <option value="SINPE Móvil">SINPE Móvil</option>
                         </select>
                     </div>
                 </form>
@@ -60,7 +60,7 @@ const shippingPopupTpl = `
             </div>
         </div>
         <div class="shipping-cta my-4 mx-4">
-            <button id="shippingContinuarBtn" class="btn btn-primary">facturar</button>
+            <button id="shippingFacturarBtn" class="btn btn-primary">facturar</button>
         </div>
 `;
 const cartListPopupTemplate = `
@@ -404,7 +404,7 @@ function updateCartPopup(cartPopupElement) {
 
 async function loadProvincias() {
     const response = await fetch(jsonProvincias);
-    const provincias = await response.json();
+    provincias = await response.json();
     const selector = document.getElementById('provinciaSelect');
     provincias.forEach((item) => {
         const option = document.createElement('option');
@@ -424,7 +424,92 @@ function showShippingPopup() {
         loadProvincias();
         closeShippingPopup(shippingPopupEl);
         shippingPopupCreateItems();
+        shippingConfirm();
+        provinciaSelection();
+        toggleShippingBodyClass();
     }
+}
+
+function provinciaSelection() {
+    const provinciaSelect = document.getElementById('provinciaSelect');
+    provinciaSelect.addEventListener('change', function() {
+        const alert = document.querySelector('.shippingFormInfo');
+        alert.innerHTML = '';
+        alert.classList.add('d-none');
+        
+        const selectedOptionValue = this.value;
+        const envio = provincias.find(p => p.provincia === selectedOptionValue);
+        if (envio) {
+            alert.classList.remove('d-none');
+            alert.innerHTML = `El envío a <strong>${selectedOptionValue}</strong> tiene un costo de <strong>₡${envio.costoEnvio}</strong>.
+            La entrega se realiza los días ${envio.diasEntrega}.`;
+        }
+    });
+}
+
+function shippingConfirm() {
+    const btn = document.getElementById('shippingFacturarBtn');
+    
+    btn.addEventListener('click', () => {
+        const shippingNombre = document.getElementById('shippingNombre');
+        const shippingTel = document.getElementById('shippingTel');
+        const shippingCorreo = document.getElementById('shippingCorreo');
+        const provinciaSelect = document.getElementById('provinciaSelect');
+        const metodoPagoSelect = document.getElementById('metodoPagoSelect');
+
+        const provinciaDefault = provinciaSelect.options[0].value;
+        const metodoPagoDefault = metodoPagoSelect.options[0].value;
+
+        const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(shippingCorreo.value.trim());
+        const telValido = /^\d{8}$/.test(shippingTel.value.trim());
+
+        if (shippingNombre.value.trim() === "") {
+            showShippingErrors("Nombre es requerido");
+            return;
+        }
+    
+        if (!telValido ||  shippingTel.value.trim() === "") {
+            showShippingErrors("Teléfono es inválido");
+            return;
+        }
+
+        if (!correoValido ||  shippingCorreo.value.trim() === "") {
+            showShippingErrors("Correo es inválido");
+            return;
+        }
+
+        if (!provinciaSelect ||  provinciaSelect.value.trim() === "" || provinciaSelect.value === provinciaDefault) {
+            showShippingErrors("Provincia es requerido");
+            return;
+        }
+
+        if (!metodoPagoSelect ||  metodoPagoSelect.value.trim() === "" || metodoPagoSelect.value === metodoPagoDefault) {
+            showShippingErrors("Método de pago es requerido");
+            return;
+        }
+
+        const envio = provincias.find(p => p.provincia === provinciaSelect.value);
+
+        localStorage.setItem("shipping", JSON.stringify({
+            shippingNombre: shippingNombre.value,
+            shippingTel: shippingTel.value,
+            shippingCorreo: shippingCorreo.value,
+            provincia: provinciaSelect.value,
+            metodoPago: metodoPagoSelect.value,
+            costoEnvio: envio.costoEnvio,
+            diasEntrega: envio.diasEntrega
+        }));
+    });
+}
+
+function showShippingErrors(errMsg) {
+    const errors = document.querySelector('.shippingFormErrors');
+    errors.classList.remove('d-none');
+    errors.textContent = errMsg;
+    setTimeout(function() {
+        errors.textContent = "";
+        errors.classList.add('d-none');
+    }, 3000);
 }
 
 function shippingPopupCreateItems() {
@@ -488,12 +573,25 @@ function removeShippingPopup() {
         if (!basketData || basketData && basketData.length === 0) {
             const popup = document.querySelector('.shipping-popup');
             popup.remove();
+            toggleShippingBodyClass();
         }
+        localStorage.removeItem("shipping");
     }, 10);
+}
+
+function toggleShippingBodyClass() {
+    const body = document.querySelector('body');
+    if (body.classList.contains('shipping-popup-open')) {
+        body.classList.remove('shipping-popup-open');
+    } else {
+        body.classList.add('shipping-popup-open');
+    }
 }
 
 function shippingPopupRemoveItem(btnRef, input, item, parentEl) {
     btnRef.addEventListener('click', () => {
+        const quantityAlert = document.querySelector('.shippingPopupQtyAlert');
+        quantityAlert.classList.add('d-none');
         input.value = "0";
         setTimeout(() => {
             updateBasketQuantity(0, {
@@ -515,7 +613,11 @@ function closeShippingPopup(parentEl) {
     if (parentEl) {
         const btnRegresar = document.getElementById('regresar-shipping-btn');
         btnRegresar.addEventListener('click', () => {
-            parentEl.remove();
+            setTimeout(() => {
+                parentEl.remove();
+                localStorage.removeItem("shipping");
+                toggleShippingBodyClass();
+            }, 10);
         });
     }
 }
