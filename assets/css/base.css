@@ -290,3 +290,128 @@ span.required {
         }
     }
 }
+
+.js-body-overlay-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7) !important; 
+    z-index: 2000;
+}
+
+.shipping-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 900px;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 5px;
+    z-index: 1032;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+    padding: 24px;
+    
+    .shipping-flex {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+        margin: 40px 0;
+    }
+
+    .shipping-form {
+        max-width: 350px;
+        width: 100%;
+    }
+
+    .shipping-cta {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .shipping-items {
+        height: 250px;
+        overflow: scroll;
+
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .shipping-item {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        margin-top: 24px;
+    }
+
+    .shipping-item-popup-left {
+        display: flex;
+        align-items: flex-start;
+        gap: 32px;
+    }
+
+    .shipping-item-popup-img {
+        width: 80px;
+        height: auto;
+    }
+
+    .shipping-item-popup-text {
+        h2 {
+            font-size: 20px;
+            margin: 0;
+            text-align: left;
+            padding-bottom: 0;
+        }
+        p {
+            margin: 0;
+
+            &.shipping-item-popup-text-precio {
+                font-size: 22px;
+            }
+        }
+    }
+
+    .shipping-item-popup-actions {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        input {
+            width: 70px;
+            background-color: var(--darkPurple);
+            color: var(--white);
+            border: none;
+            border-radius: 3px;
+            text-align: center;
+        }
+        button {
+            background-color: transparent;
+            border: none;
+            color: var(--red);
+            font-size: 20px;
+        }
+    }
+
+    .shipping-items-popup-total {
+        margin: 24px 0;
+
+        .item {
+            display: flex;
+            align-items: center;  
+            justify-content: space-between;      
+        }
+    }
+
+    .shipping-items-popup-footer {
+        .shipping-items-popup-footer-cta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+}
