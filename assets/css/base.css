@@ -513,10 +513,9 @@ span.required {
         justify-content: space-between;
     }
 
-    .receipt-total-title.total,
-    .receipt-total-price.total {
-        color: var(--darkBlue);
-        font-weight: bolder;
+    .receipt-total-title,
+    .receipt-total-price {
+        font-weight: bold;
     }
 
     .receipt-btn-container {
