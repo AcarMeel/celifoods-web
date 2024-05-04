@@ -426,3 +426,100 @@ span.required {
     }
 
 }
+
+.receipt-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 520px;
+    width: 100%;
+
+    pointer-events: auto;
+    
+    background-color: var(--white);
+    border-radius: 5px;
+    z-index: 1032;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+    padding: 40px 24px;
+
+    @media screen and (max-width: 991px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        height: 100%;
+        overflow: scroll;
+    }
+
+    .receipt-confirmation-icon {
+        text-align: center;
+        i {
+            font-size: 60px;
+        }
+    }
+
+    .receipt-h3,
+    .receipt-h4,
+    .receipt-h5 {
+        margin: 12px 0;
+    }
+
+    .receipt-h3 {
+        font-family: 'Metropolis';
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .receipt-h4 {
+        font-family: 'Metropolis';
+    }
+
+    .receipt-h5 {
+        font-family: 'Metropolis Regular';
+    }
+
+    .receipt-h4,
+    .receipt-h5 {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .receipt-top-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .receipt-items {
+        margin-top: 24px;
+    }
+
+    .receipt-item {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+    }
+
+    .receipt-item-price {
+        font-family: 'Metropolis';
+        font-weight: bold;
+    }
+
+    .receipt-total-item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .receipt-total-title.total,
+    .receipt-total-price.total {
+        color: var(--darkBlue);
+        font-weight: bolder;
+    }
+
+    .receipt-btn-container {
+        text-align: center;
+    }
+}
