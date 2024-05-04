@@ -18,29 +18,35 @@ const shippingPopupTpl = `
         <button id="regresar-shipping-btn" data-bs-toggle="tooltip" data-bs-title="Regresar" class="btn btn-outline-secondary regresar">
             <i class="fa-solid fa-arrow-left"></i>
         </button>
+        <div class="my-4 alert alert-danger shippingPopupQtyAlert d-none" role="alert">
+            Favor ingresar al menos un producto. Solo 5 productos por cliente.
+        </div>
+        <div class="my-4 alert alert-danger shippingFormErrors d-none" role="alert">
+            
+        </div>
         <div class="shipping-flex">
             <div class="shipping-form">
                 <form>
                     <div class="mb-3">
-                        <label for="shippingNombre" class="form-label">Nombre Completo</label>
+                        <label for="shippingNombre" class="form-label"><span class="required">*</span>Nombre Completo</label>
                         <input type="text" class="form-control" id="shippingNombre" placeholder="Ej. María Castro">
                     </div>
                     <div class="mb-3">
-                        <label for="shippingTel" class="form-label">Número de Teléfono</label>
+                        <label for="shippingTel" class="form-label"><span class="required">*</span>Número de Teléfono</label>
                         <input type="tel" class="form-control" id="shippingTel" placeholder="Ej. 88906543">
                     </div>
                     <div class="mb-3">
-                        <label for="shippingCorreo" class="form-label">Correo electrónico</label>
+                        <label for="shippingCorreo" class="form-label"><span class="required">*</span>Correo electrónico</label>
                         <input type="email" class="form-control" id="shippingCorreo" placeholder="Ej. alguien@algo.com">
                     </div>
                     <div class="mb-3">
-                        <label for="shippingProvincia" class="form-label">Provincia</label>
+                        <label for="shippingProvincia" class="form-label"><span class="required">*</span>Provincia</label>
                         <select id="provinciaSelect" class="form-select" aria-label="Elegir provincia">
                             <option selected>Elegir provincia</option>
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label for="shippingPago" class="form-label">Método de pago</label>
+                        <label for="shippingPago" class="form-label"><span class="required">*</span>Método de pago</label>
                         <select id="metodoPagoSelect" class="form-select" aria-label="Método de pago">
                             <option selected>Elegir Método de pago</option>
                             <option value="1">Transferencia bancaria</option>
@@ -52,9 +58,6 @@ const shippingPopupTpl = `
             <div class="shipping-items">
                 
             </div>
-        </div>
-        <div class="alert alert-danger shippingPopupQtyAlert d-none" role="alert">
-            Favor ingresar al menos un producto. Solo 5 productos por cliente.
         </div>
         <div class="shipping-cta my-4 mx-4">
             <button id="shippingContinuarBtn" class="btn btn-primary">facturar</button>
