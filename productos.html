@@ -60,22 +60,24 @@
     </div>
 
     <section id="banner">
-        <img src="assets/images/GranosVasos.png" width="100%" alt="Imagen de granos en vasos">
+        <img class="banner-img-desktop" src="assets/images/GranosVasos.png" width="100%" alt="Imagen de granos en vasos">
+        <img class="banner-img-mobile" src="assets/images/GranosVasosMovil.png" width="100%" alt="Imagen de granos en vasos">
         <div class="container">
             <h1 class="banner-texto">Prueba las mejores comidas sin gluten del país</h1>
-            <p class="banner-texto2">Te lo facilitamos<br>Ahora es posible con unos cuantos clicks</p>
+            <p class="banner-texto2">Te lo facilitamos</p>
+            <p class="banner-texto2" id="clicks">Ahora es posible con unos cuantos clicks</p>
         </div>
 
         <div class="container">
-            <div class="row">
-                <div class="col-12" id="informacion">
+            
+                <div id="informacion">
                     <div class="informacion-boxes">
                         <svg class="iconografia" xmlns="http://www.w3.org/2000/svg" width="114" height="114" viewBox="0 0 114 114" fill="none">
                             <circle cx="57" cy="57" r="54.5" fill="white" stroke="#F5B01C" stroke-width="5"/>
                             <path d="M76 63H75V56.2437C75 55.45 74.6813 54.6875 74.1188 54.125L67.875 47.8812C67.3125 47.3187 66.55 47 65.7563 47H63V44C63 42.3438 61.6562 41 60 41H44C42.3438 41 41 42.3438 41 44V47H37.5C37.225 47 37 47.225 37 47.5V48.5C37 48.775 37.225 49 37.5 49H54.5C54.775 49 55 49.225 55 49.5V50.5C55 50.775 54.775 51 54.5 51H39.5C39.225 51 39 51.225 39 51.5V52.5C39 52.775 39.225 53 39.5 53H52.5C52.775 53 53 53.225 53 53.5V54.5C53 54.775 52.775 55 52.5 55H37.5C37.225 55 37 55.225 37 55.5V56.5C37 56.775 37.225 57 37.5 57H50.5C50.775 57 51 57.225 51 57.5V58.5C51 58.775 50.775 59 50.5 59H41V67C41 70.3125 43.6875 73 47 73C50.3125 73 53 70.3125 53 67H61C61 70.3125 63.6875 73 67 73C70.3125 73 73 70.3125 73 67H76C76.55 67 77 66.55 77 66V64C77 63.45 76.55 63 76 63ZM47 70C45.3438 70 44 68.6562 44 67C44 65.3438 45.3438 64 47 64C48.6562 64 50 65.3438 50 67C50 68.6562 48.6562 70 47 70ZM67 70C65.3438 70 64 68.6562 64 67C64 65.3438 65.3438 64 67 64C68.6562 64 70 65.3438 70 67C70 68.6562 68.6562 70 67 70ZM72 57H63V50H65.7563L72 56.2437V57Z" fill="black"/>
                           </svg>
-                        <h6>ENVÍO GRATIS</h6>
-                        <p>Por compras superiores a ₡20.000</p>
+                        <h6>ENVÍO GRATIS </h6>
+                        <p>Por todas las compras superiores a ₡20.000</p>
                     </div>
                     <div class="informacion-boxes">
                         <svg class="iconografia" xmlns="http://www.w3.org/2000/svg" width="114" height="114" viewBox="0 0 114 114" fill="none">
@@ -83,7 +85,7 @@
                             <path d="M63.9314 68.5001C62.7432 68.5001 61.6253 67.8674 61.0207 66.8549L56.4998 59.3601L51.9861 66.8549C51.3744 67.8744 50.2565 68.5072 49.0683 68.5072C48.7519 68.5072 48.4355 68.465 48.1332 68.3736L38.501 65.6175V78.1323C38.501 79.1659 39.2041 80.0658 40.2024 80.3119L55.403 84.1156C56.1202 84.2913 56.8725 84.2913 57.5826 84.1156L72.7973 80.3119C73.7956 80.0588 74.4987 79.1588 74.4987 78.1323V65.6175L64.8665 68.3666C64.5642 68.458 64.2478 68.5001 63.9314 68.5001ZM78.8789 60.6116L75.258 53.3839C75.0401 52.948 74.569 52.6949 74.0839 52.7582L56.4998 55.001L62.9471 65.6948C63.2143 66.1378 63.7486 66.3487 64.2478 66.2081L78.1618 62.2357C78.8578 62.0318 79.1953 61.2584 78.8789 60.6116ZM37.7417 53.3839L34.1208 60.6116C33.7974 61.2584 34.1419 62.0318 34.8309 62.2287L48.7449 66.2011C49.2441 66.3417 49.7784 66.1308 50.0456 65.6878L56.4998 55.001L38.9088 52.7582C38.4236 52.7019 37.9596 52.948 37.7417 53.3839Z" fill="black"/>
                             <path d="M63.3339 30.4269C61.6044 28.9531 59.0323 29.2182 57.4449 30.8561L56.8232 31.4968L56.2014 30.8561C54.6171 29.2182 52.0419 28.9531 50.3124 30.4269C48.3305 32.1185 48.2263 35.1545 50 36.9881L56.1067 43.2937C56.5012 43.7009 57.1419 43.7009 57.5364 43.2937L63.6432 36.9881C65.42 35.1545 65.3158 32.1185 63.3339 30.4269Z" fill="black"/>
                           </svg>
-                        <h6>GARANTIA DE ENTREGA</h6>
+                        <h6>GARANTIA</h6>
                         <p>Si tu comida no llega, te devolvemos tu dinero</p>
                     </div>
                     <div class="informacion-boxes">
@@ -103,7 +105,7 @@
                         <p>Siéntete libre de preguntarnos lo que sea</p>
                     </div>
                 </div>
-            </div>
+            
         </div>
 
     </section>
@@ -154,10 +156,10 @@
     </template>
 
     <section id="visitanos">
-        <img src="assets/images/Local.png" width="50%">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.9951107714073!2d-84.06841632520734!3d9.9343640901677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e38c413c5431%3A0xc67942c5b59661f5!2sBarrio%20Escalante!5e0!3m2!1ses-419!2scr!4v1714462149195!5m2!1ses-419!2scr" width="50%" height="auto" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <h1 class="visitanos-titulo">¡Tambien puedes<br>visitarnos!</h1>
+        <h1 class="visitanos-titulo">¡También puedes<br>visitarnos!</h1>
         <p class="visitanos-texto">Será un placer atenderte</p>
+        <img class="img-visitanos" src="assets/images/Local.png" width="50%">
+        <iframe class="mapa-visitanos" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.9951107714073!2d-84.06841632520734!3d9.9343640901677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e38c413c5431%3A0xc67942c5b59661f5!2sBarrio%20Escalante!5e0!3m2!1ses-419!2scr!4v1714462149195!5m2!1ses-419!2scr" width="50%" height="auto" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
     <footer id="footer">
