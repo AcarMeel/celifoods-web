@@ -10,11 +10,11 @@
                 "nombre": "Platillo Verde",
                 "descripcion": "Contiene arroz preparado junto con deliciosas verduras salteadas con extra sabor",
                 "precio": 4650,
-                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
-                "alergenos": "Contiene sésamo.",
-                "presentacion": "Bowl.",
-                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
-                "conservacion": "Guardar en la nevera"
+                "ingredientes": "huevo, culantro, arroz, ajo, pimienta, zanahoria, sésamo, sal, cebolla, laurel",
+                "alergenos": "sésamo.",
+                "presentacion": "bowl.",
+                "vidaUtil": "consumir preferiblemente dentro de 3 días después de la preparación.",
+                "conservacion": "guardar en la nevera."
             },
             {
                 "productId": 5,
@@ -22,11 +22,11 @@
                 "nombre": "Pollo con garbanzos",
                 "descripcion": "Una sopa especial y llena de sabor de pollo, verduras varias y garbanzos",
                 "precio": 5200,
-                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
-                "alergenos": "Contiene sésamo.",
-                "presentacion": "Bowl.",
-                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
-                "conservacion": "Guardar en la nevera"
+                "ingredientes": "garbanzos, aceite de oliva, jugo de limón, ajo, comino, sal, paprika, zanahoria, cebolla, pollo",
+                "alergenos": "no aplica.",
+                "presentacion": "bowl.",
+                "vidaUtil": "consumir preferiblemente dentro de 3 días después de la preparación.",
+                "conservacion": "guardar en la nevera."
             },
             {
                 "productId": 6,
@@ -34,11 +34,11 @@
                 "nombre": "Cheesecake",
                 "descripcion": "Disfruta un rico postre con una pastel de queso, jugoso y dulce, perfecto para compartir",
                 "precio": 13000,
-                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
-                "alergenos": "Contiene sésamo.",
-                "presentacion": "Bowl.",
-                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
-                "conservacion": "Guardar en la nevera"
+                "ingredientes": "galletas sin gluten, frutos secos, harina de almendras, canela, azúcar, crema de leche, vainilla, huevo",
+                "alergenos": "almendras, huevo.",
+                "presentacion": "familiar 10 piezas.",
+                "vidaUtil": "consumir preferiblemente dentro de 5 días después de la preparación.",
+                "conservacion": "guardar en la nevera."
             },
             {
                 "productId": 7,
@@ -46,11 +46,11 @@
                 "nombre": "Pizza",
                 "descripcion": "Pizza familiar de 14 piezas con ingredientes naturales y masa libre de gluten, perfecta para la familia",
                 "precio": 14300,
-                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
-                "alergenos": "Contiene sésamo.",
-                "presentacion": "Bowl.",
-                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
-                "conservacion": "Guardar en la nevera"
+                "ingredientes": "masa preparada sin gluten, ajo, cebolla, tomate, sal, orégano, pimienta, queso mozarella, bolitas de carne, salami sin gluten",
+                "alergenos": "no aplica.",
+                "presentacion": "familiar 14 piezas",
+                "vidaUtil": "consumir preferiblemente dentro de 5 días después de la preparación.",
+                "conservacion": "guardar en la nevera."
             }
         ]
     },
@@ -64,11 +64,11 @@
                 "imagen": "assets/images/Pinto.svg",
                 "nombre": "Gallo Pinto",
                 "descripcion": "Disfruta la gastronomía tica con un pinto elaborado con arroz, frijoles, especias y puro sabor",
-                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
-                "alergenos": "Contiene sésamo.",
-                "presentacion": "Bowl.",
-                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
-                "conservacion": "Guardar en la nevera",
+                "ingredientes": "arroz, frijoles, culantro, cebolla, chile dulce, salsa de la casa, pimienta",
+                "alergenos": "no aplica.",
+                "presentacion": "bowl",
+                "vidaUtil": "consumir preferiblemente dentro de 3 días después de la preparación.",
+                "conservacion": "guardar en la nevera.",
                 "precio": 6500
             },
             {
@@ -77,22 +77,22 @@
                 "nombre": "Pollo con garbanzos",
                 "descripcion": "Una sopa especial y llena de sabor de pollo, verduras varias y garbanzos",
                 "precio": 5200,
-                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
-                "alergenos": "Contiene sésamo.",
-                "presentacion": "Bowl.",
-                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
-                "conservacion": "Guardar en la nevera"
+                "ingredientes": "garbanzos, aceite de oliva, jugo de limón, ajo, comino, sal, paprika, zanahoria, cebolla, pollo",
+                "alergenos": "no aplica.",
+                "presentacion": "bowl.",
+                "vidaUtil": "consumir preferiblemente dentro de 3 días después de la preparación.",
+                "conservacion": "guardar en la nevera."
             },
             {
                 "productId": 10,
                 "imagen": "assets/images/Spaghetti.svg",
                 "nombre": "Spaghetti",
                 "descripcion": "Elaborados con una mezcla de harinas sin gluten, que te conquistarán con su sabor",
-                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
-                "alergenos": "Contiene sésamo.",
-                "presentacion": "Bowl.",
-                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
-                "conservacion": "Guardar en la nevera",
+                "ingredientes": "aceite de oliva, cebolla, zanahoria, ajo, tomate, sal, pimienta, oregáno, paprika, masa sin gluten, carne molida",
+                "alergenos": "no aplica.",
+                "presentacion": "bowl.",
+                "vidaUtil": "consumir preferiblemente dentro de 3 días después de la preparación.",
+                "conservacion": "guardar en la nevera.",
                 "precio": 7500
             },
             {
@@ -100,11 +100,11 @@
                 "imagen": "assets/images/ArrozPollo.svg",
                 "nombre": "Arroz con pollo",
                 "descripcion": "El pollo tierno y jugoso se acompaña a la perfección con arroz esponjoso y verduras frescas",
-                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
-                "alergenos": "Contiene sésamo.",
-                "presentacion": "Bowl.",
-                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
-                "conservacion": "Guardar en la nevera",
+                "ingredientes": "pollo, sal, pimienta, jugo de limón, ajo, cebolla, arroz, chile dulce, maíz, zanahoria, guisantes",
+                "alergenos": "no aplica.",
+                "presentacion": "bowl.",
+                "vidaUtil": "consumir preferiblemente dentro de 3 días después de la preparación.",
+                "conservacion": "guardar en la nevera.",
                 "precio": 9500
             }
         ]
@@ -120,11 +120,11 @@
                 "nombre": "Pastel de Arándanos",
                 "descripcion": "La explosión de sabor de los arándanos frescos se fusiona en una masa esponjosa",
                 "precio": 18900,
-                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
-                "alergenos": "Contiene sésamo.",
-                "presentacion": "Bowl.",
-                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
-                "conservacion": "Guardar en la nevera"
+                "ingredientes": "harina de almendras, harina de arroz integral, sal, mantequilla, huevo, vainilla, arándanos, azúcar, canela, avena",
+                "alergenos": "almendras, huevo.",
+                "presentacion": "familiar 10 piezas.",
+                "vidaUtil": "consumir preferiblemente dentro de 5 días después de la preparación.",
+                "conservacion": "guardar en la nevera."
             },
             {
                 "productId": 13,
@@ -132,11 +132,11 @@
                 "nombre": "Paquete de donas",
                 "descripcion": "Disfruta de una variedad de 8 sabores clásicos. Elaborados con ingredientes de alta calidad",
                 "precio": 11000,
-                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
-                "alergenos": "Contiene sésamo.",
-                "presentacion": "Bowl.",
-                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
-                "conservacion": "Guardar en la nevera"
+                "ingredientes": "harina de arroz integral, harina de almendras, azúcar, levadura, sal, leche, mantequilla",
+                "alergenos": "almendras.",
+                "presentacion": "paquete de 8.",
+                "vidaUtil": "consumir preferiblemente dentro de 3 días después de la preparación.",
+                "conservacion": "Guardar en la nevera."
             },
             {
                 "productId": 14,
@@ -144,11 +144,11 @@
                 "nombre": "Cheesecake",
                 "descripcion": "Disfruta un rico postre con una pastel de queso, jugoso y dulce, perfecto para compartir",
                 "precio": 13000,
-                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
-                "alergenos": "Contiene sésamo.",
-                "presentacion": "Bowl.",
-                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
-                "conservacion": "Guardar en la nevera"
+                "ingredientes": "galletas sin gluten, frutos secos, harina de almendras, canela, azúcar, crema de leche, vainilla, huevo",
+                "alergenos": "almendras, huevo.",
+                "presentacion": "familiar 10 piezas.",
+                "vidaUtil": "consumir preferiblemente dentro de 3 días después de la preparación.",
+                "conservacion": "guardar en la nevera"
             },
             {
                 "productId": 15,
@@ -156,11 +156,11 @@
                 "nombre": "Galletas de Canela",
                 "descripcion": "Cada galleta crujiente contiene harina de arroz integral, canela molida, vainilla y más",
                 "precio": 8000,
-                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
-                "alergenos": "Contiene sésamo.",
-                "presentacion": "Bowl.",
-                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
-                "conservacion": "Guardar en la nevera"
+                "ingredientes": "hariza de arriz integral, canela, vainilla, sal, edulcorante granulado, miel, huevo, aceite vegetal",
+                "alergenos": "no aplica.",
+                "presentacion": "paquete de 8 galletas.",
+                "vidaUtil": "consumir preferiblemente dentro de 3 días después de la preparación.",
+                "conservacion": "guardar en la nevera."
             }
         ]
     },
@@ -175,11 +175,11 @@
                 "nombre": "Pan de ajo",
                 "descripcion": "Un pan de ajo crujiente bañado en mantequilla, ajo fresco y hierbas aromáticas",
                 "precio": 7600,
-                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
-                "alergenos": "Contiene sésamo.",
-                "presentacion": "Bowl.",
-                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
-                "conservacion": "Guardar en la nevera"
+                "ingredientes": "azúcar, levadura, mantequilla, leche vegetal, sal, harina, ajo, perejil, oregáno",
+                "alergenos": "no aplica.",
+                "presentacion": "paquete de 6 piezas.",
+                "vidaUtil": "consumir preferiblemente dentro de 2 días después de la preparación.",
+                "conservacion": "temperatura ambiente."
             },
             {
                 "productId": 17,
@@ -187,11 +187,11 @@
                 "nombre": "Empanadas Rellenas",
                 "descripcion": "Disfruta de una crujiente masa, rellena de carne mechada, especias y verduras frescas",
                 "precio": 9000,
-                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
-                "alergenos": "Contiene sésamo.",
-                "presentacion": "Bowl.",
-                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
-                "conservacion": "Guardar en la nevera"
+                "ingredientes": "mantequilla, huevo, sal, cebolla, ajo, chile dulce, zanahoria, tomate, comino, oregáno, ají, culantro, carne mechada",
+                "alergenos": "ají, huevo.",
+                "presentacion": "paquete de 3 empanadas.",
+                "vidaUtil": "consumir preferiblemente dentro de 3 días después de la preparación.",
+                "conservacion": "guardar en la nevera."
             },
             {
                 "productId": 18,
@@ -199,23 +199,23 @@
                 "nombre": "Sandwich de jamón",
                 "descripcion": "Saborea la combinación perfecta de queso derretido, jamón jugoso, tomate fresco y espinacas",
                 "precio": 6500,
-                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
-                "alergenos": "Contiene sésamo.",
-                "presentacion": "Bowl.",
-                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
-                "conservacion": "Guardar en la nevera"
+                "ingredientes": "masa preparada sin glute, queso, jamón sin gluten, tomate, espinaca, salsa de la casa, pimienta",
+                "alergenos": "no aplica.",
+                "presentacion": "sándwich de 30 centímetros.",
+                "vidaUtil": "consumir preferiblemente dentro de 2 días después de la preparación.",
+                "conservacion": "guardar en la nevera"
             },
             {
                 "productId": 19,
                 "imagen": "assets/images/Pizza.svg",
                 "nombre": "Pizza",
                 "descripcion": "Pizza familiar de 14 piezas con ingredientes naturales y masa libre de gluten, perfecta para la familia",
-                "precio": 13000,
-                "ingredientes": "Garbanzos, tahini (pasta de sésamo), aceite de oliva, jugo de limón, ajo, comino, sal.",
-                "alergenos": "Contiene sésamo.",
-                "presentacion": "Bowl.",
-                "vidaUtil": "Consumir preferentemente dentro de 3 días después de la preparación.",
-                "conservacion": "Guardar en la nevera"
+                "precio": 14300,
+                "ingredientes": "masa preparada sin gluten, ajo, cebolla, tomate, sal, orégano, pimienta, queso mozarella, bolitas de carne, salami sin gluten",
+                "alergenos": "no aplica.",
+                "presentacion": "familiar 14 piezas",
+                "vidaUtil": "consumir preferiblemente dentro de 5 días después de la preparación.",
+                "conservacion": "guardar en la nevera."
             }
         ]
     }
