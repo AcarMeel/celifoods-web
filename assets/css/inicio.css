@@ -441,6 +441,7 @@
 
         @media screen and (max-width: 991px) {
             height: 190px;
+            margin-top: 100px;
             img {
                 max-width: 300px;
             }

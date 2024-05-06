@@ -48,6 +48,9 @@
     @media screen and (max-width: 991px) {
         display: block;
     }
+    @media screen and (max-width: 991px) {
+        margin-right: 20px;
+    }
 }
 
 .nav-item.desktop {
