@@ -7,7 +7,6 @@ const tooltipList = [...tooltipTriggerList].map(
   (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
 );
 
-AOS.init();
 
 $(document).ready(function () {
   $(".slider").slick({

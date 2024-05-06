@@ -278,6 +278,9 @@
             color: var(--yellow);
         }
         text-align: center;
+        @media screen and (max-width: 991px) {
+            font-size: 39px;
+        }
     }
 
     .popular-products {
@@ -404,6 +407,9 @@
         span {
             color: var(--darkPurple);
         }
+        @media screen and (max-width: 991px) {
+            font-size: 39px;
+        }
     }
     h3 {
         letter-spacing: 2px;
@@ -465,6 +471,9 @@
         span {
             color: var(--darkPurple);
         }
+        @media screen and (max-width: 991px) {
+            font-size: 39px;
+        }
     }
 
     .slider {
@@ -515,6 +524,10 @@
 
         span {
             color: var(--darkPurple);
+        }
+
+        @media screen and (max-width: 991px) {
+            font-size: 39px;
         }
     }
 
