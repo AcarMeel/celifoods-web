@@ -43,8 +43,6 @@
             font-size: 32px;
         }
         @media screen and (max-width: 768px) {
-            position: absolute;
-            top: 300px;
             font-size: 16px;
         }
     }
@@ -184,7 +182,7 @@
         display: none;
         @media screen and (max-width: 768px) {
             display: block;
-            margin-top: 250px;
+            margin-top: 20px;
         }
     }
 
