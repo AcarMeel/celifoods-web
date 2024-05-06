@@ -48,14 +48,15 @@ https://api.whatsapp.com/send/?phone=50689428070
     - slider prev/next
 
 - productos.html
-    - ver producto -> muestra detalles - Melissa
+    - ver producto -> muestra detalles - Melissa - DONE
     - responsive -> Katty
 
 - nosotros.html
     - html/css -> katty
     - imagenes -> erin
+    - responsive
 
-- carrito - Melissa
+- carrito - Melissa - DONE
     - popup carrito (todas las paginas)
     - popup compra
     - popup factura
@@ -64,8 +65,7 @@ https://api.whatsapp.com/send/?phone=50689428070
     - generar un # de pedido
     - info envios/costos/dias => erin
 
-- animaciones aos
-    - cambiar libreria
+- animaciones aos - DONE
 
 - footer
     - enviar footer => popup email enviado
@@ -73,5 +73,4 @@ https://api.whatsapp.com/send/?phone=50689428070
 - index.html
     - enviar email seccion => popup email enviado
 
-- contraste - Katty/Erin
-    - color azul sobre blanco, amarillo, verde, morado
+- contraste - DONE
