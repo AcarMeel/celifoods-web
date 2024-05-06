@@ -19,16 +19,19 @@
             span {
                 color: var(--yellow);
             }
-        }
-
-        @media screen and (max-width: 991px) {
-            font-size: 32px;
+            @media screen and (max-width: 991px) {
+                font-size: 32px;
+                text-align: center;
+            }
         }
     }
 
     .contacto-form-container {
         width: 100%;
         padding: 0 40px;
+        @media screen and (max-width: 991px) {
+            padding: 0;
+        }
     }
 
     .contacto-form {
