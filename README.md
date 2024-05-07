@@ -36,15 +36,15 @@ https://api.whatsapp.com/send/?phone=50689428070
 # Pendientes
 
 
-- blog.html Erin
-    - imagenes 
+- blog.html 
+    - imagenes => Melissa DONE
     - imagen trazo 
     - agregar cuadro fecha css (UI/json) => Melissa DONE
 
 - blog-detalles.html
     - fecha que esta a la par del titulo => css => Melissa DONE
     - imagen circulos de colores
-    - contenido (lorem ipsum)
+    - contenido (lorem ipsum) => Melissa DONE
     - slider prev/next
 
 - productos.html
@@ -65,12 +65,12 @@ https://api.whatsapp.com/send/?phone=50689428070
     - generar un # de pedido
     - info envios/costos/dias => erin
 
-- animaciones aos - DONE
+- animaciones aos - Melissa DONE
 
-- footer - DONE
+- footer - Melissa DONE
     - enviar footer => popup email enviado
 
-- index.html - DONE
+- index.html - Melissa DONE
     - enviar email seccion => popup email enviado
 
-- contraste - DONE
+- contraste - Melissa DONE
