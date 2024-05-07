@@ -67,10 +67,10 @@ https://api.whatsapp.com/send/?phone=50689428070
 
 - animaciones aos - DONE
 
-- footer
+- footer - DONE
     - enviar footer => popup email enviado
 
-- index.html
+- index.html - DONE
     - enviar email seccion => popup email enviado
 
 - contraste - DONE
