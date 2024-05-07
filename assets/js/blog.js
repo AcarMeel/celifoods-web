@@ -26,9 +26,11 @@ function createBlogCard(blogEntry) {
     const tagStyleClass = blogEntry.tag === 'recetas' ? 'receta' : 'info';
     blogCardTag.classList.add(tagStyleClass);
     blogCardHTML.querySelector('h2').textContent = blogEntry.titulo;
-    blogCardHTML.querySelector('p').textContent = blogEntry.descripcion;
+    blogCardHTML.querySelector('p.blog-card-description').textContent = blogEntry.descripcion;
     blogCardHTML.querySelector('a').href = `blog-detail.html?id=${blogEntry.id}`;
-
+    const { day, month } = formatDate(blogEntry.fecha);
+    blogCardHTML.querySelector('p.blog-date-day').textContent = day;
+    blogCardHTML.querySelector('p.blog-date-month').textContent = month;
 
     blogCardList.appendChild(blogCardHTML);
 }
@@ -48,6 +50,33 @@ loadMoreBtn.addEventListener('click', async () => {
 
     loadMoreBtn.style.display = 'none';
 });
+
+function formatDate(dateString) {
+    const dateParts = dateString.split('/');
+  
+    const day = dateParts[0];
+    const month = dateParts[1];
+  
+    const monthNames = { 
+      '01': 'JAN',
+      '02': 'FEB',
+      '03': 'MAR',
+      '04': 'APR',
+      '05': 'MAY',
+      '06': 'JUN',
+      '07': 'JUL',
+      '08': 'AUG',
+      '09': 'SEP',
+      '10': 'OCT',
+      '11': 'NOV',
+      '12': 'DEC'
+    };
+    return {
+        day, 
+        month: monthNames[month]
+    };
+}
+  
 
 
 window.addEventListener("load", () => {

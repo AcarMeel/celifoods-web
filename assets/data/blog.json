@@ -4,62 +4,71 @@
         "id": 1,
         "titulo": "¿Que es el Gluten?",
         "tag": "información",
-        "descripcion": "El gluten es una proteína que se encuentra en la semilla de muchos cereales como son el trigo, cebada, centeno ......."
+        "descripcion": "El gluten es una proteína que se encuentra en la semilla de muchos cereales como son el trigo, cebada, centeno .......",
+        "fecha": "21/01/2023"
     },
     {
         "imagen": "assets/images/blog-01.png",
         "id": 2,
         "titulo": "Biscotti de Almendra",
         "tag": "recetas",
-        "descripcion": "Precalienta el horno a 180ºC con calor arriba y abajo y saca la bandeja del horno. En un bol pequeño, mezcla la ......"
+        "descripcion": "Precalienta el horno a 180ºC con calor arriba y abajo y saca la bandeja del horno. En un bol pequeño, mezcla la ......",
+        "fecha": "30/02/2023"
     },
     {
         "imagen": "assets/images/blog-01.png",
         "id": 3,
         "titulo": "Mufin de Chocolate",
         "tag": "recetas",
-        "descripcion": "Su masa, esponjosa y ligera , es ideal para querer tomarlas en cualquier momento del día. Receta perfecta ......"
+        "descripcion": "Su masa, esponjosa y ligera , es ideal para querer tomarlas en cualquier momento del día. Receta perfecta ......",
+        "fecha": "02/09/2023"
     },
     {
         "imagen": "assets/images/blog-01.png",
         "id": 4,
         "titulo": "Pan de Granos y Semillas",
         "tag": "recetas",
-        "descripcion": "Para preparar este sencillo y delicioso pan sin gluten de semillas podemos elegir las que más nos gusten: de lino, de sésamo ......."
+        "descripcion": "Para preparar este sencillo y delicioso pan sin gluten de semillas podemos elegir las que más nos gusten: de lino, de sésamo .......",
+        "fecha": "22/09/2023"
     },
     {
         "imagen": "assets/images/blog-01.png",
         "id": 5,
         "titulo": "¿Como nos daña el Gluten?",
         "tag": "información",
-        "descripcion": "Se ha sabido que la sensibilidad al gluten puede causar síntomas tales como diarrea, fatiga, dolores de cabeza, depresión ........"
+        "descripcion": "Se ha sabido que la sensibilidad al gluten puede causar síntomas tales como diarrea, fatiga, dolores de cabeza, depresión ........",
+        "fecha": "07/10/2023"
     },
     {
         "imagen": "assets/images/blog-01.png",
         "id": 6,
         "titulo": "Queque de Zanahoria",
         "tag": "recetas",
-        "descripcion": "Comenzamos preparando un molde desmoldable de 14-16 cm de diámetro y encendiendo el horno a 175 ºC para que ......."
+        "descripcion": "Comenzamos preparando un molde desmoldable de 14-16 cm de diámetro y encendiendo el horno a 175 ºC para que .......",
+        "fecha": "21/10/2023"
     },
     {
         "imagen": "assets/images/blog-01.png",
         "id": 7,
         "titulo": "Productos alternativos",
         "tag": "información",
-        "descripcion": "Comenzamos preparando un molde desmoldable de 14-16 cm de diámetro y encendiendo el horno a 175 ºC para que ......."
+        "descripcion": "Comenzamos preparando un molde desmoldable de 14-16 cm de diámetro y encendiendo el horno a 175 ºC para que .......",
+        "fecha": "21/11/2023"
     },
     {
         "imagen": "assets/images/blog-01.png",
         "id": 8,
         "titulo": "Alergias al gluten",
         "tag": "información",
-        "descripcion": "Comenzamos preparando un molde desmoldable de 14-16 cm de diámetro y encendiendo el horno a 175 ºC para que ......."
+        "descripcion": "Comenzamos preparando un molde desmoldable de 14-16 cm de diámetro y encendiendo el horno a 175 ºC para que .......",
+        "fecha": "02/12/2023"
     },
     {
         "imagen": "assets/images/blog-01.png",
         "id": 9,
         "titulo": "Detectar intolerancias",
         "tag": "información",
-        "descripcion": "Comenzamos preparando un molde desmoldable de 14-16 cm de diámetro y encendiendo el horno a 175 ºC para que ......."
+        "descripcion": "Comenzamos preparando un molde desmoldable de 14-16 cm de diámetro y encendiendo el horno a 175 ºC para que .......",
+        "fecha": "21/12/2023"
     }
 ]

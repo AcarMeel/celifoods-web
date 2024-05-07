@@ -75,16 +75,20 @@
     </section>
     <template id="blog-card-template">
         <a href="#" class="blog-card">
-          <img src="${imagen}" alt="Blog ${id}">
-          <div class="blog-card-tag-container">
-            <div class="blog-card-tag ${tag}">${tag}</div>
-          </div>
-          <div class="blog-card-text">
-            <h2>${titulo}</h2>
-            <p>
-              ${descripcion}
-            </p>
-          </div>
+            <div class="blog-date">
+                <p class="blog-date-text blog-date-day"></p>
+                <p class="blog-date-text blog-date-month"></p>
+            </div>
+            <img src="${imagen}" alt="Blog ${id}">
+            <div class="blog-card-tag-container">
+                <div class="blog-card-tag ${tag}">${tag}</div>
+            </div>
+            <div class="blog-card-text">
+                <h2>${titulo}</h2>
+                <p class="blog-card-description">
+                    ${descripcion}
+                </p>
+            </div>
         </a>
       </template>
       

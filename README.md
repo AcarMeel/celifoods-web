@@ -39,7 +39,7 @@ https://api.whatsapp.com/send/?phone=50689428070
 - blog.html Erin
     - imagenes 
     - imagen trazo 
-    - agregar cuadro fecha css (UI/json) => 
+    - agregar cuadro fecha css (UI/json) => Melissa DONE
 
 - blog-detalles.html
     - fecha que esta a la par del titulo => css
