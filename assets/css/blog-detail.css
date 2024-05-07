@@ -108,7 +108,7 @@
         @media screen and (max-width: 991px) {
             height: 190px;
             img {
-                max-width: 300px;
+                max-width: 250px;
             }
         }
     }
