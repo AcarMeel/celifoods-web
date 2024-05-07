@@ -42,7 +42,7 @@ https://api.whatsapp.com/send/?phone=50689428070
     - agregar cuadro fecha css (UI/json) => Melissa DONE
 
 - blog-detalles.html
-    - fecha que esta a la par del titulo => css
+    - fecha que esta a la par del titulo => css => Melissa DONE
     - imagen circulos de colores
     - contenido (lorem ipsum)
     - slider prev/next

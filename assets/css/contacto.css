@@ -1,6 +1,7 @@
 #contacto {
     margin: 100px 0;
     .contacto-rectangle {
+        background-image: url("../images/pattern-bg.svg");
         background-color: var(--darkPurple);
         width: 100%;
         height: 300px;
