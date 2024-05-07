@@ -2,6 +2,8 @@ let blogItems = [];
 let blogItem = null;
 const blogCardList = document.querySelector('.blog-card-list');
 const blogCardTemplate = document.getElementById('blog-card-template');
+const nextButton = document.getElementById('blog-next');
+const prevButton = document.getElementById('blog-prev');
 
 async function loadBlogDetails() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -11,6 +13,12 @@ async function loadBlogDetails() {
         const jsonFilePathBlog = "./assets/data/blog.json";
         const response = await fetch(jsonFilePathBlog);
         blogItems = await response.json();
+
+        if (blogId === '1') {
+            prevButton.disabled = true;
+        } else if (+blogId === blogItems.length) {
+            nextButton.disabled = true;
+        }
 
         blogItem = blogItems.find(blog => blog.id === +blogId);
 
@@ -45,6 +53,13 @@ function createBlogDetail(blogEntry) {
     const { day, month } = formatDate(blogEntry.fecha);
     blogTplHTML.querySelector('p.blog-date-day').textContent = day;
     blogTplHTML.querySelector('p.blog-date-month').textContent = month;
+    // if (blogEntry.tag === 'recetas') {
+    //     blogTplHTML.querySelector('.blog-detail-content-receta').classList.remove('d-none');
+    //     blogTplHTML.querySelector('.blog-detail-content-info').classList.add('d-none');
+    // } else {
+    //     blogTplHTML.querySelector('.blog-detail-content-info').classList.remove('d-none');
+    //     blogTplHTML.querySelector('.blog-detail-content-receta').classList.add('d-none');
+    // }
 
     blogDetailContainer.appendChild(blogTplHTML);
 }
@@ -68,25 +83,29 @@ function createBlogCard(blogEntry) {
     blogCardList.appendChild(blogCardHTML);
 }
 
-const prevButton = document.getElementById('blog-prev');
+
 prevButton.addEventListener('click', async () => {
     if (blogItem) {
         const previousId = blogItem.id - 1;
         if (previousId >= 1) {
             window.location.href = `blog-detail.html?id=${previousId}`;
             await loadBlogDetails();
+        } else {
+            prevButton.disabled = true;
         }
     }
 });
 
 
-const nextButton = document.getElementById('blog-next');
+
 nextButton.addEventListener('click', async () => {
     if (blogItem) {
         const nextId = blogItem.id + 1;
         if (nextId <= blogItems.length) {
             window.location.href = `blog-detail.html?id=${nextId}`;
             await loadBlogDetails();
+        } else {
+            nextButton.disabled = true;
         }
     }
 });
