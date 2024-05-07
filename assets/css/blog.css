@@ -113,8 +113,10 @@
             font-family: 'Metropolis';
         }
         img {
-            width: 100%;
+            width: 318px;
+            height: 318px;
             margin-bottom: 24px;
+            object-fit: cover;
         }
     }
 

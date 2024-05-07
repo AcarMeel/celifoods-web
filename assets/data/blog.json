@@ -1,6 +1,6 @@
 [
     {
-        "imagen": "assets/images/blog-01.png",
+        "imagen": "assets/images/blog-01.jpg",
         "id": 1,
         "titulo": "¿Que es el Gluten?",
         "tag": "información",
@@ -8,7 +8,7 @@
         "fecha": "21/01/2023"
     },
     {
-        "imagen": "assets/images/blog-01.png",
+        "imagen": "assets/images/blog-02.jpg",
         "id": 2,
         "titulo": "Biscotti de Almendra",
         "tag": "recetas",
@@ -16,7 +16,7 @@
         "fecha": "30/02/2023"
     },
     {
-        "imagen": "assets/images/blog-01.png",
+        "imagen": "assets/images/blog-03.jpg",
         "id": 3,
         "titulo": "Mufin de Chocolate",
         "tag": "recetas",
@@ -24,7 +24,7 @@
         "fecha": "02/09/2023"
     },
     {
-        "imagen": "assets/images/blog-01.png",
+        "imagen": "assets/images/blog-04.jpg",
         "id": 4,
         "titulo": "Pan de Granos y Semillas",
         "tag": "recetas",
@@ -32,7 +32,7 @@
         "fecha": "22/09/2023"
     },
     {
-        "imagen": "assets/images/blog-01.png",
+        "imagen": "assets/images/blog-05.jpeg",
         "id": 5,
         "titulo": "¿Como nos daña el Gluten?",
         "tag": "información",
@@ -40,7 +40,7 @@
         "fecha": "07/10/2023"
     },
     {
-        "imagen": "assets/images/blog-01.png",
+        "imagen": "assets/images/blog-06.jpg",
         "id": 6,
         "titulo": "Queque de Zanahoria",
         "tag": "recetas",
@@ -48,7 +48,7 @@
         "fecha": "21/10/2023"
     },
     {
-        "imagen": "assets/images/blog-01.png",
+        "imagen": "assets/images/blog-07.jpg",
         "id": 7,
         "titulo": "Productos alternativos",
         "tag": "información",
@@ -56,7 +56,7 @@
         "fecha": "21/11/2023"
     },
     {
-        "imagen": "assets/images/blog-01.png",
+        "imagen": "assets/images/blog-08.jpeg",
         "id": 8,
         "titulo": "Alergias al gluten",
         "tag": "información",
@@ -64,7 +64,7 @@
         "fecha": "02/12/2023"
     },
     {
-        "imagen": "assets/images/blog-01.png",
+        "imagen": "assets/images/blog-09.jpeg",
         "id": 9,
         "titulo": "Detectar intolerancias",
         "tag": "información",
