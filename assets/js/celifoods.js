@@ -7,6 +7,58 @@ const tooltipList = [...tooltipTriggerList].map(
   (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
 );
 
+const footerEnviar = document.getElementById('footer-enviar');
+if (footerEnviar) {
+    footerEnviar.addEventListener('click', () => {
+        const footerEmail = document.getElementById('footer-email');
+        const footerMsg = document.getElementById('footer-msg');
+
+        const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(footerEmail.value.trim());
+        if (!validEmail || footerMsg.value.trim() === '') {
+            Swal.fire({
+                title: 'Datos inválidos',
+                text: !validEmail ? 'Correo es inválido' : 'El mensaje está vacío.',
+                icon: 'error',
+                confirmButtonText: 'Cerrar'
+            });
+        } else {
+            Swal.fire({
+                title: 'Solicitud enviada',
+                icon: 'success',
+                confirmButtonText: 'Cerrar'
+            }).then(() => {
+                footerEmail.value = '';
+                footerMsg.value = '';
+            });
+        }
+    });
+}
+
+
+const iniciemosEnviar = document.getElementById('iniciemosEnviar');
+if (iniciemosEnviar) {
+    iniciemosEnviar.addEventListener('click', () => {
+        const iniciemosEmail = document.getElementById('iniciemosEmail');
+
+        const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(iniciemosEmail.value.trim());
+        if (!validEmail) {
+            Swal.fire({
+                title: 'Datos inválidos',
+                text: 'Correo es inválido',
+                icon: 'error',
+                confirmButtonText: 'Cerrar'
+            });
+        } else {
+            Swal.fire({
+                title: 'Solicitud enviada',
+                icon: 'success',
+                confirmButtonText: 'Cerrar'
+            }).then(() => {
+                iniciemosEmail.value = '';
+            });
+        }
+    });
+}
 
 $(document).ready(function () {
   $(".slider").slick({
