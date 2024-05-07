@@ -6,7 +6,7 @@
       "presentacion": "paquete de 200g",
       "vidaUtil": "consumir preferiblemente dentro de 20 días después de la preparación.",
       "conservacion": "guardar en un lugar fresco y seco.",
-      "imagen": "assets/images/popular_1.svg",
+      "imagen": "assets/images/popular_1.png",
       "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nemo optio debitis molestias! Repudiandae ipsum molestiae veniam sunt, nesciunt nobis architecto quaerat eligendi eum aut quae esse praesentium, soluta sed."
     },
     {
@@ -16,7 +16,7 @@
       "presentacion": "bolsa de 400g",
       "vidaUtil": "consumir preferiblemente dentro de 5 días después de la preparación.",
       "conservacion": "conservar en bolsa hermética.",
-      "imagen": "assets/images/popular_2.svg",
+      "imagen": "assets/images/popular_2.png",
       "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nemo optio debitis molestias! Repudiandae ipsum molestiae veniam sunt, nesciunt nobis architecto quaerat eligendi eum aut quae esse praesentium, soluta sed."
     },
     {
@@ -26,7 +26,7 @@
       "presentacion": "bowl.",
       "vidaUtil": "consumir preferiblemente dentro de 3 días después de la preparación.",
       "conservacion": "guardar en la nevera.",
-      "imagen": "assets/images/popular_3.svg",
+      "imagen": "assets/images/popular_3.png",
       "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nemo optio debitis molestias! Repudiandae ipsum molestiae veniam sunt, nesciunt nobis architecto quaerat eligendi eum aut quae esse praesentium, soluta sed."
     }
   ]
