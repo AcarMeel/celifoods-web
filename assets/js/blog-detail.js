@@ -42,7 +42,9 @@ function createBlogDetail(blogEntry) {
     const tagStyleClass = blogEntry.tag === 'recetas' ? 'receta' : 'info';
     blogCardTag.classList.add(tagStyleClass);
     blogTplHTML.querySelector('.blog-detail-title').textContent = blogEntry.titulo;
-
+    const { day, month } = formatDate(blogEntry.fecha);
+    blogTplHTML.querySelector('p.blog-date-day').textContent = day;
+    blogTplHTML.querySelector('p.blog-date-month').textContent = month;
 
     blogDetailContainer.appendChild(blogTplHTML);
 }
@@ -57,9 +59,11 @@ function createBlogCard(blogEntry) {
     const tagStyleClass = blogEntry.tag === 'recetas' ? 'receta' : 'info';
     blogCardTag.classList.add(tagStyleClass);
     blogCardHTML.querySelector('h2').textContent = blogEntry.titulo;
-    blogCardHTML.querySelector('p').textContent = blogEntry.descripcion;
+    blogCardHTML.querySelector('.blog-card-text p').textContent = blogEntry.descripcion;
     blogCardHTML.querySelector('a').href = `blog-detail.html?id=${blogEntry.id}`;
-
+    const { day, month } = formatDate(blogEntry.fecha);
+    blogCardHTML.querySelector('p.blog-date-day').textContent = day;
+    blogCardHTML.querySelector('p.blog-date-month').textContent = month;
 
     blogCardList.appendChild(blogCardHTML);
 }

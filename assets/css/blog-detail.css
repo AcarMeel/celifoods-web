@@ -39,6 +39,37 @@
         }
     }
 
+    .blog-detail-title-date {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-top: 24px;
+
+        .blog-date {
+            background-color: var(--white);
+            display: flex;
+            flex-direction: column;
+            width: 62px;
+            padding: 6px 0;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border: 1px solid #dedede;
+
+            p.blog-date-text {
+                margin: 0;
+                padding: 0;
+                font-size: 14px;
+                text-transform: uppercase;
+                text-align: center;
+                font-family: 'Metropolis';
+                line-height: 1;
+            }
+            p.blog-date-day {
+                font-size: 28px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
     .blog-detail-tag {
         &.info {
             background-color: var(--darkBlue);
@@ -96,6 +127,7 @@
         margin: 32px 0;
     }
     .blog-card {
+        position: relative;
         max-width: 320px;
         width: 100%;
         background-color: var(--white);
@@ -104,6 +136,33 @@
         text-decoration: none;
         color: var(--black);
         box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+        .blog-card-date {
+            background-color: var(--white);
+            display: flex;
+            flex-direction: column;
+            width: 62px;
+            padding: 4px 0;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+            position: absolute;
+            top: 12px;
+            left: 12px;
+
+            p.blog-card-date-text {
+                margin: 0;
+                padding: 0;
+                font-size: 14px;
+                text-transform: uppercase;
+                text-align: center;
+                font-family: 'Metropolis';
+                line-height: 1;
+            }
+            p.blog-date-day {
+                font-size: 28px;
+                letter-spacing: 1px;
+            }
+        }
 
         .blog-card-text {
             padding: 16px;
