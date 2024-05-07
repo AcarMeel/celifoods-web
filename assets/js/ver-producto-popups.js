@@ -1,55 +1,26 @@
-
-["popular-purchase-1", "popular-purchase-2", "popular-purchase-3"].map(
-    (btnId) => {
-        const element = document.getElementById(btnId);
-        if (element) {
-            element.addEventListener("click", function() { verProductoClick(this.dataset, null ) } );
-        }
-    }
-);
-
-async function verProductoClick(dataset, detalles) {
-        const productId = dataset.productId;
-        const nombreProducto = dataset.nombre;
-        const precioProducto = `₡${dataset.precio}`;
-        const precioProductoSinFormato = `${dataset.precio}`;
-
-        if (!detalles) {
-            const response = await fetch(jsonFilePathPopulares);
-            const productos = await response.json();
-
-            detalles = productos.find((p) => p.productId === productId);
-        }
-
-        let basketData = JSON.parse(localStorage.getItem("basket")) || [];
-
-        const findProductInBasket = basketData.find(p => p.productId === productId);
-        const productQtyValue = findProductInBasket ? findProductInBasket.cantidad.toString() : "0";
-
-        Swal.fire({
-            html: `<div class="product-detail-view">
+["popular-purchase-1","popular-purchase-2","popular-purchase-3"].map(a=>{const b=document.getElementById(a);b&&b.addEventListener("click",function(){verProductoClick(this.dataset,null)})});async function verProductoClick(a,b){const c=a.productId,d=a.nombre,e=`₡${a.precio}`,f=`${a.precio}`;if(!b){const a=await fetch(jsonFilePathPopulares),d=await a.json();b=d.find(a=>a.productId===c)}let g=JSON.parse(localStorage.getItem("basket"))||[];const h=g.find(a=>a.productId===c),i=h?h.cantidad.toString():"0";Swal.fire({html:`<div class="product-detail-view">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3">
-                        <img class="product-detail-view-image" src="${detalles?.imagen}" alt="producto">
+                        <img class="product-detail-view-image" src="${b?.imagen}" alt="producto">
                     </div>
                     <div class="col product-detail-view-text">
-                        <h2 class="product-detail-view-title">${nombreProducto}</h2>
+                        <h2 class="product-detail-view-title">${d}</h2>
                         <p class="product-detail-view-stars">
                             <span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span>
                         </p>
-                        <h4 class="product-detail-view-price">${precioProducto}</h4>
+                        <h4 class="product-detail-view-price">${e}</h4>
                         <p class="product-detail-view-legend"><small><i class="fa-solid fa-heart-circle-check"></i> Hay existencias</small></p>
                         <div class="product-detail-view-input">
                             <div class="row add-action">
                                 <div class="col-lg-3">
                                     <div class="">
                                         <label for="addQuantityViewDetail" class="form-label">Cantidad</label>
-                                        <input type="number" value="${productQtyValue}" min="0" max="5" class="form-control qty" id="addQuantityViewDetail">
+                                        <input type="number" value="${i}" min="0" max="5" class="form-control qty" id="addQuantityViewDetail">
                                     </div>
                                 </div>
                                 <div class="col mt-4">
-                                    <button id="popup-view-detail-remove-cart" type="button" class="btn btn-danger cart popup-view-detail-remove-cart" data-nombre="${nombreProducto}" data-precio="${precioProductoSinFormato}"><i class="fa-solid fa-trash-can"></i></button>
+                                    <button id="popup-view-detail-remove-cart" type="button" class="btn btn-danger cart popup-view-detail-remove-cart" data-nombre="${d}" data-precio="${f}"><i class="fa-solid fa-trash-can"></i></button>
                                 </div>
                             </div>
                             <div class="row mt-3">
@@ -63,64 +34,16 @@ async function verProductoClick(dataset, detalles) {
                 <div class="row product-detail-view-info">
                     <h3>Detalles</h3>
                     <p>
-                        <strong>Ingredientes:</strong> ${detalles?.ingredientes}.
+                        <strong>Ingredientes:</strong> ${b?.ingredientes}.
                     </p>
                     <p>
-                        <strong>Alérgenos:</strong> ${detalles?.alergenos}
+                        <strong>Alérgenos:</strong> ${b?.alergenos}
                     </p>
                     <p>
-                        <strong>Presentación:</strong> ${detalles?.presentacion}
+                        <strong>Presentación:</strong> ${b?.presentacion}
                     </p>
-                    <p><strong>Vida útil:</strong> ${detalles?.vidaUtil}</p>
-                    <p><strong>Conservación:</strong> ${detalles?.conservacion}</p>
+                    <p><strong>Vida útil:</strong> ${b?.vidaUtil}</p>
+                    <p><strong>Conservación:</strong> ${b?.conservacion}</p>
                 </div>
             </div>
-        </div>`,
-            confirmButtonText: "Cerrar",
-            width: "960px",
-        });
-
-        const quantityInput = document.getElementById("addQuantityViewDetail");
-        const quantityAlert = document.querySelector(".quantity-alert");
-        const removeCartButton = document.getElementById(
-            "popup-view-detail-remove-cart"
-        );
-
-        quantityInput?.addEventListener("change", function () {
-            let quantity = parseInt(this.value);
-            if (isNaN(quantity)) {
-                quantity = 0;
-                quantityInput.value = "0";
-            }
-            if (quantity < 0 || quantity > 5) {
-                quantityAlert.classList.remove("d-none");
-            } else {
-                quantityAlert.classList.add("d-none");
-                setTimeout(() => {
-                    updateBasketQuantity(quantity, {
-                        nombreProducto,
-                        ...detalles,
-                        cantidad: quantity,
-                        precio: precioProductoSinFormato,
-                        totalProducto: parseFloat(precioProductoSinFormato) * quantity,
-                        productId
-                    });
-                }, 10);
-            }
-        });
-
-        removeCartButton?.addEventListener("click", function () {
-            quantityInput.value = "0";
-            setTimeout(() => {
-                updateBasketQuantity(0, {
-                    nombreProducto,
-                    ...detalles,
-                    cantidad: 0,
-                    precio: precioProductoSinFormato,
-                    totalProducto: 0,
-                    productId
-                });
-            }, 10);
-        });
-}
-
+        </div>`,confirmButtonText:"Cerrar",width:"960px"});const j=document.getElementById("addQuantityViewDetail"),k=document.querySelector(".quantity-alert"),l=document.getElementById("popup-view-detail-remove-cart");j?.addEventListener("change",function(){let a=parseInt(this.value);isNaN(a)&&(a=0,j.value="0"),0>a||5<a?k.classList.remove("d-none"):(k.classList.add("d-none"),setTimeout(()=>{updateBasketQuantity(a,{nombreProducto:d,...b,cantidad:a,precio:f,totalProducto:parseFloat(f)*a,productId:c})},10))}),l?.addEventListener("click",function(){j.value="0",setTimeout(()=>{updateBasketQuantity(0,{nombreProducto:d,...b,cantidad:0,precio:f,totalProducto:0,productId:c})},10)})}
