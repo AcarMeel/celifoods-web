@@ -72,7 +72,7 @@
                 "precio": 6500
             },
             {
-                "productId": 9,
+                "productId": 5,
                 "imagen": "assets/images/PolloGarbanzos.svg",
                 "nombre": "Pollo con garbanzos",
                 "descripcion": "Una sopa especial y llena de sabor de pollo, verduras varias y garbanzos",
@@ -139,7 +139,7 @@
                 "conservacion": "Guardar en la nevera."
             },
             {
-                "productId": 14,
+                "productId": 6,
                 "imagen": "assets/images/Cheesecake.svg",
                 "nombre": "Cheesecake",
                 "descripcion": "Disfruta un rico postre con una pastel de queso, jugoso y dulce, perfecto para compartir",
@@ -206,7 +206,7 @@
                 "conservacion": "guardar en la nevera"
             },
             {
-                "productId": 19,
+                "productId": 7,
                 "imagen": "assets/images/Pizza.svg",
                 "nombre": "Pizza",
                 "descripcion": "Pizza familiar de 14 piezas con ingredientes naturales y masa libre de gluten, perfecta para la familia",
