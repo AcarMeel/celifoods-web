@@ -80,7 +80,7 @@ alert en mobile no se ve bien - DONE
 centrar nombre mobile  - DONE
 facturar centrarlo en mobile - DONE
 
-scroll windows
-carrito alinear items
+scroll windows - DONE
+carrito alinear items - DONE
 espacios mas popular index
 
