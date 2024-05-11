@@ -74,3 +74,10 @@ https://api.whatsapp.com/send/?phone=50689428070
     - enviar email seccion => popup email enviado
 
 - contraste - Melissa DONE
+
+
+alert en mobile no se ve bien
+scroll windows
+carrito alinear items
+facturar centrarlo en mobile
+centrar nombre mobile 
