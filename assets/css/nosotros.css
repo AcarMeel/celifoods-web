@@ -11,17 +11,18 @@ body{
     margin-top: 150px;
 
     .img-nosotros{
-        width: 50%;
-        margin-top: -150px;
-        clip-path: inset(0% 0% 20% 0%);
+        width: 40%;
+        margin-top: -50px;
+        clip-path: inset(0% 0% 18% 0%);
     }
 
     @media screen and (max-width: 376px){
         .img-nosotros{
-            width: 100%;
-            margin-top: -110px;
+            width: 110%;
+            margin-top: -80px;
+            margin-left: -44px;
             filter:brightness(0.4);
-            clip-path: inset(0% 0% 0% 0%);
+            clip-path: inset(0% 0% 5% 0%);
         }
     }
 }
@@ -113,6 +114,15 @@ body{
         margin-bottom: 400px;
         .carrusel{
             display: initial;
+            position: relative;
+        }
+        .nombre{
+            position: absolute;
+            left: 125px;
+            top: 110px;
+        }
+        #nicole{
+            left: 133px;
         }
     }
 }
