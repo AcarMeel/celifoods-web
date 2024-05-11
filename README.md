@@ -78,6 +78,9 @@ https://api.whatsapp.com/send/?phone=50689428070
 
 alert en mobile no se ve bien - DONE
 centrar nombre mobile  - DONE
+facturar centrarlo en mobile - DONE
+
 scroll windows
 carrito alinear items
-facturar centrarlo en mobile - DONE
+espacios mas popular index
+
