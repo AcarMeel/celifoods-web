@@ -76,8 +76,8 @@ https://api.whatsapp.com/send/?phone=50689428070
 - contraste - Melissa DONE
 
 
-alert en mobile no se ve bien
+alert en mobile no se ve bien - DONE
+centrar nombre mobile  - DONE
 scroll windows
 carrito alinear items
-facturar centrarlo en mobile
-centrar nombre mobile 
+facturar centrarlo en mobile - DONE
